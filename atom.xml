@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://snakecy.github.io/"/>
-  <updated>2016-03-09T18:55:30.000Z</updated>
+  <updated>2016-03-10T09:34:27.000Z</updated>
   <id>https://snakecy.github.io/</id>
   
   <author>
@@ -16,19 +16,26 @@
   
   <entry>
     <title><![CDATA[about-libsvm]]></title>
-    <link href="https://snakecy.github.io/2016/03/10/about-libsvm/"/>
-    <id>https://snakecy.github.io/2016/03/10/about-libsvm/</id>
-    <published>2016-03-09T17:13:22.000Z</published>
-    <updated>2016-03-09T18:55:30.000Z</updated>
-    <content type="html"><![CDATA[<p>Tutorial<br><a href="http://jacoxu.com/?p=118" target="_blank" rel="external">http://jacoxu.com/?p=118</a></p>
-<p>Weka<br><a href="http://jayatiatblogs.blogspot.hk/2013/05/running-wekas-logistic-regression-using.html" target="_blank" rel="external">http://jayatiatblogs.blogspot.hk/2013/05/running-wekas-logistic-regression-using.html</a></p>
-<p>liblinear-java-1.95.jar<br><a href="https://github.com/bwaldvogel/liblinear-java" target="_blank" rel="external">https://github.com/bwaldvogel/liblinear-java</a></p>
+    <link href="https://snakecy.github.io/2016/02/10/about-libsvm/"/>
+    <id>https://snakecy.github.io/2016/02/10/about-libsvm/</id>
+    <published>2016-02-09T17:13:22.000Z</published>
+    <updated>2016-03-10T09:34:27.000Z</updated>
+    <content type="html"><![CDATA[<p>About the applications using libsvm tools on different platform.</p>
+<p><a href="http://jacoxu.com/?p=118" target="_blank" rel="external">libsvm tutorial</a></p>
+<p>which can be used on the following platform, such as Java, matlab(64 bit), python, svm-toy.</p>
+<a id="more"></a>
+<p><a href="https://github.com/bwaldvogel/liblinear-java" target="_blank" rel="external">liblinear-java-1.95.jar</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">training:  java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Train <span class="_">-s</span> 0 data_file</span><br><span class="line">prediction: java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Prediction -b 1 <span class="built_in">test</span>_file data_file.model output_file</span><br></pre></td></tr></table></figure>
-<p>Spark liblinear<br>Ref –&gt; <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html" target="_blank" rel="external">http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html</a><br>Limited for the JDK version (before 8u)</p>
+<p><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html" target="_blank" rel="external">Spark liblinear</a></p>
+<ul>
+<li>Limited for the JDK version (before 8u)</li>
+</ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Tutorial<br><a href="http://jacoxu.com/?p=118" target="_blank" rel="external">http://jacoxu.com/?p=118</a></p>
-<p>Weka<br><a href="http:/]]>
+    <![CDATA[<p>About the applications using libsvm tools on different platform.</p>
+<p><a href="http://jacoxu.com/?p=118">libsvm tutorial</a></p>
+<p>which can be used on the following platform, such as Java, matlab(64 bit), python, svm-toy.</p>]]>
+    
     </summary>
     
       <category term="Libsvm" scheme="https://snakecy.github.io/tags/Libsvm/"/>
@@ -41,19 +48,18 @@
   
   <entry>
     <title><![CDATA[Resolve the debug problem of WARN NativeCodeLoader]]></title>
-    <link href="https://snakecy.github.io/2016/03/10/debug-nativecodeloader/"/>
-    <id>https://snakecy.github.io/2016/03/10/debug-nativecodeloader/</id>
-    <published>2016-03-09T16:58:25.000Z</published>
-    <updated>2016-03-09T18:55:30.000Z</updated>
+    <link href="https://snakecy.github.io/2016/02/10/debug-nativecodeloader/"/>
+    <id>https://snakecy.github.io/2016/02/10/debug-nativecodeloader/</id>
+    <published>2016-02-09T16:58:25.000Z</published>
+    <updated>2016-03-10T09:33:40.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS</span><br><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS</span><br></pre></td></tr></table></figure>
 <h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p>Three ways to solve the problem</p>
-<ul>
-<li>install libgfortran3</li>
-<li>linstall libatlas3-base libopenblas-base</li>
-<li>OpenBlase</li>
-</ul>
+<blockquote>
+<p>install libgfortran3<br>linstall libatlas3-base libopenblas-base<br>OpenBlase</p>
+</blockquote>
 <ul>
 <li><p>in sbt file: libraryDependencies += “com.github.fommil.netlib” % “all” % “1.1.2”</p>
 <ul>
@@ -73,7 +79,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas3-base libopenblas-base</span><br><span class="line">sudo update-alternatives --config libblas.so.3</span><br><span class="line">sudo update-alternatives --config liblapack.so.3</span><br><span class="line">$ /etc/ld.so.conf</span><br><span class="line">add /usr/lib/libblas.so.3 &amp;  /usr/lib/liblapack.so.3</span><br><span class="line">$ sudo ldconfig</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN ]]>
+    <![CDATA[<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>]]>
+    
     </summary>
     
       <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
@@ -86,10 +94,10 @@
   
   <entry>
     <title><![CDATA[mac-license]]></title>
-    <link href="https://snakecy.github.io/2016/03/10/mac-license/"/>
-    <id>https://snakecy.github.io/2016/03/10/mac-license/</id>
-    <published>2016-03-09T16:54:13.000Z</published>
-    <updated>2016-03-09T18:55:30.000Z</updated>
+    <link href="https://snakecy.github.io/2016/02/10/mac-license/"/>
+    <id>https://snakecy.github.io/2016/02/10/mac-license/</id>
+    <published>2016-02-09T16:54:13.000Z</published>
+    <updated>2016-03-10T09:31:25.000Z</updated>
     <content type="html"><![CDATA[<p>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</p>
 <p>﻿- Open the terminal, then type in “ sudo xcodebuild -license”</p>
 <ul>
@@ -117,8 +125,8 @@
     <link href="https://snakecy.github.io/2016/01/13/nosql-database/"/>
     <id>https://snakecy.github.io/2016/01/13/nosql-database/</id>
     <published>2016-01-12T18:25:57.000Z</published>
-    <updated>2016-03-09T18:32:34.000Z</updated>
-    <content type="html"><![CDATA[<p>NoSQL database for a key-value DB Redis<br><a id="more"></a></p>
+    <updated>2016-03-10T09:32:39.000Z</updated>
+    <content type="html"><![CDATA[<p>NoSQL database for a key-value DB Redis</p>
 <ul>
 <li><p>Quick Start <a href="http://redis.io/topics/quickstart" target="_blank" rel="external">Redis</a></p>
 </li>
@@ -128,6 +136,9 @@
 <li><p>Or download the redis from website</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>Or download</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/redis-stable.tar.gz</span><br><span class="line">tar xvzf redis-stable.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-stable</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
 </li>
@@ -144,7 +155,17 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>NoSQL database for a key-value DB Redis<br>]]>
+    <![CDATA[<p>NoSQL database for a key-value DB Redis</p>
+<ul>
+<li><p>Quick Start <a href="http://redis.io/topics/quickstart">Redis</a></p>
+</li>
+<li><p>use the key value DB (redis)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download the redis from website</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>]]>
     
     </summary>
     
@@ -161,8 +182,8 @@
     <link href="https://snakecy.github.io/2016/01/13/json-eclipse/"/>
     <id>https://snakecy.github.io/2016/01/13/json-eclipse/</id>
     <published>2016-01-12T17:26:05.000Z</published>
-    <updated>2016-03-09T18:55:30.000Z</updated>
-    <content type="html"><![CDATA[<p>Describe how to parser Json flows in (eclipse)  Java, also in Scala<br><a id="more"></a></p>
+    <updated>2016-03-10T09:32:56.000Z</updated>
+    <content type="html"><![CDATA[<p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
 <h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
 <ul>
 <li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp" target="_blank" rel="external">Java-org-json</a></p>
@@ -170,6 +191,9 @@
 <li><p>Json-lib</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p><a href="http://www.cnblogs.com/zhenjing/p/json-smart.html" target="_blank" rel="external">Json-smart</a></p>
 <ul>
 <li>Compare with each json jar package <a href="https://code.google.com/p/json-smart/wiki/FeaturesTests" target="_blank" rel="external">compare</a></li>
@@ -189,7 +213,15 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reference:</span></span><br><span class="line">&gt; json格式如下：&#123;<span class="string">"response"</span>:&#123;<span class="string">"data"</span>:[&#123;<span class="string">"address"</span>:<span class="string">"南京市游乐园"</span>,<span class="string">"province"</span>:<span class="string">"江苏"</span>,<span class="string">"district"</span>:<span class="string">"玄武区"</span>,<span class="string">"city"</span>:<span class="string">"南京"</span>&#125;]&#125;,<span class="string">"status"</span>:<span class="string">"ok"</span>&#125;</span><br><span class="line">Result： 江苏 南京 玄武区 南京市游乐园</span><br><span class="line">﻿</span><br><span class="line">JSONObject dataJson=new JSONObject(<span class="string">"Json data"</span>);</span><br><span class="line">JSONObject response=dataJson.getJSONObject(<span class="string">"response"</span>);</span><br><span class="line">JSONArray data=response.getJSONArray(<span class="string">"data"</span>);</span><br><span class="line">JSONObject info=data.getJSONObject(0);</span><br><span class="line">String province=info.getString(<span class="string">"province"</span>);</span><br><span class="line">String city=info.getString(<span class="string">"city"</span>);</span><br><span class="line">String district=info.getString(<span class="string">"district"</span>);</span><br><span class="line">String address=info.getString(<span class="string">"address"</span>);</span><br><span class="line">System.out.println(province+city+district+address);</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Describe how to parser Json flows in (eclipse)  Java, also in Scala<br>]]>
+    <![CDATA[<p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
+<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
+<ul>
+<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp">Java-org-json</a></p>
+</li>
+<li><p>Json-lib</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
+</li>
+</ul>]]>
     
     </summary>
     
@@ -208,12 +240,13 @@
     <link href="https://snakecy.github.io/2016/01/12/hdfs-spark-2/"/>
     <id>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</id>
     <published>2016-01-12T07:15:04.000Z</published>
-    <updated>2016-03-09T18:32:34.000Z</updated>
-    <content type="html"><![CDATA[<p>Construct the platform for Big Data project<br><a id="more"></a></p>
+    <updated>2016-03-10T09:33:06.000Z</updated>
+    <content type="html"><![CDATA[<p>Construct the platform for Big Data project</p>
 <h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Configure Zookeeper"></a>Configure Zookeeper</h2><ul>
 <li>on each server, configure the java environment<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf zookeeper-3.4.6.tar.gz</span><br><span class="line">$ mv zookeeper-3.4.6 zookeeper</span><br><span class="line">$ <span class="built_in">cd</span> zookeeper/conf</span><br><span class="line">$ cp zoo_sample.cfg zoo.cfg</span><br><span class="line">$ vi zoo.cfg</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <table>
 <thead>
 <tr>
@@ -394,7 +427,11 @@
 <h3 id="Spark_on_Yarn_Reference"><a href="#Spark_on_Yarn_Reference" class="headerlink" title="Spark on Yarn Reference"></a><a href="http://wuchong.me/blog/2015/04/04/spark-on-yarn-cluster-deploy/" target="_blank" rel="external">Spark on Yarn Reference</a></h3><p>configure additional two file<br>yarn-site.xml &amp; maperd-site.xml</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Construct the platform for Big Data project<br>]]>
+    <![CDATA[<p>Construct the platform for Big Data project</p>
+<h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Configure Zookeeper"></a>Configure Zookeeper</h2><ul>
+<li>on each server, configure the java environment<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf zookeeper-3.4.6.tar.gz</span><br><span class="line">$ mv zookeeper-3.4.6 zookeeper</span><br><span class="line">$ <span class="built_in">cd</span> zookeeper/conf</span><br><span class="line">$ cp zoo_sample.cfg zoo.cfg</span><br><span class="line">$ vi zoo.cfg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>]]>
     
     </summary>
     
@@ -411,9 +448,10 @@
     <link href="https://snakecy.github.io/2016/01/12/hdfs-spark-1/"/>
     <id>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</id>
     <published>2016-01-12T07:14:59.000Z</published>
-    <updated>2016-03-09T18:32:34.000Z</updated>
-    <content type="html"><![CDATA[<p>Construct the platform for Big Data project<br><a id="more"></a></p>
+    <updated>2016-03-10T09:33:16.000Z</updated>
+    <content type="html"><![CDATA[<p>Construct the platform for Big Data project</p>
 <h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>
+<a id="more"></a>
 <ul>
 <li>Unbuntu 14.0 LTS</li>
 </ul>
@@ -448,7 +486,8 @@
 <p>Download the Hadoop Binary on each node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ Install java on ubuntu</span><br><span class="line">$ wget http://mirrors.cnnic.cn/apache/hadoop/common/stable/hadoop-2.7.1.tar.gz</span><br><span class="line">$ tar xvf hadoop-2.7.1.tar.gz</span><br><span class="line">$ mv hadoop-2.7.1 hadoop</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Construct the platform for Big Data project<br>]]>
+    <![CDATA[<p>Construct the platform for Big Data project</p>
+<h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>]]>
     
     </summary>
     
@@ -465,8 +504,8 @@
     <link href="https://snakecy.github.io/2016/01/12/tools-summary/"/>
     <id>https://snakecy.github.io/2016/01/12/tools-summary/</id>
     <published>2016-01-11T18:48:57.000Z</published>
-    <updated>2016-03-09T18:32:34.000Z</updated>
-    <content type="html"><![CDATA[<p>Summary the tools used in project, essential in big data direction<br><a id="more"></a></p>
+    <updated>2016-03-10T09:32:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Summary the tools used in project, essential in big data direction </p>
 <h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
 <li>Database: MySQL, NOSQL(redis), Hive, HBase</li>
 <li>Platform: Windows8, Ubuntu, Debian</li>
@@ -487,8 +526,8 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Summary the tools used in project, essential in big data direction<br>]]>
-    
+    <![CDATA[<p>Summary the tools used in project, essential in big data direction </p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools">]]>
     </summary>
     
       <category term="Software" scheme="https://snakecy.github.io/tags/Software/"/>
@@ -502,9 +541,10 @@
     <link href="https://snakecy.github.io/2016/01/11/python-spyder/"/>
     <id>https://snakecy.github.io/2016/01/11/python-spyder/</id>
     <published>2016-01-10T16:22:08.000Z</published>
-    <updated>2016-03-09T18:32:34.000Z</updated>
-    <content type="html"><![CDATA[<p>The spyder tool of Python GUI works on Max OS<br><a id="more"></a></p>
+    <updated>2016-03-10T09:32:23.000Z</updated>
+    <content type="html"><![CDATA[<p>The spyder tool of Python GUI works on Max OS</p>
 <h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="Install_Python_3-4-1_on_Mac"><a href="#Install_Python_3-4-1_on_Mac" class="headerlink" title="Install Python 3.4.1 on Mac"></a>Install Python 3.4.1 on Mac</h3><p>Mac has installed the python 2.7, if you want to use the latest version,  go to the <a href="http://www.python.org/download/" target="_blank" rel="external">Python</a> website and download.</p>
 <h2 id="Install_the_Python_GUI_on_Mac"><a href="#Install_the_Python_GUI_on_Mac" class="headerlink" title="Install the Python GUI on Mac"></a>Install the Python GUI on Mac</h2><h3 id="Step_1_2C_Intall_the_Python"><a href="#Step_1_2C_Intall_the_Python" class="headerlink" title="Step 1, Intall the Python"></a>Step 1, Intall the Python</h3><h3 id="Step_2_2C_Install_the_Anaconda"><a href="#Step_2_2C_Install_the_Anaconda" class="headerlink" title="Step 2, Install the Anaconda"></a>Step 2, Install the <a href="http://www.continuum.io/downloads" target="_blank" rel="external">Anaconda</a></h3><ul>
 <li>Command-Line Install</li>
@@ -523,7 +563,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ spyder</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>The spyder tool of Python GUI works on Max OS<br>]]>
+    <![CDATA[<p>The spyder tool of Python GUI works on Max OS</p>
+<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>]]>
     
     </summary>
     
@@ -542,9 +583,10 @@
     <link href="https://snakecy.github.io/2016/01/09/github-hexo/"/>
     <id>https://snakecy.github.io/2016/01/09/github-hexo/</id>
     <published>2016-01-08T16:00:00.000Z</published>
-    <updated>2016-03-09T18:55:30.000Z</updated>
-    <content type="html"><![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub<br><a id="more"></a></p>
+    <updated>2016-03-10T09:33:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub</p>
 <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<a id="more"></a>
 <h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -574,7 +616,8 @@
 <h3 id="Update_plugins"><a href="#Update_plugins" class="headerlink" title="Update plugins"></a>Update plugins</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm update</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="comment">### Add plugins</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2.7 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.3.0 --save</span><br><span class="line">npm install hexo-generator-feed@1.0.3 --save</span><br><span class="line">npm install hexo-generator-sitemap@1.0.1 --save</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub<br>]]>
+    <![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>]]>
     
     </summary>
     

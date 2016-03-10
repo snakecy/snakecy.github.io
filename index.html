@@ -215,7 +215,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/10/about-libsvm/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/10/about-libsvm/" itemprop="url">
                   about-libsvm
                 </a>
               
@@ -229,8 +229,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T01:13:22+08:00" content="2016-03-10">
-              2016-03-10
+            <time itemprop="dateCreated" datetime="2016-02-10T01:13:22+08:00" content="2016-02-10">
+              2016-02-10
             </time>
           </span>
 
@@ -259,8 +259,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/10/about-libsvm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/about-libsvm/" itemprop="commentsCount"></span>
+                <a href="/2016/02/10/about-libsvm/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/about-libsvm/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -283,14 +283,14 @@
 
       
         
-          
-            <p>Tutorial<br><a href="http://jacoxu.com/?p=118" target="_blank" rel="external">http://jacoxu.com/?p=118</a></p>
-<p>Weka<br><a href="http://jayatiatblogs.blogspot.hk/2013/05/running-wekas-logistic-regression-using.html" target="_blank" rel="external">http://jayatiatblogs.blogspot.hk/2013/05/running-wekas-logistic-regression-using.html</a></p>
-<p>liblinear-java-1.95.jar<br><a href="https://github.com/bwaldvogel/liblinear-java" target="_blank" rel="external">https://github.com/bwaldvogel/liblinear-java</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">training:  java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Train <span class="_">-s</span> 0 data_file</span><br><span class="line">prediction: java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Prediction -b 1 <span class="built_in">test</span>_file data_file.model output_file</span><br></pre></td></tr></table></figure>
-<p>Spark liblinear<br>Ref –&gt; <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html" target="_blank" rel="external">http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html</a><br>Limited for the JDK version (before 8u)</p>
-
-          
+          <p>About the applications using libsvm tools on different platform.</p>
+<p><a href="http://jacoxu.com/?p=118">libsvm tutorial</a></p>
+<p>which can be used on the following platform, such as Java, matlab(64 bit), python, svm-toy.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/10/about-libsvm/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -334,7 +334,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/10/debug-nativecodeloader/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/10/debug-nativecodeloader/" itemprop="url">
                   Resolve the debug problem of WARN NativeCodeLoader
                 </a>
               
@@ -348,8 +348,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T00:58:25+08:00" content="2016-03-10">
-              2016-03-10
+            <time itemprop="dateCreated" datetime="2016-02-10T00:58:25+08:00" content="2016-02-10">
+              2016-02-10
             </time>
           </span>
 
@@ -378,8 +378,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
+                <a href="/2016/02/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -402,35 +402,13 @@
 
       
         
-          
-            <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
+          <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS</span><br><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS</span><br></pre></td></tr></table></figure>
-<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p>Three ways to solve the problem</p>
-<ul>
-<li>install libgfortran3</li>
-<li>linstall libatlas3-base libopenblas-base</li>
-<li>OpenBlase</li>
-</ul>
-<ul>
-<li><p>in sbt file: libraryDependencies += “com.github.fommil.netlib” % “all” % “1.1.2”</p>
-<ul>
-<li>-Dcom.github.fommil.netlib.BLAS=com.github.fommil.netlib.F2jBLAS</li>
-<li><a href="https://github.com/mridulm/netlib-java" target="_blank" rel="external">https://github.com/mridulm/netlib-java</a></li>
-</ul>
-</li>
-<li><p>or in commandline</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libgfortran3</span><br><span class="line">// check the libgfortran3</span><br><span class="line">$ dpkg <span class="_">-l</span> libgfortran3</span><br><span class="line">$ sudo apt-get install gfortran</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>resolve the problem (important)</p>
-<ul>
-<li>refers to <a href="https://github.com/fommil/netlib-java#machine-optimised-system-libraries" target="_blank" rel="external">https://github.com/fommil/netlib-java#machine-optimised-system-libraries</a></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas3-base libopenblas-base</span><br><span class="line">sudo update-alternatives --config libblas.so.3</span><br><span class="line">sudo update-alternatives --config liblapack.so.3</span><br><span class="line">$ /etc/ld.so.conf</span><br><span class="line">add /usr/lib/libblas.so.3 &amp;  /usr/lib/liblapack.so.3</span><br><span class="line">$ sudo ldconfig</span><br></pre></td></tr></table></figure>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/10/debug-nativecodeloader/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -474,7 +452,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/10/mac-license/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/10/mac-license/" itemprop="url">
                   mac-license
                 </a>
               
@@ -488,8 +466,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T00:54:13+08:00" content="2016-03-10">
-              2016-03-10
+            <time itemprop="dateCreated" datetime="2016-02-10T00:54:13+08:00" content="2016-02-10">
+              2016-02-10
             </time>
           </span>
 
@@ -518,8 +496,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/10/mac-license/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/mac-license/" itemprop="commentsCount"></span>
+                <a href="/2016/02/10/mac-license/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/mac-license/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -666,7 +644,17 @@
 
       
         
-          <p>NoSQL database for a key-value DB Redis<br>
+          <p>NoSQL database for a key-value DB Redis</p>
+<ul>
+<li><p>Quick Start <a href="http://redis.io/topics/quickstart">Redis</a></p>
+</li>
+<li><p>use the key value DB (redis)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download the redis from website</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/13/nosql-database/#more" rel="contents">
               Read more &raquo;
@@ -783,7 +771,15 @@
 
       
         
-          <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala<br>
+          <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
+<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
+<ul>
+<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp">Java-org-json</a></p>
+</li>
+<li><p>Json-lib</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/13/json-eclipse/#more" rel="contents">
               Read more &raquo;
@@ -900,7 +896,11 @@
 
       
         
-          <p>Construct the platform for Big Data project<br>
+          <p>Construct the platform for Big Data project</p>
+<h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Configure Zookeeper"></a>Configure Zookeeper</h2><ul>
+<li>on each server, configure the java environment<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf zookeeper-3.4.6.tar.gz</span><br><span class="line">$ mv zookeeper-3.4.6 zookeeper</span><br><span class="line">$ <span class="built_in">cd</span> zookeeper/conf</span><br><span class="line">$ cp zoo_sample.cfg zoo.cfg</span><br><span class="line">$ vi zoo.cfg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/12/hdfs-spark-2/#more" rel="contents">
               Read more &raquo;
@@ -1017,7 +1017,8 @@
 
       
         
-          <p>Construct the platform for Big Data project<br>
+          <p>Construct the platform for Big Data project</p>
+<h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/12/hdfs-spark-1/#more" rel="contents">
               Read more &raquo;
@@ -1134,12 +1135,28 @@
 
       
         
-          <p>Summary the tools used in project, essential in big data direction<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/12/tools-summary/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
+            <p>Summary the tools used in project, essential in big data direction </p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
+<li>Database: MySQL, NOSQL(redis), Hive, HBase</li>
+<li>Platform: Windows8, Ubuntu, Debian</li>
+<li>VM: VMware, Cywin, VirtualBox</li>
+<li>Language: JAVA, R, Python, go, Ruby, Matlab</li>
+<li>Shell: bash, perl</li>
+<li>Bigdata Sys: SPARK, Hadoop, XAMPP</li>
+<li>Algorithm: ML &amp; NL &amp; DM (DL)</li>
+<li>Transfer: winSCP</li>
+<li>Notes : WizNote , evernote</li>
+<li>Office : OpenOffice, WPS</li>
+<li>PHP, html5, <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>Build evn: Maven, sbt</li>
+<li>MLlib: liblinear-java, libsvm</li>
+<li>SSH manager : putty manager, putty</li>
+<li>Blog tools: WordPress, hexo</li>
+<li>Redis <a href="https://redislabs.com/redis-java" target="_blank" rel="external">java</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -1251,7 +1268,8 @@
 
       
         
-          <p>The spyder tool of Python GUI works on Max OS<br>
+          <p>The spyder tool of Python GUI works on Max OS</p>
+<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/11/python-spyder/#more" rel="contents">
               Read more &raquo;
@@ -1368,7 +1386,8 @@
 
       
         
-          <p>Beginning the blog journey of Hexo &amp; Gituhub<br>
+          <p>Beginning the blog journey of Hexo &amp; Gituhub</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/09/github-hexo/#more" rel="contents">
               Read more &raquo;
