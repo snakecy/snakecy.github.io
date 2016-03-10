@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
+    <lastmod>2016-03-10T13:05:57.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
     <lastmod>2016-03-10T09:34:27.000Z</lastmod>
   </url>
