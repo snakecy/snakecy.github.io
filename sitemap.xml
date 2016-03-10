@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://snakecy.github.io/2016/03/10/about-libsvm/</loc>
+    <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
     <lastmod>2016-03-09T18:55:30.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
+    <lastmod>2016-03-09T18:55:30.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/about-libsvm/</loc>
     <lastmod>2016-03-09T18:55:30.000Z</lastmod>
   </url>
   
@@ -22,7 +27,7 @@
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/11/python-spyder/</loc>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
@@ -32,22 +37,17 @@
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
+    <loc>https://snakecy.github.io/2016/01/11/python-spyder/</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/01/12/tools-summary/</loc>
-    <lastmod>2016-03-09T18:32:34.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
@@ -62,12 +62,12 @@
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/tags/index.html</loc>
+    <loc>https://snakecy.github.io/categories/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/categories/index.html</loc>
+    <loc>https://snakecy.github.io/tags/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
