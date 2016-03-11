@@ -2,58 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
-    <lastmod>2016-03-10T13:05:57.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/03/12/machine-learning-notes-1/</loc>
+    <lastmod>2016-03-11T17:03:40.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
-    <lastmod>2016-03-10T09:34:27.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
+    <lastmod>2016-03-11T17:02:31.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/02/10/debug-nativecodeloader/</loc>
-    <lastmod>2016-03-10T09:33:40.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
-    <lastmod>2016-03-10T09:33:30.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
-    <lastmod>2016-03-10T09:33:16.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
-    <lastmod>2016-03-10T09:33:06.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/02/11/perl-example/</loc>
+    <lastmod>2016-03-11T16:22:43.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
-    <lastmod>2016-03-10T09:32:56.000Z</lastmod>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/13/nosql-database/</loc>
-    <lastmod>2016-03-10T09:32:39.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/11/python-spyder/</loc>
-    <lastmod>2016-03-10T09:32:23.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/02/10/debug-nativecodeloader/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/12/tools-summary/</loc>
-    <lastmod>2016-03-10T09:32:00.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/02/10/mac-license/</loc>
-    <lastmod>2016-03-10T09:31:25.000Z</lastmod>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/13/nosql-database/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/11/python-spyder/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/tools-summary/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
@@ -67,12 +82,12 @@
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/categories/index.html</loc>
+    <loc>https://snakecy.github.io/tags/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/tags/index.html</loc>
+    <loc>https://snakecy.github.io/categories/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
