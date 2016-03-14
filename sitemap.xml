@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://snakecy.github.io/about/index.html</loc>
+    <lastmod>2016-03-14T11:32:29.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://snakecy.github.io/2016/03/12/machine-learning-notes-1/</loc>
-    <lastmod>2016-03-11T17:03:40.000Z</lastmod>
+    <lastmod>2016-03-14T11:24:32.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/15/UCI-machine-learning-repository/</loc>
+    <lastmod>2016-03-14T11:23:16.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/php-r-sparkr/</loc>
+    <lastmod>2016-03-14T09:32:33.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
-    <lastmod>2016-03-11T17:02:31.000Z</lastmod>
+    <lastmod>2016-03-12T06:48:47.000Z</lastmod>
   </url>
   
   <url>
@@ -17,22 +32,12 @@
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
-    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
-    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>https://snakecy.github.io/2016/02/10/debug-nativecodeloader/</loc>
     <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
+    <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
     <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
@@ -42,22 +47,27 @@
   </url>
   
   <url>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://snakecy.github.io/2016/01/13/nosql-database/</loc>
     <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
+    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
     <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
-    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
     <lastmod>2016-03-10T13:12:58.000Z</lastmod>
   </url>
   
@@ -72,22 +82,22 @@
   </url>
   
   <url>
+    <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
+    <lastmod>2016-03-10T13:12:58.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://snakecy.github.io/404.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://snakecy.github.io/about/index.html</loc>
+    <loc>https://snakecy.github.io/categories/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
   <url>
     <loc>https://snakecy.github.io/tags/index.html</loc>
-    <lastmod>2016-03-09T18:32:34.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/categories/index.html</loc>
     <lastmod>2016-03-09T18:32:34.000Z</lastmod>
   </url>
   
