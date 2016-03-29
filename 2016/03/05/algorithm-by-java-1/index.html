@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,Machine Learning," />
+  <meta name="keywords" content="JAVA," />
 
 
 
@@ -59,34 +59,31 @@
 
 
 
-<meta name="description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta name="description" content="[TOC]
+Binary Search（二分查找）Java实现二分查找在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：
 
-Scilit-learn requires:
-
-Python (">
+键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
+键等于中间位置的元素，所以元素找到。
+键大于中间位置的元素，则匹配元素必在右边（如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine-learning-notes-1">
-<meta property="og:url" content="https://snakecy.github.io/2016/01/16/machine-learning-notes-1/index.html">
+<meta property="og:title" content="algorithm-Binary-Search-01">
+<meta property="og:url" content="https://snakecy.github.io/2016/03/05/algorithm-by-java-1/index.html">
 <meta property="og:site_name" content="Snakecy's Blog">
-<meta property="og:description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta property="og:description" content="[TOC]
+Binary Search（二分查找）Java实现二分查找在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：
 
-Scilit-learn requires:
-
-Python (">
-<meta property="og:updated_time" content="2016-03-14T11:48:57.000Z">
+键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
+键等于中间位置的元素，所以元素找到。
+键大于中间位置的元素，则匹配元素必在右边（如">
+<meta property="og:updated_time" content="2016-03-29T18:06:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="machine-learning-notes-1">
-<meta name="twitter:description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta name="twitter:title" content="algorithm-Binary-Search-01">
+<meta name="twitter:description" content="[TOC]
+Binary Search（二分查找）Java实现二分查找在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：
 
-Scilit-learn requires:
-
-Python (">
+键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
+键等于中间位置的元素，所以元素找到。
+键大于中间位置的元素，则匹配元素必在右边（如">
 
 
 
@@ -104,7 +101,7 @@ Python (">
   };
 </script>
 
-  <title> machine-learning-notes-1 | Snakecy's Blog </title>
+  <title> algorithm-Binary-Search-01 | Snakecy's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -231,7 +228,7 @@ Python (">
             
             
               
-                machine-learning-notes-1
+                algorithm-Binary-Search-01
               
             
           </h1>
@@ -243,8 +240,8 @@ Python (">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
-              2016-01-16
+            <time itemprop="dateCreated" datetime="2016-03-05T01:37:03+08:00" content="2016-03-05">
+              2016-03-05
             </time>
           </span>
 
@@ -257,8 +254,8 @@ Python (">
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
                   </a>
                 </span>
 
@@ -273,8 +270,8 @@ Python (">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                <a href="/2016/03/05/algorithm-by-java-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/algorithm-by-java-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -296,33 +293,15 @@ Python (">
       
 
       
-        <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
-<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
-<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
-<ul>
-<li><p>Scilit-learn requires:</p>
-<ul>
-<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
-</li>
-<li><p>Numpy (&gt;=1.6.1)</p>
-</li>
-<li><p>Scipy (&gt;=0.9)</p>
-</li>
-</ul>
-<blockquote>
-<p>For OSX installation</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
-<ul>
-<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
+        <p>[TOC]</p>
+<h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
+<ol>
+<li>键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。</li>
+<li>键等于中间位置的元素，所以元素找到。</li>
+<li>键大于中间位置的元素，则匹配元素必在右边（如果有的话），于是对右边的区域应用二分搜索。另外，当集合为空，则代表找不到。</li>
+</ol>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class BinarySearch &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; a = new ArrayList&lt;Integer&gt;();</span><br><span class="line">        addIntegerInSequence(a,1,10);</span><br><span class="line">        <span class="built_in">print</span>(a);</span><br><span class="line">        int pos = binarySearch(a,10);</span><br><span class="line">        <span class="keyword">if</span> ( pos != -1 )</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element found: "</span> + pos);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element not found"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 二分查找法</span><br><span class="line">    * @param a</span><br><span class="line">    * @param value 待查找元素</span><br><span class="line">    * @<span class="built_in">return</span></span><br><span class="line">    */</span><br><span class="line">    public static int binarySearch(ArrayList&lt;Integer&gt; a, int value)</span><br><span class="line">    &#123;</span><br><span class="line">        int size = a.size();</span><br><span class="line">        int low = 0 , high = size - 1;</span><br><span class="line">        int mid;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low + high) / 2;</span><br><span class="line">            <span class="keyword">if</span> ( a.get(mid) &lt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                low = low + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ( a.get(mid) &gt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                high = high - 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 填充顺序元素到数组</span><br><span class="line">    * @param a</span><br><span class="line">    * @param begin 开始元素</span><br><span class="line">    * @param size 大小</span><br><span class="line">    */</span><br><span class="line">    public static void addIntegerInSequence(ArrayList&lt;Integer&gt; a, int begin, int size)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = begin; i &lt; begin + size; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 打印数组</span><br><span class="line">    * @param a</span><br><span class="line">    */</span><br><span class="line">    public static void <span class="built_in">print</span>(ArrayList&lt;Integer&gt; a)</span><br><span class="line">    &#123;</span><br><span class="line">        Iterator&lt;Integer&gt; i = a.iterator();</span><br><span class="line">        <span class="keyword">while</span> (i.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(i.next() + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//JAVA 库中的二分查找使用非递归方式实现，返回结果与前面写的有所不同：找不到时返回的是负数，但不一定是-1</span><br><span class="line">private static int binarySearch0(int[] a, int fromIndex, int toIndex,</span><br><span class="line">int key) &#123;</span><br><span class="line">    int low = fromIndex;</span><br><span class="line">    int high = toIndex - 1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        int mid = (low + high) &gt;&gt;&gt; 1;</span><br><span class="line">        int midVal = a[mid];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (midVal &lt; key)</span><br><span class="line">        low = mid + 1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (midVal &gt; key)</span><br><span class="line">        high = mid - 1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">return</span> mid; // key found</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> -(low + 1);  // key not found.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -337,9 +316,7 @@ Python (">
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag">#Python</a>
-          
-            <a href="/tags/Machine-Learning/" rel="tag">#Machine Learning</a>
+            <a href="/tags/JAVA/" rel="tag">#JAVA</a>
           
         </div>
       
@@ -348,16 +325,16 @@ Python (">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/15/UCI-machine-learning-repository/" rel="next" title="UCI-machine-learning-repository">
-                <i class="fa fa-chevron-left"></i> UCI-machine-learning-repository
+              <a href="/2016/02/11/perl-example/" rel="next" title="perl-example">
+                <i class="fa fa-chevron-left"></i> perl-example
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/10/mac-license/" rel="prev" title="mac-license">
-                mac-license <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/05/algorithm-by-java-2/" rel="prev" title="algorithm-Sorting-2">
+                algorithm-Sorting-2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -523,7 +500,7 @@ Python (">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine_learning_package_for_Python__281_29"><span class="nav-number">1.</span> <span class="nav-text">Machine learning package for Python (1)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic_Requirement"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Scikit-learn"><span class="nav-number">1.1.1.</span> <span class="nav-text">Scikit-learn</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><span class="nav-number">1.</span> <span class="nav-text">Binary Search（二分查找）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><span class="nav-number">1.1.</span> <span class="nav-text">Java实现二分查找</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -798,9 +775,9 @@ Python (">
 
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
-      var disqus_identifier = '2016/01/16/machine-learning-notes-1/';
-      var disqus_title = 'machine-learning-notes-1';
-      var disqus_url = 'https://snakecy.github.io/2016/01/16/machine-learning-notes-1/';
+      var disqus_identifier = '2016/03/05/algorithm-by-java-1/';
+      var disqus_title = 'algorithm-Binary-Search-01';
+      var disqus_url = 'https://snakecy.github.io/2016/03/05/algorithm-by-java-1/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

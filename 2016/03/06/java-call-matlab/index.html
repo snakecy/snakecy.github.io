@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,Machine Learning," />
+  <meta name="keywords" content="JAVA,MATLAB," />
 
 
 
@@ -59,34 +59,55 @@
 
 
 
-<meta name="description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta name="description" content="[TOC]
+环境准备+ Eclipse &amp;amp; Matlab
 
-Scilit-learn requires:
+JAVA_HOME
 
-Python (">
+i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
+
+设置后，重启matlab才能有效.
+
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
+
+
+
+ii. Classpath">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine-learning-notes-1">
-<meta property="og:url" content="https://snakecy.github.io/2016/01/16/machine-learning-notes-1/index.html">
+<meta property="og:title" content="java-call-matlab">
+<meta property="og:url" content="https://snakecy.github.io/2016/03/06/java-call-matlab/index.html">
 <meta property="og:site_name" content="Snakecy's Blog">
-<meta property="og:description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta property="og:description" content="[TOC]
+环境准备+ Eclipse &amp;amp; Matlab
 
-Scilit-learn requires:
+JAVA_HOME
 
-Python (">
-<meta property="og:updated_time" content="2016-03-14T11:48:57.000Z">
+i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
+
+设置后，重启matlab才能有效.
+
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
+
+
+
+ii. Classpath">
+<meta property="og:updated_time" content="2016-03-29T18:06:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="machine-learning-notes-1">
-<meta name="twitter:description" content="Machine learning package for Python (1)Basic RequirementIntroduce
-Scikit-learn
-A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.
+<meta name="twitter:title" content="java-call-matlab">
+<meta name="twitter:description" content="[TOC]
+环境准备+ Eclipse &amp;amp; Matlab
 
-Scilit-learn requires:
+JAVA_HOME
 
-Python (">
+i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
+
+设置后，重启matlab才能有效.
+
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
+
+
+
+ii. Classpath">
 
 
 
@@ -104,7 +125,7 @@ Python (">
   };
 </script>
 
-  <title> machine-learning-notes-1 | Snakecy's Blog </title>
+  <title> java-call-matlab | Snakecy's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -231,7 +252,7 @@ Python (">
             
             
               
-                machine-learning-notes-1
+                java-call-matlab
               
             
           </h1>
@@ -243,8 +264,8 @@ Python (">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
-              2016-01-16
+            <time itemprop="dateCreated" datetime="2016-03-06T01:49:37+08:00" content="2016-03-06">
+              2016-03-06
             </time>
           </span>
 
@@ -257,8 +278,8 @@ Python (">
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
                   </a>
                 </span>
 
@@ -273,8 +294,8 @@ Python (">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                <a href="/2016/03/06/java-call-matlab/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/06/java-call-matlab/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -296,33 +317,75 @@ Python (">
       
 
       
-        <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
-<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
-<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
+        <p>[TOC]</p>
+<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
+</code></pre><ol>
+<li><p>JAVA_HOME</p>
 <ul>
-<li><p>Scilit-learn requires:</p>
+<li><p>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)</p>
 <ul>
-<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
+<li><p>设置后，重启matlab才能有效.</p>
 </li>
-<li><p>Numpy (&gt;=1.6.1)</p>
-</li>
-<li><p>Scipy (&gt;=0.9)</p>
-</li>
-</ul>
-<blockquote>
-<p>For OSX installation</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
+<li><p>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</p>
 </li>
 </ul>
 </li>
-<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
+<li><p>ii. Classpath</p>
 <ul>
-<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
+</ul>
 </li>
+<li>iii. Path<ul>
+<li>添加%JAVA_HOME%/bin/javac</li>
 </ul>
 </li>
 </ul>
+</li>
+<li><p>build matlab m-file into a jar</p>
+<ul>
+<li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
+<li>b) 在Deployment Tool中，点击new按钮，选择 Matlab Builder for Java 与 Java Package。新建一个工程名字，如flying.prj 。对该工程，要进入其设置对话框，设置其compiler为“matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar ”。</li>
+<li>c) In the Deployment Tool pane, ensure that the Generate Verbose Output option is selected</li>
+<li>d) 将欲被java调用的.m 文件，（如mydraw.m，其中包括两个参数(x,y)），从Matlab整个界面的左侧工作目录面板，拖拽到Deployment Tool中的新建的类下面的class文件夹下。</li>
+<li>e) 点击build 按钮，则会在matlab的当前目录下，生成以一个与工程同名的(如flying)文件夹。</li>
+</ul>
+</li>
+<li><p>编写java函数，准备调用刚刚生成好的flying.jar中的方法。</p>
+<ul>
+<li>a) 在java工程Test属性的BuildPath中，添加两个jar包：<ul>
+<li>i. matlabroot\toolbox\javabuilder\jar\javabuilder.jar</li>
+<li>ii. TestDirectory\ flying.jar</li>
+</ul>
+</li>
+<li><p>b) 编写函数示例如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package <span class="built_in">test</span>;</span><br><span class="line">import com.mathworks.toolbox.javabuilder.*;</span><br><span class="line">import flrying.*;</span><br><span class="line">public class <span class="built_in">test</span>MatlabClass &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // TODO Auto-generated method stub</span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(<span class="string">"Begin"</span>);</span><br><span class="line">            flyingclass flyingDraw=new flyingclass();</span><br><span class="line">            System.out.println(<span class="string">"Middle"</span>);</span><br><span class="line">            flyingDraw.mydraw(7,2);</span><br><span class="line">            System.out.println(<span class="string">"Here"</span>);</span><br><span class="line">        &#125;catch (Exception e)&#123;System.out.println(e);&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>d) 如果不能正常运行，可以考虑在classpath中，加入flying.jar所在的位置。</p>
+</li>
+</ul>
+</li>
+<li><p>详细</p>
+<ul>
+<li>a) 参见matlab的帮助文件</li>
+<li>b) www.simwe.com/forum/archiver/tid-747229.html</li>
+<li><p>c) 数据类型相关</p>
+<ul>
+<li>i. Java的数值型数组，可以直接作为输入参数传递到.m文件上。<br>如：mydraw(x,y)，可以画x=[1 2 3 4] ,y=[3.3 -5 6 10.2] 这样的线图。Java调用该方法时候，如果传递的参数是整型或者实数型数组，则直接可成功。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">如 java中 :</span><br><span class="line">int[] a=new int[4];</span><br><span class="line">int[] b=new int[4];</span><br><span class="line">// 给 a,b 赋值…//</span><br><span class="line">//调用</span><br><span class="line">flyingclass flyingDraw=new flyingclass();</span><br><span class="line">flyingDraw.mydraw(a,b);</span><br><span class="line">//注意：a,b最好所有有索引的位置都有值，否则如果没有充分赋值曲线可能会最终折回(0,0)点。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Matlab程序(.m文件)的修改</p>
+<ul>
+<li>a) 找到TestDirectory\ flying.jar所在的位置（因为按照上述步骤的话，.m源文件就在该位置附近）。这个位置，从Eclipse的Package Explore可以用看到。</li>
+<li>b) 直接修改欲改动的.m文件</li>
+<li>c) 打开Matlab, 在Command输入 Deploytool, 在新打开的部署面板中，“打开”该m文件所在的工程，如 flying.prj。</li>
+<li>d) 选中相应工程下Class文件夹下的.m文件，点击工具栏的Build按钮。</li>
+<li>e) 则相应源文件被重新编译。如果按照前面步骤添加的jar包，则编译后新生成的jar包自动替换掉原有的jar。又由于这个jar的位置，已经作为BuildPath告诉了java的相应工程，因此Java端不需要做任何调整，即可正确调用到新修改了内容的matlab方法。</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -337,9 +400,9 @@ Python (">
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag">#Python</a>
+            <a href="/tags/JAVA/" rel="tag">#JAVA</a>
           
-            <a href="/tags/Machine-Learning/" rel="tag">#Machine Learning</a>
+            <a href="/tags/MATLAB/" rel="tag">#MATLAB</a>
           
         </div>
       
@@ -348,16 +411,16 @@ Python (">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/15/UCI-machine-learning-repository/" rel="next" title="UCI-machine-learning-repository">
-                <i class="fa fa-chevron-left"></i> UCI-machine-learning-repository
+              <a href="/2016/03/05/algorithm-by-java-2/" rel="next" title="algorithm-Sorting-2">
+                <i class="fa fa-chevron-left"></i> algorithm-Sorting-2
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/10/mac-license/" rel="prev" title="mac-license">
-                mac-license <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/10/machine-learning-scala/" rel="prev" title="machine-learning-scala">
+                machine-learning-scala <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -523,7 +586,7 @@ Python (">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine_learning_package_for_Python__281_29"><span class="nav-number">1.</span> <span class="nav-text">Machine learning package for Python (1)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic_Requirement"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Scikit-learn"><span class="nav-number">1.1.1.</span> <span class="nav-text">Scikit-learn</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u73AF_u5883_u51C6_u5907"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -798,9 +861,9 @@ Python (">
 
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
-      var disqus_identifier = '2016/01/16/machine-learning-notes-1/';
-      var disqus_title = 'machine-learning-notes-1';
-      var disqus_url = 'https://snakecy.github.io/2016/01/16/machine-learning-notes-1/';
+      var disqus_identifier = '2016/03/06/java-call-matlab/';
+      var disqus_title = 'java-call-matlab';
+      var disqus_url = 'https://snakecy.github.io/2016/03/06/java-call-matlab/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
