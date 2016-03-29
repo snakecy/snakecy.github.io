@@ -68,11 +68,7 @@ i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
 
 设置后，重启matlab才能有效.
 
-用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
-
-
-
-ii. Classpath">
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java-call-matlab">
 <meta property="og:url" content="https://snakecy.github.io/2016/03/06/java-call-matlab/index.html">
@@ -86,12 +82,8 @@ i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
 
 设置后，重启matlab才能有效.
 
-用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
-
-
-
-ii. Classpath">
-<meta property="og:updated_time" content="2016-03-29T18:06:50.000Z">
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。">
+<meta property="og:updated_time" content="2016-03-29T18:12:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-call-matlab">
 <meta name="twitter:description" content="[TOC]
@@ -103,11 +95,7 @@ i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)
 
 设置后，重启matlab才能有效.
 
-用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。
-
-
-
-ii. Classpath">
+用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。">
 
 
 
@@ -330,17 +318,15 @@ ii. Classpath">
 </li>
 </ul>
 </li>
-<li><p>ii. Classpath</p>
-<ul>
-<li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
 </ul>
 </li>
-<li>iii. Path<ul>
-<li>添加%JAVA_HOME%/bin/javac</li>
-</ul>
-</li>
-</ul>
-</li>
+</ol>
+<a id="more"></a>
+<pre><code>- ii. Classpath
+    - 添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar
+- iii. Path
+    - 添加%JAVA_HOME%/bin/javac
+</code></pre><ol>
 <li><p>build matlab m-file into a jar</p>
 <ul>
 <li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
@@ -504,7 +490,7 @@ ii. Classpath">
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               
             </div>

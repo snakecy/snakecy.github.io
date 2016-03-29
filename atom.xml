@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://snakecy.github.io/"/>
-  <updated>2016-03-29T18:06:44.000Z</updated>
+  <updated>2016-03-29T18:13:39.000Z</updated>
   <id>https://snakecy.github.io/</id>
   
   <author>
@@ -19,21 +19,21 @@
     <link href="https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/"/>
     <id>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</id>
     <published>2016-03-14T17:56:22.000Z</published>
-    <updated>2016-03-29T18:06:44.000Z</updated>
+    <updated>2016-03-29T18:13:39.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
-<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，而BFGS是数学优化中一种无约束最优化算法。</p>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
 </blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
-<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，而BFGS是数学优化中一种无约束最优化算法。</p>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
 </blockquote>
 ]]>
     </summary>
     
       <category term="JAVA" scheme="https://snakecy.github.io/tags/JAVA/"/>
     
-      <category term="Algorithm" scheme="https://snakecy.github.io/categories/Algorithm/"/>
+      <category term="algorithm" scheme="https://snakecy.github.io/categories/algorithm/"/>
     
   </entry>
   
@@ -291,7 +291,7 @@
     <link href="https://snakecy.github.io/2016/03/06/java-call-matlab/"/>
     <id>https://snakecy.github.io/2016/03/06/java-call-matlab/</id>
     <published>2016-03-05T17:49:37.000Z</published>
-    <updated>2016-03-29T18:06:50.000Z</updated>
+    <updated>2016-03-29T18:12:30.000Z</updated>
     <content type="html"><![CDATA[<p>[TOC]</p>
 <h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
 </code></pre><ol>
@@ -305,17 +305,15 @@
 </li>
 </ul>
 </li>
-<li><p>ii. Classpath</p>
-<ul>
-<li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
 </ul>
 </li>
-<li>iii. Path<ul>
-<li>添加%JAVA_HOME%/bin/javac</li>
-</ul>
-</li>
-</ul>
-</li>
+</ol>
+<a id="more"></a>
+<pre><code>- ii. Classpath
+    - 添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar
+- iii. Path
+    - 添加%JAVA_HOME%/bin/javac
+</code></pre><ol>
 <li><p>build matlab m-file into a jar</p>
 <ul>
 <li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
@@ -364,7 +362,22 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>[TOC]</p>
-<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ E]]>
+<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
+</code></pre><ol>
+<li><p>JAVA_HOME</p>
+<ul>
+<li><p>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)</p>
+<ul>
+<li><p>设置后，重启matlab才能有效.</p>
+</li>
+<li><p>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>]]>
+    
     </summary>
     
       <category term="JAVA" scheme="https://snakecy.github.io/tags/JAVA/"/>
@@ -380,7 +393,7 @@
     <link href="https://snakecy.github.io/2016/03/05/algorithm-by-java-2/"/>
     <id>https://snakecy.github.io/2016/03/05/algorithm-by-java-2/</id>
     <published>2016-03-04T17:40:55.000Z</published>
-    <updated>2016-03-29T18:06:23.000Z</updated>
+    <updated>2016-03-29T18:12:43.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Sorting_Algorithm"><a href="#Sorting_Algorithm" class="headerlink" title="Sorting Algorithm"></a>Sorting Algorithm</h2><h3 id="u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83"><a href="#u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83" class="headerlink" title="排序算法比较"></a>排序算法比较</h3><ul>
 <li>Bubble Sort (冒泡排序)</li>
 <li>Insertion Sort (插入排序)</li>
@@ -400,7 +413,7 @@
     
       <category term="JAVA" scheme="https://snakecy.github.io/tags/JAVA/"/>
     
-      <category term="Algorithm" scheme="https://snakecy.github.io/categories/Algorithm/"/>
+      <category term="algorithm" scheme="https://snakecy.github.io/categories/algorithm/"/>
     
   </entry>
   
@@ -409,7 +422,7 @@
     <link href="https://snakecy.github.io/2016/03/05/algorithm-by-java-1/"/>
     <id>https://snakecy.github.io/2016/03/05/algorithm-by-java-1/</id>
     <published>2016-03-04T17:37:03.000Z</published>
-    <updated>2016-03-29T18:06:29.000Z</updated>
+    <updated>2016-03-29T18:12:37.000Z</updated>
     <content type="html"><![CDATA[<p>[TOC]</p>
 <h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
 <ol>
@@ -433,7 +446,7 @@
     
       <category term="JAVA" scheme="https://snakecy.github.io/tags/JAVA/"/>
     
-      <category term="Algorithm" scheme="https://snakecy.github.io/categories/Algorithm/"/>
+      <category term="algorithm" scheme="https://snakecy.github.io/categories/algorithm/"/>
     
   </entry>
   
