@@ -47,7 +47,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Snakecy's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Snakecy's NOTE" type="application/atom+xml" />
 
 
 
@@ -62,22 +62,28 @@
 <meta name="description" content="Sorting Algorithm排序算法比较
 Bubble Sort (冒泡排序)
 Insertion Sort (插入排序)
-Selection Sort (选择排序)">
+Selection Sort (选择排序)
+
+Java实现排序算法123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555">
 <meta property="og:type" content="article">
-<meta property="og:title" content="algorithm-Sorting-2">
+<meta property="og:title" content="Sorting Algorithm (02)">
 <meta property="og:url" content="https://snakecy.github.io/2016/03/05/algorithm-by-java-2/index.html">
-<meta property="og:site_name" content="Snakecy's Blog">
+<meta property="og:site_name" content="Snakecy's NOTE">
 <meta property="og:description" content="Sorting Algorithm排序算法比较
 Bubble Sort (冒泡排序)
 Insertion Sort (插入排序)
-Selection Sort (选择排序)">
-<meta property="og:updated_time" content="2016-03-30T18:18:13.000Z">
+Selection Sort (选择排序)
+
+Java实现排序算法123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555">
+<meta property="og:updated_time" content="2016-04-03T19:30:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="algorithm-Sorting-2">
+<meta name="twitter:title" content="Sorting Algorithm (02)">
 <meta name="twitter:description" content="Sorting Algorithm排序算法比较
 Bubble Sort (冒泡排序)
 Insertion Sort (插入排序)
-Selection Sort (选择排序)">
+Selection Sort (选择排序)
+
+Java实现排序算法123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555">
 
 
 
@@ -85,17 +91,17 @@ Selection Sort (选择排序)">
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
 </script>
 
-  <title> algorithm-Sorting-2 | Snakecy's Blog </title>
+  <title> Sorting Algorithm (02) | Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -123,7 +129,7 @@ Selection Sort (选择排序)">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -133,7 +139,7 @@ Selection Sort (选择排序)">
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Snakecy's Blog</span>
+      <span class="site-title">Snakecy's NOTE</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -222,7 +228,7 @@ Selection Sort (选择排序)">
             
             
               
-                algorithm-Sorting-2
+                Sorting Algorithm (02)
               
             
           </h1>
@@ -275,6 +281,15 @@ Selection Sort (选择排序)">
 
           
           
+             <span id="/2016/03/05/algorithm-by-java-2/" class="leancloud_visitors" data-flag-title="Sorting Algorithm (02)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
         </div>
       </header>
@@ -292,7 +307,6 @@ Selection Sort (选择排序)">
 <li>Insertion Sort (插入排序)</li>
 <li>Selection Sort (选择排序)</li>
 </ul>
-<a id="more"></a>
 <h3 id="Java_u5B9E_u73B0_u6392_u5E8F_u7B97_u6CD5"><a href="#Java_u5B9E_u73B0_u6392_u5E8F_u7B97_u6CD5" class="headerlink" title="Java实现排序算法"></a>Java实现排序算法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">public class Paixu &#123;</span><br><span class="line">    // 冒泡排序法</span><br><span class="line">    public void Maopao(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (int j = 0; j &lt; a.length - i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">                    int temp = a[j + 1];</span><br><span class="line">                    a[j + 1] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用冒泡排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    // 插入排序法：</span><br><span class="line">    public void Charu(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (int j = 0; j &lt; i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j] &gt; a[i]) &#123;</span><br><span class="line">                    int temp = a[i];</span><br><span class="line">                    <span class="keyword">for</span> (int k = i; k &gt; j; k--) &#123;</span><br><span class="line">                        a[k] = a[k--];</span><br><span class="line">                    &#125;</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用插入排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    // 选择排序法：</span><br><span class="line">    public void Xuanze(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            int position = i;</span><br><span class="line">            <span class="keyword">for</span> (int j = i + 1; j &lt; a.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[position] &gt; a[j]) &#123;</span><br><span class="line">                    int temp = a[position];</span><br><span class="line">                    a[position] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用选择排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    public void Print(int a[]) &#123;</span><br><span class="line">        System.out.println(<span class="string">"从小到大排序结果为："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            System.out.print(a[i] + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int a[] = new int[5];</span><br><span class="line">        Paixu px = new Paixu();</span><br><span class="line">        BufferedReader buf = new BufferedReader(</span><br><span class="line">        new InputStreamReader(System.in));</span><br><span class="line">        System.out.println(<span class="string">"请输入五个整数："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                String s = buf.readLine();</span><br><span class="line">                int j = Integer.parseInt(s);</span><br><span class="line">                a[i] = j;</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                System.out.println(<span class="string">"出错了！必须输入整数,请重新输入!"</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"您输入的整数依次为："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            System.out.print(a[i] + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Maopao(a); // 调用冒泡算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Charu(a); // 调用插入算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Xuanze(a); // 调用选择算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -317,16 +331,16 @@ Selection Sort (选择排序)">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/05/algorithm-by-java-1/" rel="next" title="algorithm-Binary-Search-01">
-                <i class="fa fa-chevron-left"></i> algorithm-Binary-Search-01
+              <a href="/2016/03/05/algorithm-by-java-1/" rel="next" title="Binary Search Algorithm (01)">
+                <i class="fa fa-chevron-left"></i> Binary Search Algorithm (01)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/06/java-call-matlab/" rel="prev" title="java-call-matlab">
-                java-call-matlab <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/06/java-call-matlab/" rel="prev" title="Java call Matlab Method">
+                Java call Matlab Method <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -468,13 +482,23 @@ Selection Sort (选择排序)">
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://snakecy.github.io/topics" target="_blank">Data Topics</a>
+                <a href="http://snakecy.github.io/topics" target="_blank">DataTopics</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.chinabyte.com/" target="_blank">Chinabyte</a>
               </span>
             
           
@@ -511,7 +535,8 @@ Selection Sort (选择排序)">
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -531,6 +556,14 @@ Selection Sort (选择排序)">
     NexT.Pisces
   </a>
 </div>
+
+<span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+</span>
+
+<span id="busuanzi_container_site_uv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+</span>
 
 
 
@@ -768,7 +801,7 @@ Selection Sort (选择排序)">
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
       var disqus_identifier = '2016/03/05/algorithm-by-java-2/';
-      var disqus_title = 'algorithm-Sorting-2';
+      var disqus_title = 'Sorting Algorithm (02)';
       var disqus_url = 'https://snakecy.github.io/2016/03/05/algorithm-by-java-2/';
 
       function run_disqus_script(disqus_script){
@@ -816,6 +849,99 @@ Selection Sort (选择排序)">
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>

@@ -47,7 +47,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Snakecy's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Snakecy's NOTE" type="application/atom+xml" />
 
 
 
@@ -61,12 +61,12 @@
 
 <meta name="description" content="The unexamined life is not worth living. --Socrates">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Snakecy's Blog">
+<meta property="og:title" content="Snakecy's NOTE">
 <meta property="og:url" content="https://snakecy.github.io/index.html">
-<meta property="og:site_name" content="Snakecy's Blog">
+<meta property="og:site_name" content="Snakecy's NOTE">
 <meta property="og:description" content="The unexamined life is not worth living. --Socrates">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snakecy's Blog">
+<meta name="twitter:title" content="Snakecy's NOTE">
 <meta name="twitter:description" content="The unexamined life is not worth living. --Socrates">
 
 
@@ -75,17 +75,17 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
 </script>
 
-  <title> Snakecy's Blog </title>
+  <title> Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -113,7 +113,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container one-collumn sidebar-position-right 
    page-home 
  ">
     <div class="headband"></div>
@@ -125,7 +125,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Snakecy's Blog</span>
+      <span class="site-title">Snakecy's NOTE</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -216,7 +216,7 @@
               
                 
                 <a class="post-title-link" href="/2016/03/15/algorithm-L-BFGS/" itemprop="url">
-                  algorithm-L-BFGS
+                  L-BFGS Algorithm (01)
                 </a>
               
             
@@ -270,6 +270,15 @@
 
           
           
+             <span id="/2016/03/15/algorithm-L-BFGS/" class="leancloud_visitors" data-flag-title="L-BFGS Algorithm (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
         </div>
       </header>
@@ -284,1133 +293,14 @@
       
         
           
-            <blockquote>
+            <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
+<blockquote>
 <p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/10/ipinyou-database/" itemprop="url">
-                  ipinyou-database
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T20:35:08+08:00" content="2016-03-10">
-              2016-03-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/10/ipinyou-database/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/ipinyou-database/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
-<hr>
-<p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
-<hr>
+<h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
+<p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
 </blockquote>
-<ul>
-<li><p>RankSorce = CTR * BidPrice</p>
-<ul>
-<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html">Advertising Calculating</a></li>
-</ul>
-</li>
-<li><p>Aim</p>
-<ul>
-<li>Low-latency and scalale predictions as a service</li>
-<li>Integrated approach leads to fresher, better predictions</li>
-<li>Easy translation to production predictions</li>
-<li>Eases Operational pain</li>
-</ul>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/10/ipinyou-database/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/10/machine-learning-scala/" itemprop="url">
-                  machine-learning-scala
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T00:26:44+08:00" content="2016-03-10">
-              2016-03-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/10/machine-learning-scala/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/machine-learning-scala/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<hr>
-<p>Good Example: REST API &amp; Velox<br><a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final">PPT</a><br><a href="http://arxiv.org/pdf/1409.3809v2.pdf">Papre</a><br><a href="https://github.com/amplab/velox-modelserver">Github</a></p>
-<hr>
-</blockquote>
-<h3 id="Construct_project_2C_with_SBT__26amp_3B_dependencies"><a href="#Construct_project_2C_with_SBT__26amp_3B_dependencies" class="headerlink" title="Construct project, with SBT &amp; dependencies"></a>Construct project, with SBT &amp; dependencies</h3><blockquote>
-<p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/10/machine-learning-scala/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/06/java-call-matlab/" itemprop="url">
-                  java-call-matlab
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-06T01:49:37+08:00" content="2016-03-06">
-              2016-03-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/06/java-call-matlab/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/06/java-call-matlab/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>[TOC]</p>
-<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
-</code></pre><ol>
-<li><p>JAVA_HOME</p>
-<ul>
-<li><p>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)</p>
-<ul>
-<li><p>设置后，重启matlab才能有效.</p>
-</li>
-<li><p>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/06/java-call-matlab/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/05/algorithm-by-java-2/" itemprop="url">
-                  algorithm-Sorting-2
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T01:40:55+08:00" content="2016-03-05">
-              2016-03-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/05/algorithm-by-java-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/algorithm-by-java-2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Sorting_Algorithm"><a href="#Sorting_Algorithm" class="headerlink" title="Sorting Algorithm"></a>Sorting Algorithm</h2><h3 id="u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83"><a href="#u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83" class="headerlink" title="排序算法比较"></a>排序算法比较</h3><ul>
-<li>Bubble Sort (冒泡排序)</li>
-<li>Insertion Sort (插入排序)</li>
-<li>Selection Sort (选择排序)</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/05/algorithm-by-java-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/05/algorithm-by-java-1/" itemprop="url">
-                  algorithm-Binary-Search-01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T01:37:03+08:00" content="2016-03-05">
-              2016-03-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/05/algorithm-by-java-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/algorithm-by-java-1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <!-- [TOC] -->
-<h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
-<ol>
-<li>键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。</li>
-<li>键等于中间位置的元素，所以元素找到。</li>
-<li>键大于中间位置的元素，则匹配元素必在右边（如果有的话），于是对右边的区域应用二分搜索。另外，当集合为空，则代表找不到。</li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/05/algorithm-by-java-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/11/perl-example/" itemprop="url">
-                  perl-example
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-11T23:12:07+08:00" content="2016-02-11">
-              2016-02-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/11/perl-example/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/11/perl-example/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="install_tutorial"><a href="#install_tutorial" class="headerlink" title="install tutorial"></a>install tutorial</h3><blockquote>
-<p>Perl install</p>
-<p>sudo apt-get update</p>
-<p>sudo apt-get upgrade</p>
-<p>sudo apt-get install -y perl</p>
-<p>perl -version</p>
-</blockquote>
-<ul>
-<li>my $secstr = join(“\t\t”,@items2[1…$#items2]);</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/11/perl-example/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/10/about-libsvm/" itemprop="url">
-                  about-libsvm
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T01:13:22+08:00" content="2016-02-10">
-              2016-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/10/about-libsvm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/about-libsvm/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>About the applications using libsvm tools on different platform.</p>
-<p><a href="http://jacoxu.com/?p=118">libsvm tutorial</a></p>
-<p>which can be used on the following platform, such as Java, matlab(64 bit), python, svm-toy.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/10/about-libsvm/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/10/debug-nativecodeloader/" itemprop="url">
-                  Resolve the debug problem of WARN NativeCodeLoader
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T00:58:25+08:00" content="2016-02-10">
-              2016-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/10/debug-nativecodeloader/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/10/mac-license/" itemprop="url">
-                  mac-license
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T00:54:13+08:00" content="2016-02-10">
-              2016-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/License/" itemprop="url" rel="index">
-                    <span itemprop="name">License</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/10/mac-license/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/mac-license/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</p>
-<p>﻿- Open the terminal, then type in “ sudo xcodebuild -license”</p>
-<ul>
-<li><p>Type in “ enter”</p>
-</li>
-<li><p>Type in “space” for more to read, or “q” for quit</p>
-</li>
-<li><p>Finally, type in “agree” and enter.</p>
-</li>
-</ul>
-
+<h4 id="Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><a href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29" class="headerlink" title="Newton Algorithm (牛顿算法)"></a>Newton Algorithm (牛顿算法)</h4><h4 id="BFGS_Algorithm"><a href="#BFGS_Algorithm" class="headerlink" title="BFGS Algorithm"></a>BFGS Algorithm</h4>
           
         
       
@@ -1438,7 +328,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1545,13 +435,23 @@
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://snakecy.github.io/topics" target="_blank">Data Topics</a>
+                <a href="http://snakecy.github.io/topics" target="_blank">DataTopics</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.chinabyte.com/" target="_blank">Chinabyte</a>
               </span>
             
           
@@ -1571,7 +471,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -1591,6 +492,14 @@
     NexT.Pisces
   </a>
 </div>
+
+<span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+</span>
+
+<span id="busuanzi_container_site_uv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+</span>
 
 
 
@@ -1713,6 +622,99 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>

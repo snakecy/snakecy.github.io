@@ -47,7 +47,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Snakecy's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Snakecy's NOTE" type="application/atom+xml" />
 
 
 
@@ -63,24 +63,24 @@
 
 键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
 键等于中间位置的元素，所以元素找到。
-键大于中间位置的元素，则匹配元素必在右边（如果有的话）">
+键大于中间位置的元素，则匹配元素必在右边（如果有的话），">
 <meta property="og:type" content="article">
-<meta property="og:title" content="algorithm-Binary-Search-01">
+<meta property="og:title" content="Binary Search Algorithm (01)">
 <meta property="og:url" content="https://snakecy.github.io/2016/03/05/algorithm-by-java-1/index.html">
-<meta property="og:site_name" content="Snakecy's Blog">
+<meta property="og:site_name" content="Snakecy's NOTE">
 <meta property="og:description" content="Binary Search（二分查找）Java实现二分查找在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：
 
 键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
 键等于中间位置的元素，所以元素找到。
-键大于中间位置的元素，则匹配元素必在右边（如果有的话）">
-<meta property="og:updated_time" content="2016-03-30T18:18:31.000Z">
+键大于中间位置的元素，则匹配元素必在右边（如果有的话），">
+<meta property="og:updated_time" content="2016-04-03T19:29:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="algorithm-Binary-Search-01">
+<meta name="twitter:title" content="Binary Search Algorithm (01)">
 <meta name="twitter:description" content="Binary Search（二分查找）Java实现二分查找在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：
 
 键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。
 键等于中间位置的元素，所以元素找到。
-键大于中间位置的元素，则匹配元素必在右边（如果有的话）">
+键大于中间位置的元素，则匹配元素必在右边（如果有的话），">
 
 
 
@@ -88,17 +88,17 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
 </script>
 
-  <title> algorithm-Binary-Search-01 | Snakecy's Blog </title>
+  <title> Binary Search Algorithm (01) | Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -126,7 +126,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -136,7 +136,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Snakecy's Blog</span>
+      <span class="site-title">Snakecy's NOTE</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -225,7 +225,7 @@
             
             
               
-                algorithm-Binary-Search-01
+                Binary Search Algorithm (01)
               
             
           </h1>
@@ -278,6 +278,15 @@
 
           
           
+             <span id="/2016/03/05/algorithm-by-java-1/" class="leancloud_visitors" data-flag-title="Binary Search Algorithm (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
         </div>
       </header>
@@ -290,14 +299,12 @@
       
 
       
-        <!-- [TOC] -->
-<h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
+        <h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
 <ol>
 <li>键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。</li>
 <li>键等于中间位置的元素，所以元素找到。</li>
 <li>键大于中间位置的元素，则匹配元素必在右边（如果有的话），于是对右边的区域应用二分搜索。另外，当集合为空，则代表找不到。</li>
 </ol>
-<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class BinarySearch &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; a = new ArrayList&lt;Integer&gt;();</span><br><span class="line">        addIntegerInSequence(a,1,10);</span><br><span class="line">        <span class="built_in">print</span>(a);</span><br><span class="line">        int pos = binarySearch(a,10);</span><br><span class="line">        <span class="keyword">if</span> ( pos != -1 )</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element found: "</span> + pos);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element not found"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 二分查找法</span><br><span class="line">    * @param a</span><br><span class="line">    * @param value 待查找元素</span><br><span class="line">    * @<span class="built_in">return</span></span><br><span class="line">    */</span><br><span class="line">    public static int binarySearch(ArrayList&lt;Integer&gt; a, int value)</span><br><span class="line">    &#123;</span><br><span class="line">        int size = a.size();</span><br><span class="line">        int low = 0 , high = size - 1;</span><br><span class="line">        int mid;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low + high) / 2;</span><br><span class="line">            <span class="keyword">if</span> ( a.get(mid) &lt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                low = low + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ( a.get(mid) &gt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                high = high - 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 填充顺序元素到数组</span><br><span class="line">    * @param a</span><br><span class="line">    * @param begin 开始元素</span><br><span class="line">    * @param size 大小</span><br><span class="line">    */</span><br><span class="line">    public static void addIntegerInSequence(ArrayList&lt;Integer&gt; a, int begin, int size)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = begin; i &lt; begin + size; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 打印数组</span><br><span class="line">    * @param a</span><br><span class="line">    */</span><br><span class="line">    public static void <span class="built_in">print</span>(ArrayList&lt;Integer&gt; a)</span><br><span class="line">    &#123;</span><br><span class="line">        Iterator&lt;Integer&gt; i = a.iterator();</span><br><span class="line">        <span class="keyword">while</span> (i.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(i.next() + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//JAVA 库中的二分查找使用非递归方式实现，返回结果与前面写的有所不同：找不到时返回的是负数，但不一定是-1</span><br><span class="line">private static int binarySearch0(int[] a, int fromIndex, int toIndex,</span><br><span class="line">int key) &#123;</span><br><span class="line">    int low = fromIndex;</span><br><span class="line">    int high = toIndex - 1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        int mid = (low + high) &gt;&gt;&gt; 1;</span><br><span class="line">        int midVal = a[mid];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (midVal &lt; key)</span><br><span class="line">        low = mid + 1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (midVal &gt; key)</span><br><span class="line">        high = mid - 1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">return</span> mid; // key found</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> -(low + 1);  // key not found.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -322,16 +329,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/11/perl-example/" rel="next" title="perl-example">
-                <i class="fa fa-chevron-left"></i> perl-example
+              <a href="/2016/02/11/perl-example/" rel="next" title="Perl Demo">
+                <i class="fa fa-chevron-left"></i> Perl Demo
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/05/algorithm-by-java-2/" rel="prev" title="algorithm-Sorting-2">
-                algorithm-Sorting-2 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/05/algorithm-by-java-2/" rel="prev" title="Sorting Algorithm (02)">
+                Sorting Algorithm (02) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -473,13 +480,23 @@
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://snakecy.github.io/topics" target="_blank">Data Topics</a>
+                <a href="http://snakecy.github.io/topics" target="_blank">DataTopics</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.chinabyte.com/" target="_blank">Chinabyte</a>
               </span>
             
           
@@ -516,7 +533,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -536,6 +554,14 @@
     NexT.Pisces
   </a>
 </div>
+
+<span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+</span>
+
+<span id="busuanzi_container_site_uv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+</span>
 
 
 
@@ -773,7 +799,7 @@
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
       var disqus_identifier = '2016/03/05/algorithm-by-java-1/';
-      var disqus_title = 'algorithm-Binary-Search-01';
+      var disqus_title = 'Binary Search Algorithm (01)';
       var disqus_url = 'https://snakecy.github.io/2016/03/05/algorithm-by-java-1/';
 
       function run_disqus_script(disqus_script){
@@ -821,6 +847,99 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>

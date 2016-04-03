@@ -47,7 +47,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Snakecy's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Snakecy's NOTE" type="application/atom+xml" />
 
 
 
@@ -61,12 +61,12 @@
 
 <meta name="description" content="The unexamined life is not worth living. --Socrates">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Snakecy's Blog">
+<meta property="og:title" content="Snakecy's NOTE">
 <meta property="og:url" content="https://snakecy.github.io/page/2/index.html">
-<meta property="og:site_name" content="Snakecy's Blog">
+<meta property="og:site_name" content="Snakecy's NOTE">
 <meta property="og:description" content="The unexamined life is not worth living. --Socrates">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snakecy's Blog">
+<meta name="twitter:title" content="Snakecy's NOTE">
 <meta name="twitter:description" content="The unexamined life is not worth living. --Socrates">
 
 
@@ -75,17 +75,17 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
 </script>
 
-  <title> Snakecy's Blog </title>
+  <title> Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -113,7 +113,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container one-collumn sidebar-position-right 
    page-home 
  ">
     <div class="headband"></div>
@@ -125,7 +125,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Snakecy's Blog</span>
+      <span class="site-title">Snakecy's NOTE</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -215,8 +215,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/16/machine-learning-notes-1/" itemprop="url">
-                  machine-learning-notes-1
+                <a class="post-title-link" href="/2016/03/10/ipinyou-database/" itemprop="url">
+                  Ipinyou DataSet Description
                 </a>
               
             
@@ -229,8 +229,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
-              2016-01-16
+            <time itemprop="dateCreated" datetime="2016-03-10T20:35:08+08:00" content="2016-03-10">
+              2016-03-10
             </time>
           </span>
 
@@ -259,8 +259,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                <a href="/2016/03/10/ipinyou-database/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/ipinyou-database/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -269,6 +269,15 @@
           
 
           
+          
+             <span id="/2016/03/10/ipinyou-database/" class="leancloud_visitors" data-flag-title="Ipinyou DataSet Description">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
           
 
         </div>
@@ -284,1210 +293,89 @@
       
         
           
-            <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
-<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
-<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
-<ul>
-<li><p>Scilit-learn requires:</p>
-<ul>
-<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
-</li>
-<li><p>Numpy (&gt;=1.6.1)</p>
-</li>
-<li><p>Scipy (&gt;=0.9)</p>
-</li>
-</ul>
-<blockquote>
-<p>For OSX installation</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
-<ul>
-<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/15/UCI-machine-learning-repository/" itemprop="url">
-                  UCI-machine-learning-repository
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-15T16:46:41+08:00" content="2016-01-15">
-              2016-01-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/15/UCI-machine-learning-repository/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/15/UCI-machine-learning-repository/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Datasets_Examples_for_machine_learning"><a href="#Datasets_Examples_for_machine_learning" class="headerlink" title="Datasets Examples for machine learning"></a>Datasets Examples for machine learning</h2><p>Here are the data sets from <a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="external">UCI Machine Learning Repository</a> once I sorted and practiced. Some of the abstracts I summarized updated to my github <a href="https://github.com/snakecy/CUIMachineLearningRepositry" target="_blank" rel="external">CUIMachineLearningRepository</a>.</p>
-<p>Example:</p>
-<h3 id="Image_Segmentation"><a href="#Image_Segmentation" class="headerlink" title="Image Segmentation"></a>Image Segmentation</h3><ol>
-<li>Data set website<br><a href="http://archive.ics.uci.edu/ml/datasets/Image+Segmentation" target="_blank" rel="external">http://archive.ics.uci.edu/ml/datasets/Image+Segmentation</a></li>
-<li>Datasets describe<br>【1】The data used in our experiments were collected by Vision Group, University of Massachusetts.【2】We used to classify the image.【3】The instances were drawn randomly from a database of 7 outdoor images. The images were hand segmented to create a classification for every pixel. Each instance is a 3x3 region. Number of Attributes has 19 continuous attributes, each attribute can describes as region-centroid-col、region-centroid-row、region-pixel-count、short-line-density-5、short-line-density-2、 vedge-mean、vegde-sd、hedge-mean、hedge-sd、intensity-mean、rawred-mean、rawblue-mean、rawgreen-mean、exred-mean、exblue-mean、exgreen-mean、value-mean、saturatoin-mean、hue-mean.【4】The database has 2310 samples, respectively belong to training with 210 samples and testing with 2100 samples. The categories of network system include seven categories, as shown in Table 1.</li>
-</ol>
-<h5 id="Table_1_Category_Distribution_of_Network_System"><a href="#Table_1_Category_Distribution_of_Network_System" class="headerlink" title="Table 1 Category Distribution of Network System"></a>Table 1 Category Distribution of Network System</h5><table>
-<thead>
-<tr>
-<th style="text-align:left">Invasion</th>
-<th style="text-align:left">Training</th>
-<th style="text-align:left">Testing</th>
-<th style="text-align:left">Total Number of Samples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Brickface</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">sky</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Foliage</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Cement</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">window</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Path</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">grass</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Total number of samples in total</td>
-<td style="text-align:left">210</td>
-<td style="text-align:left">2100</td>
-<td style="text-align:left">2310</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/13/nosql-database/" itemprop="url">
-                  Install NoSQL Database
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-13T02:25:57+08:00" content="2016-01-13">
-              2016-01-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/13/nosql-database/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/nosql-database/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>NoSQL database for a key-value DB Redis</p>
-<ul>
-<li><p>Quick Start <a href="http://redis.io/topics/quickstart">Redis</a></p>
-</li>
-<li><p>use the key value DB (redis)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Or download the redis from website</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/13/nosql-database/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/13/json-eclipse/" itemprop="url">
-                  Json parsered by Java
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-13T01:26:05+08:00" content="2016-01-13">
-              2016-01-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/13/json-eclipse/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/json-eclipse/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
-<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
-<ul>
-<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp">Java-org-json</a></p>
-</li>
-<li><p>Json-lib</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/13/json-eclipse/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/12/php-r-sparkr/" itemprop="url">
-                  API configure with Php-r-sparkr
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-12T17:25:06+08:00" content="2016-01-12">
-              2016-01-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/12/php-r-sparkr/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/php-r-sparkr/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
+            <h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
 <hr>
-<p>PHP configure</p>
+<p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
 <hr>
 </blockquote>
 <ul>
-<li><p>How to install the nignx on Ubuntu 10.04?<br>Append the appropriate stanza to /etc/apt/sources.list. The Pgp page expalins the signing of th nignx.org released packaging.</p>
+<li><p>RankSorce = CTR * BidPrice</p>
 <ul>
-<li><p>shell script</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://nginx.org/packages/ubuntu/ lucid nginx</span><br><span class="line">deb-src http://nginx.org/packages/ubuntu/ lucid nginx</span><br></pre></td></tr></table></figure>
+<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html" target="_blank" rel="external">Advertising Calculating</a></li>
+</ul>
 </li>
-<li><p>then do</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="_">-s</span></span><br><span class="line">nginx=stable <span class="comment"># use nginx=development for latest development version</span></span><br><span class="line">add-apt-repository ppa:nginx/<span class="variable">$nginx</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Then finished. Ref. at website<br>(<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a>)</p>
-</li>
+<li><p>Aim</p>
+<ul>
+<li>Low-latency and scalale predictions as a service</li>
+<li>Integrated approach leads to fresher, better predictions</li>
+<li>Easy translation to production predictions</li>
+<li>Eases Operational pain</li>
 </ul>
 </li>
 </ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/12/php-r-sparkr/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/12/hdfs-spark-2/" itemprop="url">
-                  HDFS configure with Zookeeper (02)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-12T15:15:04+08:00" content="2016-01-12">
-              2016-01-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/12/hdfs-spark-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/hdfs-spark-2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Construct the platform for Big Data project</p>
-<h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Configure Zookeeper"></a>Configure Zookeeper</h2><ul>
-<li>on each server, configure the java environment<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf zookeeper-3.4.6.tar.gz</span><br><span class="line">$ mv zookeeper-3.4.6 zookeeper</span><br><span class="line">$ <span class="built_in">cd</span> zookeeper/conf</span><br><span class="line">$ cp zoo_sample.cfg zoo.cfg</span><br><span class="line">$ vi zoo.cfg</span><br></pre></td></tr></table></figure>
+<h4 id="Experiment_using_R"><a href="#Experiment_using_R" class="headerlink" title="Experiment using R"></a>Experiment using R</h4><ul>
+<li><p>First //</p>
+<ul>
+<li><a href="https://github.com/wnzhang/make-ipinyou-data" target="_blank" rel="external">make-ipinyou-data</a></li>
+<li>Paper: Real-Time Bidding Benchmarking with iPinYou Dataset</li>
+</ul>
+</li>
+<li><p>Second</p>
+<ul>
+<li><a href="https://github.com/wnzhang/rtbcontrol" target="_blank" rel="external">rtbcontrol</a></li>
+<li>Paper: Experiment Code for RTB Feedback Control Techniques</li>
+</ul>
+</li>
+<li><p>Third</p>
+<ul>
+<li><a href="https://github.com/wnzhang/rtbarbitrage" target="_blank" rel="external">rtbarbitrage</a></li>
+<li>Paper: Statistical Arbitrage Mining for Display Advertising</li>
+</ul>
+</li>
+<li><p>Fourth //</p>
+<ul>
+<li><a href="https://github.com/wnzhang/optimal-rtb" target="_blank" rel="external">optimal-rtb</a></li>
+<li>Paper: Optimal Real-Time Bidding for Display Advertising</li>
+</ul>
+</li>
+<li><p>Fifth</p>
+<ul>
+<li><a href="https://github.com/wush978/KDD2015wpp" target="_blank" rel="external">KDD2015wpp</a></li>
+<li>Predicting Winning Price in Real Time Bidding with Censored Data</li>
+</ul>
 </li>
 </ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/12/hdfs-spark-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/12/hdfs-spark-1/" itemprop="url">
-                  HDFS configure with Zookeeper (01)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-12T15:14:59+08:00" content="2016-01-12">
-              2016-01-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/12/hdfs-spark-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/hdfs-spark-1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Construct the platform for Big Data project</p>
-<h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/12/hdfs-spark-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/12/tools-summary/" itemprop="url">
-                  tools-summary
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-12T02:48:57+08:00" content="2016-01-12">
-              2016-01-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/12/tools-summary/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/tools-summary/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Summary the tools used in project, essential in big data direction </p>
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
-<li>Database: MySQL, NOSQL(redis), Hive, HBase</li>
-<li>Platform: Windows8, Ubuntu, Debian</li>
-<li>VM: VMware, Cywin, VirtualBox</li>
-<li>Language: JAVA, R, Python, go, Ruby, Matlab</li>
-<li>Shell: bash, perl</li>
-<li>Bigdata Sys: SPARK, Hadoop, XAMPP</li>
-<li>Algorithm: ML &amp; NL &amp; DM (DL)</li>
-<li>Transfer: winSCP</li>
-<li>Notes : WizNote , evernote</li>
-<li>Office : OpenOffice, WPS</li>
-<li>PHP, html5, <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>Build evn: Maven, sbt</li>
-<li>MLlib: liblinear-java, libsvm</li>
-<li>SSH manager : putty manager, putty</li>
-<li>Blog tools: WordPress, hexo</li>
-<li>Redis <a href="https://redislabs.com/redis-java" target="_blank" rel="external">java</a></li>
+<h3 id="Winning_price_steps"><a href="#Winning_price_steps" class="headerlink" title="Winning price steps"></a>Winning price steps</h3><ul>
+<li>What features should be taken in</li>
+<li>Considering of the Winning Rate</li>
+<li>Combine Win Rate &amp; Winning Price<ul>
+<li><a href="http://blog.csdn.net/star_liux/article/details/39666737" target="_blank" rel="external">logistic factor solution</a></li>
+<li>Paper reference<ul>
+<li><a href="http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data" target="_blank" rel="external">http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data</a></li>
+<li>Programmatic buying bidding strategies with Win Rate and Winning Price Estimation in real time mobile advertising</li>
 </ul>
+</li>
+</ul>
+</li>
+<li>Join bid_req, bid_resp and win_notice for Winning Rate/Winning Price Prediction</li>
+</ul>
+<ul>
+<li>Testing Winning Rate running by python (examples with ipinyou)<ul>
+<li>Example of CTR Using Python<ul>
+<li><a href="http://www.dataguru.cn/thread-460417-1-1.html" target="_blank" rel="external">http://www.dataguru.cn/thread-460417-1-1.html</a>  </li>
+</ul>
+</li>
+<li>Example of CTR using R<ul>
+<li><a href="http://f.dataguru.cn/thread-329637-1-1.html" target="_blank" rel="external">http://f.dataguru.cn/thread-329637-1-1.html</a>  </li>
+<li><a href="http://blog.csdn.net/yucan1001/article/details/23228053" target="_blank" rel="external">http://blog.csdn.net/yucan1001/article/details/23228053</a>  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CRT_DATA.txt</span></span><br><span class="line">0 20 0.294181968932 0.508158622733 0.182334278695 0.629420618229</span><br><span class="line">0 68 0.1867187241 0.606174671096 0.0748709302071 0.806387550943</span><br><span class="line">0 18 0.62087371082 0.497772456954 0.0321750684638 0.629224616618</span><br><span class="line">1 90 0.521405561387 0.476048142961 0.134707792901 0.400062294097</span><br><span class="line">0 75 0.0126899618353 0.507688693623 0.377923880332 0.998697036848</span><br><span class="line">0 8 0.308646073229 0.930652495254 0.755735916926 0.0519441699996</span><br><span class="line">0 64 0.444668888126 0.768001428418 0.501163712702 0.418327345087</span><br><span class="line">0 79 0.842532595853 0.817052919537 0.0709486928253 0.552712019723</span><br><span class="line">1 32 0.410650495262 0.164977576847 0.491438436479 0.886456782492</span><br><span class="line">// first col is whether click, second is the number of impressions</span><br><span class="line"></span><br><span class="line">ctr_data &lt;- read.csv(<span class="string">'CTR_DATA.txt'</span>,header = F, sep = <span class="string">" "</span>)</span><br><span class="line">head(ctr_data)</span><br><span class="line">attach(ctr_data)</span><br><span class="line">ctr_logr &lt;- glm(cbind(V1,V2)~V3+V4+V5+V6,family=binomial(link=<span class="string">"logit"</span>))</span><br><span class="line">record &lt;- data.frame(V3=0.294181968932,V4=0.508158622733,V5=0.182334278695,V6=0.629420618229)</span><br><span class="line">d &lt;- predict(ctr_logr,newdata = record,<span class="built_in">type</span>=<span class="string">"response"</span>)</span><br></pre></td></tr></table></figure>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/11/python-spyder/" itemprop="url">
-                  Install Python GUI spyder on Mac
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-11T00:22:08+08:00" content="2016-01-11">
-              2016-01-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/11/python-spyder/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/11/python-spyder/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>The spyder tool of Python GUI works on Max OS</p>
-<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/11/python-spyder/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/09/github-hexo/" itemprop="url">
-                  Build Blog with Github & Hexo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-09T00:00:00+08:00" content="2016-01-09">
-              2016-01-09
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web-building/" itemprop="url" rel="index">
-                    <span itemprop="name">web-building</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/09/github-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/09/github-hexo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Beginning the blog journey of Hexo &amp; Gituhub</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/09/github-hexo/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
         
       
     </div>
@@ -1514,7 +402,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1621,13 +509,23 @@
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://snakecy.github.io/topics" target="_blank">Data Topics</a>
+                <a href="http://snakecy.github.io/topics" target="_blank">DataTopics</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.chinabyte.com/" target="_blank">Chinabyte</a>
               </span>
             
           
@@ -1647,7 +545,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -1667,6 +566,14 @@
     NexT.Pisces
   </a>
 </div>
+
+<span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+</span>
+
+<span id="busuanzi_container_site_uv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+</span>
 
 
 
@@ -1789,6 +696,99 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>

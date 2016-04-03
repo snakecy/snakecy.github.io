@@ -47,7 +47,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Snakecy's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Snakecy's NOTE" type="application/atom+xml" />
 
 
 
@@ -59,16 +59,31 @@
 
 
 
-<meta name="description" content="L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。">
+<meta name="description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
+
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+
+2. Optimization algorithm - BFGS
+BGFS是一种准牛顿算法, 所谓的”准”是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="algorithm-L-BFGS">
+<meta property="og:title" content="L-BFGS Algorithm (01)">
 <meta property="og:url" content="https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/index.html">
-<meta property="og:site_name" content="Snakecy's Blog">
-<meta property="og:description" content="L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。">
-<meta property="og:updated_time" content="2016-03-30T18:18:07.000Z">
+<meta property="og:site_name" content="Snakecy's NOTE">
+<meta property="og:description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
+
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+
+2. Optimization algorithm - BFGS
+BGFS是一种准牛顿算法, 所谓的”准”是">
+<meta property="og:updated_time" content="2016-04-03T19:28:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="algorithm-L-BFGS">
-<meta name="twitter:description" content="L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。">
+<meta name="twitter:title" content="L-BFGS Algorithm (01)">
+<meta name="twitter:description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
+
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+
+2. Optimization algorithm - BFGS
+BGFS是一种准牛顿算法, 所谓的”准”是">
 
 
 
@@ -76,17 +91,17 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
 </script>
 
-  <title> algorithm-L-BFGS | Snakecy's Blog </title>
+  <title> L-BFGS Algorithm (01) | Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -114,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -124,7 +139,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Snakecy's Blog</span>
+      <span class="site-title">Snakecy's NOTE</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -213,7 +228,7 @@
             
             
               
-                algorithm-L-BFGS
+                L-BFGS Algorithm (01)
               
             
           </h1>
@@ -266,6 +281,15 @@
 
           
           
+             <span id="/2016/03/15/algorithm-L-BFGS/" class="leancloud_visitors" data-flag-title="L-BFGS Algorithm (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
         </div>
       </header>
@@ -278,10 +302,14 @@
       
 
       
-        <blockquote>
+        <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
+<blockquote>
 <p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
 </blockquote>
-
+<h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
+<p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
+</blockquote>
+<h4 id="Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><a href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29" class="headerlink" title="Newton Algorithm (牛顿算法)"></a>Newton Algorithm (牛顿算法)</h4><h4 id="BFGS_Algorithm"><a href="#BFGS_Algorithm" class="headerlink" title="BFGS Algorithm"></a>BFGS Algorithm</h4>
       
     </div>
 
@@ -304,8 +332,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/10/ipinyou-database/" rel="next" title="ipinyou-database">
-                <i class="fa fa-chevron-left"></i> ipinyou-database
+              <a href="/2016/03/10/ipinyou-database/" rel="next" title="Ipinyou DataSet Description">
+                <i class="fa fa-chevron-left"></i> Ipinyou DataSet Description
               </a>
             
           </div>
@@ -451,13 +479,23 @@
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://snakecy.github.io/topics" target="_blank">Data Topics</a>
+                <a href="http://snakecy.github.io/topics" target="_blank">DataTopics</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.chinabyte.com/" target="_blank">Chinabyte</a>
               </span>
             
           
@@ -475,7 +513,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_Introduction_of_L-BFGS"><span class="nav-number">1.</span> <span class="nav-text">1. Introduction of  L-BFGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_Optimization_algorithm_-_BFGS"><span class="nav-number">2.</span> <span class="nav-text">2. Optimization algorithm - BFGS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><span class="nav-number">2.1.</span> <span class="nav-text">Newton Algorithm (牛顿算法)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFGS_Algorithm"><span class="nav-number">2.2.</span> <span class="nav-text">BFGS Algorithm</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -494,7 +532,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
@@ -514,6 +553,14 @@
     NexT.Pisces
   </a>
 </div>
+
+<span id="busuanzi_container_site_pv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+</span>
+
+<span id="busuanzi_container_site_uv">
+  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+</span>
 
 
 
@@ -751,7 +798,7 @@
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
       var disqus_identifier = '2016/03/15/algorithm-L-BFGS/';
-      var disqus_title = 'algorithm-L-BFGS';
+      var disqus_title = 'L-BFGS Algorithm (01)';
       var disqus_url = 'https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/';
 
       function run_disqus_script(disqus_script){
@@ -799,6 +846,99 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>
