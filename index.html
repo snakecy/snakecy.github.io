@@ -178,9 +178,39 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'NZsCXiZ-H9Q1sLYQH3VP','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -193,6 +223,165 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/18/mac-apache-server/" itemprop="url">
+                  Apache Server Configure on Mac
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-18T18:15:59+08:00" content="2016-03-18">
+              2016-03-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/18/mac-apache-server/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/18/mac-apache-server/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/18/mac-apache-server/" class="leancloud_visitors" data-flag-title="Apache Server Configure on Mac">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
+<li>Start up Apache on Mac<ul>
+<li>sudo apachectl (-k) start</li>
+<li>//sudo apachectl (-k) restart</li>
+<li>sudo apachectl (-k) stop</li>
+</ul>
+</li>
+<li>Check the apache version<ul>
+<li>sudo apachectl -v</li>
+<li>or apachectl -v</li>
+</ul>
+</li>
+<li>(Mac) Apache: You don’t have permission to access / on this server  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites/"</span>&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Options Indexes MultiViews FollowSymLinks</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Configure_PHP_Server"><a href="#Configure_PHP_Server" class="headerlink" title="Configure PHP Server"></a>Configure PHP Server</h3><ol>
+<li><p>Search httpd.conf</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apache2</span><br><span class="line">//sudo cp httpd.conf httpd.conf.bak</span><br><span class="line">sudo vim httpd.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Configure httpd.conf</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Change the DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></span><br><span class="line">DocumentRoot <span class="string">"/Users/andy/Sites"</span></span><br><span class="line">// Change the &lt;Directory <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites"</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Find php</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#LoadModule php5_module libexec/apache2/libphp5.so</span></span><br><span class="line">drop <span class="string">"#"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cd /etc/</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp php.ini.default php.ini</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create index.php in /Users/andy/Sites”, and type in</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php phpinfo(); ?&gt;    // &lt;?php  without blank space</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sudo apachectl restart</p>
+</li>
+<li>Scan localhost in website <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://loaclhost/index.php</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -275,7 +464,7 @@
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">visitors </span>
+               <span class="post-meta-item-text">Views </span>
                <span class="leancloud-visitors-count"></span>
               </span>
           
@@ -324,11 +513,215 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/10/ipinyou-database/" itemprop="url">
+                  Ipinyou DataSet Description
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T20:35:08+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/10/ipinyou-database/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/ipinyou-database/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/10/ipinyou-database/" class="leancloud_visitors" data-flag-title="Ipinyou DataSet Description">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
+<hr>
+<p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
+<hr>
+</blockquote>
+<ul>
+<li><p>RankSorce = CTR * BidPrice</p>
+<ul>
+<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html" target="_blank" rel="external">Advertising Calculating</a></li>
+</ul>
+</li>
+<li><p>Aim</p>
+<ul>
+<li>Low-latency and scalale predictions as a service</li>
+<li>Integrated approach leads to fresher, better predictions</li>
+<li>Easy translation to production predictions</li>
+<li>Eases Operational pain</li>
+</ul>
+</li>
+</ul>
+<h4 id="Experiment_using_R"><a href="#Experiment_using_R" class="headerlink" title="Experiment using R"></a>Experiment using R</h4><ul>
+<li><p>First //</p>
+<ul>
+<li><a href="https://github.com/wnzhang/make-ipinyou-data" target="_blank" rel="external">make-ipinyou-data</a></li>
+<li>Paper: Real-Time Bidding Benchmarking with iPinYou Dataset</li>
+</ul>
+</li>
+<li><p>Second</p>
+<ul>
+<li><a href="https://github.com/wnzhang/rtbcontrol" target="_blank" rel="external">rtbcontrol</a></li>
+<li>Paper: Experiment Code for RTB Feedback Control Techniques</li>
+</ul>
+</li>
+<li><p>Third</p>
+<ul>
+<li><a href="https://github.com/wnzhang/rtbarbitrage" target="_blank" rel="external">rtbarbitrage</a></li>
+<li>Paper: Statistical Arbitrage Mining for Display Advertising</li>
+</ul>
+</li>
+<li><p>Fourth //</p>
+<ul>
+<li><a href="https://github.com/wnzhang/optimal-rtb" target="_blank" rel="external">optimal-rtb</a></li>
+<li>Paper: Optimal Real-Time Bidding for Display Advertising</li>
+</ul>
+</li>
+<li><p>Fifth</p>
+<ul>
+<li><a href="https://github.com/wush978/KDD2015wpp" target="_blank" rel="external">KDD2015wpp</a></li>
+<li>Predicting Winning Price in Real Time Bidding with Censored Data</li>
+</ul>
+</li>
+</ul>
+<h3 id="Winning_price_steps"><a href="#Winning_price_steps" class="headerlink" title="Winning price steps"></a>Winning price steps</h3><ul>
+<li>What features should be taken in</li>
+<li>Considering of the Winning Rate</li>
+<li>Combine Win Rate &amp; Winning Price<ul>
+<li><a href="http://blog.csdn.net/star_liux/article/details/39666737" target="_blank" rel="external">logistic factor solution</a></li>
+<li>Paper reference<ul>
+<li><a href="http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data" target="_blank" rel="external">http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data</a></li>
+<li>Programmatic buying bidding strategies with Win Rate and Winning Price Estimation in real time mobile advertising</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Join bid_req, bid_resp and win_notice for Winning Rate/Winning Price Prediction</li>
+</ul>
+<ul>
+<li>Testing Winning Rate running by python (examples with ipinyou)<ul>
+<li>Example of CTR Using Python<ul>
+<li><a href="http://www.dataguru.cn/thread-460417-1-1.html" target="_blank" rel="external">http://www.dataguru.cn/thread-460417-1-1.html</a>  </li>
+</ul>
+</li>
+<li>Example of CTR using R<ul>
+<li><a href="http://f.dataguru.cn/thread-329637-1-1.html" target="_blank" rel="external">http://f.dataguru.cn/thread-329637-1-1.html</a>  </li>
+<li><a href="http://blog.csdn.net/yucan1001/article/details/23228053" target="_blank" rel="external">http://blog.csdn.net/yucan1001/article/details/23228053</a>  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CRT_DATA.txt</span></span><br><span class="line">0 20 0.294181968932 0.508158622733 0.182334278695 0.629420618229</span><br><span class="line">0 68 0.1867187241 0.606174671096 0.0748709302071 0.806387550943</span><br><span class="line">0 18 0.62087371082 0.497772456954 0.0321750684638 0.629224616618</span><br><span class="line">1 90 0.521405561387 0.476048142961 0.134707792901 0.400062294097</span><br><span class="line">0 75 0.0126899618353 0.507688693623 0.377923880332 0.998697036848</span><br><span class="line">0 8 0.308646073229 0.930652495254 0.755735916926 0.0519441699996</span><br><span class="line">0 64 0.444668888126 0.768001428418 0.501163712702 0.418327345087</span><br><span class="line">0 79 0.842532595853 0.817052919537 0.0709486928253 0.552712019723</span><br><span class="line">1 32 0.410650495262 0.164977576847 0.491438436479 0.886456782492</span><br><span class="line">// first col is whether click, second is the number of impressions</span><br><span class="line"></span><br><span class="line">ctr_data &lt;- read.csv(<span class="string">'CTR_DATA.txt'</span>,header = F, sep = <span class="string">" "</span>)</span><br><span class="line">head(ctr_data)</span><br><span class="line">attach(ctr_data)</span><br><span class="line">ctr_logr &lt;- glm(cbind(V1,V2)~V3+V4+V5+V6,family=binomial(link=<span class="string">"logit"</span>))</span><br><span class="line">record &lt;- data.frame(V3=0.294181968932,V4=0.508158622733,V5=0.182334278695,V6=0.629420618229)</span><br><span class="line">d &lt;- predict(ctr_logr,newdata = record,<span class="built_in">type</span>=<span class="string">"response"</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -369,7 +762,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -386,7 +779,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -494,11 +887,11 @@
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
 </span>
 
 <span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -625,7 +1018,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("", "");</script>
+  <script>AV.initialize("ICX7w1eUjsdhsI9peY8NhDy8-gzGzoHsz", "LNeLg9XFL6IJ6srOgJ48UiHT");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);

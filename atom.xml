@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://snakecy.github.io/"/>
-  <updated>2016-04-03T19:28:29.000Z</updated>
+  <updated>2016-04-04T16:36:13.000Z</updated>
   <id>https://snakecy.github.io/</id>
   
   <author>
@@ -15,11 +15,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Apache Server Configure on Mac]]></title>
+    <link href="https://snakecy.github.io/2016/03/18/mac-apache-server/"/>
+    <id>https://snakecy.github.io/2016/03/18/mac-apache-server/</id>
+    <published>2016-03-18T10:15:59.000Z</published>
+    <updated>2016-04-04T16:36:13.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
+<li>Start up Apache on Mac<ul>
+<li>sudo apachectl (-k) start</li>
+<li>//sudo apachectl (-k) restart</li>
+<li>sudo apachectl (-k) stop</li>
+</ul>
+</li>
+<li>Check the apache version<ul>
+<li>sudo apachectl -v</li>
+<li>or apachectl -v</li>
+</ul>
+</li>
+<li>(Mac) Apache: You don’t have permission to access / on this server  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites/"</span>&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Options Indexes MultiViews FollowSymLinks</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Configure_PHP_Server"><a href="#Configure_PHP_Server" class="headerlink" title="Configure PHP Server"></a>Configure PHP Server</h3><ol>
+<li><p>Search httpd.conf</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apache2</span><br><span class="line">//sudo cp httpd.conf httpd.conf.bak</span><br><span class="line">sudo vim httpd.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Configure httpd.conf</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Change the DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></span><br><span class="line">DocumentRoot <span class="string">"/Users/andy/Sites"</span></span><br><span class="line">// Change the &lt;Directory <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites"</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Find php</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#LoadModule php5_module libexec/apache2/libphp5.so</span></span><br><span class="line">drop <span class="string">"#"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cd /etc/</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp php.ini.default php.ini</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Create index.php in /Users/andy/Sites”, and type in</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php phpinfo(); ?&gt;    // &lt;?php  without blank space</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sudo apachectl restart</p>
+</li>
+<li>Scan localhost in website <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://loaclhost/index.php</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
+<li>Start up Apache on M]]>
+    </summary>
+    
+      <category term="PHP" scheme="https://snakecy.github.io/tags/PHP/"/>
+    
+      <category term="HTTP" scheme="https://snakecy.github.io/tags/HTTP/"/>
+    
+      <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[L-BFGS Algorithm (01)]]></title>
     <link href="https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/"/>
     <id>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</id>
     <published>2016-03-14T17:56:22.000Z</published>
-    <updated>2016-04-03T19:28:29.000Z</updated>
+    <updated>2016-04-04T12:38:50.000Z</updated>
     <content type="html"><![CDATA[<h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
 <blockquote>
 <p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
@@ -463,9 +519,9 @@
 <p><a href="http://jacoxu.com/?p=118" target="_blank" rel="external"]]>
     </summary>
     
-      <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
-    
       <category term="Libsvm" scheme="https://snakecy.github.io/tags/Libsvm/"/>
+    
+      <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
     
       <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
     
@@ -1018,9 +1074,9 @@
     
       <category term="R" scheme="https://snakecy.github.io/tags/R/"/>
     
-      <category term="SparkR" scheme="https://snakecy.github.io/tags/SparkR/"/>
-    
       <category term="PHP" scheme="https://snakecy.github.io/tags/PHP/"/>
+    
+      <category term="SparkR" scheme="https://snakecy.github.io/tags/SparkR/"/>
     
       <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
     
@@ -1357,55 +1413,6 @@
       <category term="Spyder" scheme="https://snakecy.github.io/tags/Spyder/"/>
     
       <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Build Blog with Github & Hexo]]></title>
-    <link href="https://snakecy.github.io/2016/01/09/github-hexo/"/>
-    <id>https://snakecy.github.io/2016/01/09/github-hexo/</id>
-    <published>2016-01-08T16:00:00.000Z</published>
-    <updated>2016-04-03T19:30:35.000Z</updated>
-    <content type="html"><![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub</p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<h2 id="Create_a_domain_of_yourself_bolg_website"><a href="#Create_a_domain_of_yourself_bolg_website" class="headerlink" title="Create a domain of yourself bolg website"></a>Create a domain of yourself bolg website</h2><h3 id="Step_1"><a href="#Step_1" class="headerlink" title="Step 1"></a>Step 1</h3><p>Register on <a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external">Godaddy</a>,  If possible, also should to use CDN on <a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a></p>
-<h3 id="Step_2"><a href="#Step_2" class="headerlink" title="Step 2"></a>Step 2</h3><p>Create Personal Rep. on github, and name the Rep. is <snakecy.github.io>, add the README.md file to describe the Rep.</snakecy.github.io></p>
-<h3 id="Step_3"><a href="#Step_3" class="headerlink" title="Step 3"></a>Step 3</h3><p>Using ping to get github pages ip  &lt; 103.245.222.133&gt;</p>
-<h3 id="Step_4"><a href="#Step_4" class="headerlink" title="Step 4"></a>Step 4</h3><p>On Mac OS, the necessary thing is to download Xcode CommandLine Tools in AppStore, and then<br><!-- download Xcode and install, then xcode-select --install --><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer</span><br></pre></td></tr></table></figure></p>
-<h3 id="Step_5"><a href="#Step_5" class="headerlink" title="Step 5"></a>Step 5</h3><p>Install jekyll (optional)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gem update --system</span><br><span class="line">$ sudo gem install jekyll</span><br></pre></td></tr></table></figure></p>
-<p>Install Hexo (use)</p>
-<ul>
-<li>Install Xcode and <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>Install Hexo on mac</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br><span class="line">$ mkdir blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo init &amp; npm install</span><br></pre></td></tr></table></figure>
-<p>Configure the homepage by</p>
-<ul>
-<li><a href="http://www.jianshu.com/p/73779eacb494" target="_blank" rel="external">jianshu</a></li>
-<li><a href="http://theme-next.iissnan.com" target="_blank" rel="external">iissnan</a></li>
-</ul>
-<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><h3 id="Update_hexo"><a href="#Update_hexo" class="headerlink" title="Update hexo"></a>Update hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="Update_themes"><a href="#Update_themes" class="headerlink" title="Update themes"></a>Update themes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-<h3 id="Update_plugins"><a href="#Update_plugins" class="headerlink" title="Update plugins"></a>Update plugins</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm update</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="comment">### Add plugins</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2.7 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.3.0 --save</span><br><span class="line">npm install hexo-generator-feed@1.0.3 --save</span><br><span class="line">npm install hexo-generator-sitemap@1.0.1 --save</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Beginning the blog journey of Hexo &amp; Gituhub</p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! Th]]>
-    </summary>
-    
-      <category term="Hexo + Github" scheme="https://snakecy.github.io/tags/Hexo-Github/"/>
-    
-      <category term="Mac" scheme="https://snakecy.github.io/tags/Mac/"/>
-    
-      <category term="web-building" scheme="https://snakecy.github.io/categories/web-building/"/>
     
   </entry>
   

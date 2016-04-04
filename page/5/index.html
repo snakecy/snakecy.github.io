@@ -178,9 +178,39 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'NZsCXiZ-H9Q1sLYQH3VP','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -215,8 +245,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/05/algorithm-by-java-2/" itemprop="url">
-                  Sorting Algorithm (02)
+                <a class="post-title-link" href="/2016/01/15/UCI-machine-learning-repository/" itemprop="url">
+                  UCI Machine Learning Repository
                 </a>
               
             
@@ -229,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T01:40:55+08:00" content="2016-03-05">
-              2016-03-05
+            <time itemprop="dateCreated" datetime="2016-01-15T16:46:41+08:00" content="2016-01-15">
+              2016-01-15
             </time>
           </span>
 
@@ -259,8 +289,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/05/algorithm-by-java-2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/algorithm-by-java-2/" itemprop="commentsCount"></span>
+                <a href="/2016/01/15/UCI-machine-learning-repository/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/15/UCI-machine-learning-repository/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -270,12 +300,12 @@
 
           
           
-             <span id="/2016/03/05/algorithm-by-java-2/" class="leancloud_visitors" data-flag-title="Sorting Algorithm (02)">
+             <span id="/2016/01/15/UCI-machine-learning-repository/" class="leancloud_visitors" data-flag-title="UCI Machine Learning Repository">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">visitors </span>
+               <span class="post-meta-item-text">Views </span>
                <span class="leancloud-visitors-count"></span>
               </span>
           
@@ -293,12 +323,367 @@
       
         
           
-            <h2 id="Sorting_Algorithm"><a href="#Sorting_Algorithm" class="headerlink" title="Sorting Algorithm"></a>Sorting Algorithm</h2><h3 id="u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83"><a href="#u6392_u5E8F_u7B97_u6CD5_u6BD4_u8F83" class="headerlink" title="排序算法比较"></a>排序算法比较</h3><ul>
-<li>Bubble Sort (冒泡排序)</li>
-<li>Insertion Sort (插入排序)</li>
-<li>Selection Sort (选择排序)</li>
+            <h2 id="Datasets_Examples_for_machine_learning"><a href="#Datasets_Examples_for_machine_learning" class="headerlink" title="Datasets Examples for machine learning"></a>Datasets Examples for machine learning</h2><p>Here are the data sets from <a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="external">UCI Machine Learning Repository</a> once I sorted and practiced. Some of the abstracts I summarized updated to my github <a href="https://github.com/snakecy/CUIMachineLearningRepositry" target="_blank" rel="external">CUIMachineLearningRepository</a>.</p>
+<p>Example:</p>
+<h3 id="Image_Segmentation"><a href="#Image_Segmentation" class="headerlink" title="Image Segmentation"></a>Image Segmentation</h3><ol>
+<li>Data set website<br><a href="http://archive.ics.uci.edu/ml/datasets/Image+Segmentation" target="_blank" rel="external">http://archive.ics.uci.edu/ml/datasets/Image+Segmentation</a></li>
+<li>Datasets describe<br>【1】The data used in our experiments were collected by Vision Group, University of Massachusetts.【2】We used to classify the image.【3】The instances were drawn randomly from a database of 7 outdoor images. The images were hand segmented to create a classification for every pixel. Each instance is a 3x3 region. Number of Attributes has 19 continuous attributes, each attribute can describes as region-centroid-col、region-centroid-row、region-pixel-count、short-line-density-5、short-line-density-2、 vedge-mean、vegde-sd、hedge-mean、hedge-sd、intensity-mean、rawred-mean、rawblue-mean、rawgreen-mean、exred-mean、exblue-mean、exgreen-mean、value-mean、saturatoin-mean、hue-mean.【4】The database has 2310 samples, respectively belong to training with 210 samples and testing with 2100 samples. The categories of network system include seven categories, as shown in Table 1.</li>
+</ol>
+<h5 id="Table_1_Category_Distribution_of_Network_System"><a href="#Table_1_Category_Distribution_of_Network_System" class="headerlink" title="Table 1 Category Distribution of Network System"></a>Table 1 Category Distribution of Network System</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">Invasion</th>
+<th style="text-align:left">Training</th>
+<th style="text-align:left">Testing</th>
+<th style="text-align:left">Total Number of Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Brickface</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">sky</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Foliage</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Cement</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">window</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Path</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">grass</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Total number of samples in total</td>
+<td style="text-align:left">210</td>
+<td style="text-align:left">2100</td>
+<td style="text-align:left">2310</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/13/nosql-database/" itemprop="url">
+                  Install NoSQL Database
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-13T02:25:57+08:00" content="2016-01-13">
+              2016-01-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/13/nosql-database/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/nosql-database/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/13/nosql-database/" class="leancloud_visitors" data-flag-title="Install NoSQL Database">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>NoSQL database for a key-value DB Redis</p>
+<ul>
+<li><p>Quick Start <a href="http://redis.io/topics/quickstart" target="_blank" rel="external">Redis</a></p>
+</li>
+<li><p>use the key value DB (redis)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download the redis from website</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/redis-stable.tar.gz</span><br><span class="line">tar xvzf redis-stable.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-stable</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update the redis-server</p>
+<ul>
+<li><p>first way</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:chris-lea/redis-server</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>another way to do this update</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y python-software-properties</span><br><span class="line">sudo add-apt-repository -y ppa:rwky/redis</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y redis-server</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="Java_u5B9E_u73B0_u6392_u5E8F_u7B97_u6CD5"><a href="#Java_u5B9E_u73B0_u6392_u5E8F_u7B97_u6CD5" class="headerlink" title="Java实现排序算法"></a>Java实现排序算法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">public class Paixu &#123;</span><br><span class="line">    // 冒泡排序法</span><br><span class="line">    public void Maopao(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (int j = 0; j &lt; a.length - i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">                    int temp = a[j + 1];</span><br><span class="line">                    a[j + 1] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用冒泡排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    // 插入排序法：</span><br><span class="line">    public void Charu(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (int j = 0; j &lt; i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j] &gt; a[i]) &#123;</span><br><span class="line">                    int temp = a[i];</span><br><span class="line">                    <span class="keyword">for</span> (int k = i; k &gt; j; k--) &#123;</span><br><span class="line">                        a[k] = a[k--];</span><br><span class="line">                    &#125;</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用插入排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    // 选择排序法：</span><br><span class="line">    public void Xuanze(int a[]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            int position = i;</span><br><span class="line">            <span class="keyword">for</span> (int j = i + 1; j &lt; a.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[position] &gt; a[j]) &#123;</span><br><span class="line">                    int temp = a[position];</span><br><span class="line">                    a[position] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"采用选择排序法："</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    public void Print(int a[]) &#123;</span><br><span class="line">        System.out.println(<span class="string">"从小到大排序结果为："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            System.out.print(a[i] + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int a[] = new int[5];</span><br><span class="line">        Paixu px = new Paixu();</span><br><span class="line">        BufferedReader buf = new BufferedReader(</span><br><span class="line">        new InputStreamReader(System.in));</span><br><span class="line">        System.out.println(<span class="string">"请输入五个整数："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                String s = buf.readLine();</span><br><span class="line">                int j = Integer.parseInt(s);</span><br><span class="line">                a[i] = j;</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                System.out.println(<span class="string">"出错了！必须输入整数,请重新输入!"</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"您输入的整数依次为："</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            System.out.print(a[i] + <span class="string">","</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Maopao(a); // 调用冒泡算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Charu(a); // 调用插入算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">        System.out.println(<span class="string">"\n"</span> + <span class="string">"-------------"</span>);</span><br><span class="line">        px.Xuanze(a); // 调用选择算法</span><br><span class="line">        px.Print(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/13/json-eclipse/" itemprop="url">
+                  Json parsered by Java
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-13T01:26:05+08:00" content="2016-01-13">
+              2016-01-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/13/json-eclipse/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/json-eclipse/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/13/json-eclipse/" class="leancloud_visitors" data-flag-title="Json parsered by Java">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
+<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
+<ul>
+<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp" target="_blank" rel="external">Java-org-json</a></p>
+</li>
+<li><p>Json-lib</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://www.cnblogs.com/zhenjing/p/json-smart.html" target="_blank" rel="external">Json-smart</a></p>
+<ul>
+<li>Compare with each json jar package <a href="https://code.google.com/p/json-smart/wiki/FeaturesTests" target="_blank" rel="external">compare</a></li>
+</ul>
+</li>
+<li><p>simple-json</p>
+</li>
+<li><p>org.json</p>
+</li>
+<li><p>example</p>
+<ul>
+<li><a href="http://crunchify.com/how-to-write-json-object-to-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-write-json-object-to-file-in-java/</a></li>
+<li><a href="http://crunchify.com/how-to-read-json-object-from-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-read-json-object-from-file-in-java/</a></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reference:</span></span><br><span class="line">&gt; json格式如下：&#123;<span class="string">"response"</span>:&#123;<span class="string">"data"</span>:[&#123;<span class="string">"address"</span>:<span class="string">"南京市游乐园"</span>,<span class="string">"province"</span>:<span class="string">"江苏"</span>,<span class="string">"district"</span>:<span class="string">"玄武区"</span>,<span class="string">"city"</span>:<span class="string">"南京"</span>&#125;]&#125;,<span class="string">"status"</span>:<span class="string">"ok"</span>&#125;</span><br><span class="line">Result： 江苏 南京 玄武区 南京市游乐园</span><br><span class="line">﻿</span><br><span class="line">JSONObject dataJson=new JSONObject(<span class="string">"Json data"</span>);</span><br><span class="line">JSONObject response=dataJson.getJSONObject(<span class="string">"response"</span>);</span><br><span class="line">JSONArray data=response.getJSONArray(<span class="string">"data"</span>);</span><br><span class="line">JSONObject info=data.getJSONObject(0);</span><br><span class="line">String province=info.getString(<span class="string">"province"</span>);</span><br><span class="line">String city=info.getString(<span class="string">"city"</span>);</span><br><span class="line">String district=info.getString(<span class="string">"district"</span>);</span><br><span class="line">String address=info.getString(<span class="string">"address"</span>);</span><br><span class="line">System.out.println(province+city+district+address);</span><br></pre></td></tr></table></figure>
 
           
         
@@ -327,7 +712,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -368,7 +753,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -385,7 +770,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -493,11 +878,11 @@
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
 </span>
 
 <span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -624,7 +1009,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("", "");</script>
+  <script>AV.initialize("ICX7w1eUjsdhsI9peY8NhDy8-gzGzoHsz", "LNeLg9XFL6IJ6srOgJ48UiHT");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);

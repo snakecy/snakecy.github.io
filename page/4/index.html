@@ -178,9 +178,39 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'NZsCXiZ-H9Q1sLYQH3VP','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -215,8 +245,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/06/java-call-matlab/" itemprop="url">
-                  Java call Matlab Method
+                <a class="post-title-link" href="/2016/02/10/debug-nativecodeloader/" itemprop="url">
+                  Resolve the debug problem of WARN NativeCodeLoader
                 </a>
               
             
@@ -229,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-06T01:49:37+08:00" content="2016-03-06">
-              2016-03-06
+            <time itemprop="dateCreated" datetime="2016-02-10T00:58:25+08:00" content="2016-02-10">
+              2016-02-10
             </time>
           </span>
 
@@ -243,8 +273,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
                   </a>
                 </span>
 
@@ -259,8 +289,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/06/java-call-matlab/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/06/java-call-matlab/" itemprop="commentsCount"></span>
+                <a href="/2016/02/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -270,12 +300,12 @@
 
           
           
-             <span id="/2016/03/06/java-call-matlab/" class="leancloud_visitors" data-flag-title="Java call Matlab Method">
+             <span id="/2016/02/10/debug-nativecodeloader/" class="leancloud_visitors" data-flag-title="Resolve the debug problem of WARN NativeCodeLoader">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">visitors </span>
+               <span class="post-meta-item-text">Views </span>
                <span class="leancloud-visitors-count"></span>
               </span>
           
@@ -293,74 +323,313 @@
       
         
           
-            <h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
-</code></pre><ol>
-<li><p>JAVA_HOME</p>
+            <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS</span><br><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS</span><br></pre></td></tr></table></figure>
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p>Three ways to solve the problem</p>
+<blockquote>
+<p>install libgfortran3<br>linstall libatlas3-base libopenblas-base<br>OpenBlase</p>
+</blockquote>
 <ul>
-<li><p>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)</p>
+<li><p>in sbt file: libraryDependencies += “com.github.fommil.netlib” % “all” % “1.1.2”</p>
 <ul>
-<li><p>设置后，重启matlab才能有效.</p>
-</li>
-<li><p>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</p>
-</li>
+<li>-Dcom.github.fommil.netlib.BLAS=com.github.fommil.netlib.F2jBLAS</li>
+<li><a href="https://github.com/mridulm/netlib-java" target="_blank" rel="external">https://github.com/mridulm/netlib-java</a></li>
 </ul>
 </li>
-<li><p>ii. Classpath</p>
+<li><p>or in commandline</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libgfortran3</span><br><span class="line">// check the libgfortran3</span><br><span class="line">$ dpkg <span class="_">-l</span> libgfortran3</span><br><span class="line">$ sudo apt-get install gfortran</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>resolve the problem (important)</p>
 <ul>
-<li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
-</ul>
-</li>
-<li>iii. Path<ul>
-<li>添加%JAVA_HOME%/bin/javac</li>
+<li>refers to <a href="https://github.com/fommil/netlib-java#machine-optimised-system-libraries" target="_blank" rel="external">https://github.com/fommil/netlib-java#machine-optimised-system-libraries</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p>build matlab m-file into a jar</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas3-base libopenblas-base</span><br><span class="line">sudo update-alternatives --config libblas.so.3</span><br><span class="line">sudo update-alternatives --config liblapack.so.3</span><br><span class="line">$ /etc/ld.so.conf</span><br><span class="line">add /usr/lib/libblas.so.3 &amp;  /usr/lib/liblapack.so.3</span><br><span class="line">$ sudo ldconfig</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/10/mac-license/" itemprop="url">
+                  Mac License
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-02-10T00:54:13+08:00" content="2016-02-10">
+              2016-02-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/License/" itemprop="url" rel="index">
+                    <span itemprop="name">License</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/10/mac-license/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/mac-license/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/10/mac-license/" class="leancloud_visitors" data-flag-title="Mac License">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</p>
+<p>﻿- Open the terminal, then type in “ sudo xcodebuild -license”</p>
 <ul>
-<li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
-<li>b) 在Deployment Tool中，点击new按钮，选择 Matlab Builder for Java 与 Java Package。新建一个工程名字，如flying.prj 。对该工程，要进入其设置对话框，设置其compiler为“matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar ”。</li>
-<li>c) In the Deployment Tool pane, ensure that the Generate Verbose Output option is selected</li>
-<li>d) 将欲被java调用的.m 文件，（如mydraw.m，其中包括两个参数(x,y)），从Matlab整个界面的左侧工作目录面板，拖拽到Deployment Tool中的新建的类下面的class文件夹下。</li>
-<li>e) 点击build 按钮，则会在matlab的当前目录下，生成以一个与工程同名的(如flying)文件夹。</li>
-</ul>
+<li><p>Type in “ enter”</p>
 </li>
-<li><p>编写java函数，准备调用刚刚生成好的flying.jar中的方法。</p>
+<li><p>Type in “space” for more to read, or “q” for quit</p>
+</li>
+<li><p>Finally, type in “agree” and enter.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/16/machine-learning-notes-1/" itemprop="url">
+                  Machine Learning notes (01)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
+              2016-01-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/16/machine-learning-notes-1/" class="leancloud_visitors" data-flag-title="Machine Learning notes (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
+<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
+<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
 <ul>
-<li>a) 在java工程Test属性的BuildPath中，添加两个jar包：<ul>
-<li>i. matlabroot\toolbox\javabuilder\jar\javabuilder.jar</li>
-<li>ii. TestDirectory\ flying.jar</li>
-</ul>
-</li>
-<li><p>b) 编写函数示例如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package <span class="built_in">test</span>;</span><br><span class="line">import com.mathworks.toolbox.javabuilder.*;</span><br><span class="line">import flrying.*;</span><br><span class="line">public class <span class="built_in">test</span>MatlabClass &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // TODO Auto-generated method stub</span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(<span class="string">"Begin"</span>);</span><br><span class="line">            flyingclass flyingDraw=new flyingclass();</span><br><span class="line">            System.out.println(<span class="string">"Middle"</span>);</span><br><span class="line">            flyingDraw.mydraw(7,2);</span><br><span class="line">            System.out.println(<span class="string">"Here"</span>);</span><br><span class="line">        &#125;catch (Exception e)&#123;System.out.println(e);&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>d) 如果不能正常运行，可以考虑在classpath中，加入flying.jar所在的位置。</p>
-</li>
-</ul>
-</li>
-<li><p>详细</p>
+<li><p>Scilit-learn requires:</p>
 <ul>
-<li>a) 参见matlab的帮助文件</li>
-<li>b) www.simwe.com/forum/archiver/tid-747229.html</li>
-<li><p>c) 数据类型相关</p>
+<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
+</li>
+<li><p>Numpy (&gt;=1.6.1)</p>
+</li>
+<li><p>Scipy (&gt;=0.9)</p>
+</li>
+</ul>
+<blockquote>
+<p>For OSX installation</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
 <ul>
-<li>i. Java的数值型数组，可以直接作为输入参数传递到.m文件上。<br>如：mydraw(x,y)，可以画x=[1 2 3 4] ,y=[3.3 -5 6 10.2] 这样的线图。Java调用该方法时候，如果传递的参数是整型或者实数型数组，则直接可成功。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">如 java中 :</span><br><span class="line">int[] a=new int[4];</span><br><span class="line">int[] b=new int[4];</span><br><span class="line">// 给 a,b 赋值…//</span><br><span class="line">//调用</span><br><span class="line">flyingclass flyingDraw=new flyingclass();</span><br><span class="line">flyingDraw.mydraw(a,b);</span><br><span class="line">//注意：a,b最好所有有索引的位置都有值，否则如果没有充分赋值曲线可能会最终折回(0,0)点。</span><br></pre></td></tr></table></figure>
+<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>Matlab程序(.m文件)的修改</p>
-<ul>
-<li>a) 找到TestDirectory\ flying.jar所在的位置（因为按照上述步骤的话，.m源文件就在该位置附近）。这个位置，从Eclipse的Package Explore可以用看到。</li>
-<li>b) 直接修改欲改动的.m文件</li>
-<li>c) 打开Matlab, 在Command输入 Deploytool, 在新打开的部署面板中，“打开”该m文件所在的工程，如 flying.prj。</li>
-<li>d) 选中相应工程下Class文件夹下的.m文件，点击工具栏的Build按钮。</li>
-<li>e) 则相应源文件被重新编译。如果按照前面步骤添加的jar包，则编译后新生成的jar包自动替换掉原有的jar。又由于这个jar的位置，已经作为BuildPath告诉了java的相应工程，因此Java端不需要做任何调整，即可正确调用到新修改了内容的matlab方法。</li>
 </ul>
-</li>
-</ol>
 
           
         
@@ -389,7 +658,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -430,7 +699,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -447,7 +716,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -555,11 +824,11 @@
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
 </span>
 
 <span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Total visited <span id="busuanzi_value_site_uv"></span>
+  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -686,7 +955,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("", "");</script>
+  <script>AV.initialize("ICX7w1eUjsdhsI9peY8NhDy8-gzGzoHsz", "LNeLg9XFL6IJ6srOgJ48UiHT");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
