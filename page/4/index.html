@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning, Data Mining, Deep Learning" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -104,6 +104,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=55430358";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -245,8 +254,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/10/debug-nativecodeloader/" itemprop="url">
-                  Resolve the debug problem of WARN NativeCodeLoader
+                <a class="post-title-link" href="/2016/01/13/json-eclipse/" itemprop="url">
+                  Json parsered by Java
                 </a>
               
             
@@ -259,8 +268,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T00:58:25+08:00" content="2016-02-10">
-              2016-02-10
+            <time itemprop="dateCreated" datetime="2016-01-13T01:26:05+08:00" content="2016-01-13">
+              2016-01-13
             </time>
           </span>
 
@@ -273,8 +282,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
-                    <span itemprop="name">cloud-tech</span>
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
                   </a>
                 </span>
 
@@ -289,8 +298,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
+                <a href="/2016/01/13/json-eclipse/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/json-eclipse/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,7 +309,7 @@
 
           
           
-             <span id="/2016/02/10/debug-nativecodeloader/" class="leancloud_visitors" data-flag-title="Resolve the debug problem of WARN NativeCodeLoader">
+             <span id="/2016/01/13/json-eclipse/" class="leancloud_visitors" data-flag-title="Json parsered by Java">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -323,30 +332,31 @@
       
         
           
-            <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS</span><br><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS</span><br></pre></td></tr></table></figure>
-<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p>Three ways to solve the problem</p>
-<blockquote>
-<p>install libgfortran3<br>linstall libatlas3-base libopenblas-base<br>OpenBlase</p>
-</blockquote>
+            <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
+<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
 <ul>
-<li><p>in sbt file: libraryDependencies += “com.github.fommil.netlib” % “all” % “1.1.2”</p>
+<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp" target="_blank" rel="external">Java-org-json</a></p>
+</li>
+<li><p>Json-lib</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://www.cnblogs.com/zhenjing/p/json-smart.html" target="_blank" rel="external">Json-smart</a></p>
 <ul>
-<li>-Dcom.github.fommil.netlib.BLAS=com.github.fommil.netlib.F2jBLAS</li>
-<li><a href="https://github.com/mridulm/netlib-java" target="_blank" rel="external">https://github.com/mridulm/netlib-java</a></li>
+<li>Compare with each json jar package <a href="https://code.google.com/p/json-smart/wiki/FeaturesTests" target="_blank" rel="external">compare</a></li>
 </ul>
 </li>
-<li><p>or in commandline</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libgfortran3</span><br><span class="line">// check the libgfortran3</span><br><span class="line">$ dpkg <span class="_">-l</span> libgfortran3</span><br><span class="line">$ sudo apt-get install gfortran</span><br></pre></td></tr></table></figure>
+<li><p>simple-json</p>
 </li>
-<li><p>resolve the problem (important)</p>
+<li><p>org.json</p>
+</li>
+<li><p>example</p>
 <ul>
-<li>refers to <a href="https://github.com/fommil/netlib-java#machine-optimised-system-libraries" target="_blank" rel="external">https://github.com/fommil/netlib-java#machine-optimised-system-libraries</a></li>
+<li><a href="http://crunchify.com/how-to-write-json-object-to-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-write-json-object-to-file-in-java/</a></li>
+<li><a href="http://crunchify.com/how-to-read-json-object-from-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-read-json-object-from-file-in-java/</a></li>
 </ul>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas3-base libopenblas-base</span><br><span class="line">sudo update-alternatives --config libblas.so.3</span><br><span class="line">sudo update-alternatives --config liblapack.so.3</span><br><span class="line">$ /etc/ld.so.conf</span><br><span class="line">add /usr/lib/libblas.so.3 &amp;  /usr/lib/liblapack.so.3</span><br><span class="line">$ sudo ldconfig</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reference:</span></span><br><span class="line">&gt; json格式如下：&#123;<span class="string">"response"</span>:&#123;<span class="string">"data"</span>:[&#123;<span class="string">"address"</span>:<span class="string">"南京市游乐园"</span>,<span class="string">"province"</span>:<span class="string">"江苏"</span>,<span class="string">"district"</span>:<span class="string">"玄武区"</span>,<span class="string">"city"</span>:<span class="string">"南京"</span>&#125;]&#125;,<span class="string">"status"</span>:<span class="string">"ok"</span>&#125;</span><br><span class="line">Result： 江苏 南京 玄武区 南京市游乐园</span><br><span class="line">﻿</span><br><span class="line">JSONObject dataJson=new JSONObject(<span class="string">"Json data"</span>);</span><br><span class="line">JSONObject response=dataJson.getJSONObject(<span class="string">"response"</span>);</span><br><span class="line">JSONArray data=response.getJSONArray(<span class="string">"data"</span>);</span><br><span class="line">JSONObject info=data.getJSONObject(0);</span><br><span class="line">String province=info.getString(<span class="string">"province"</span>);</span><br><span class="line">String city=info.getString(<span class="string">"city"</span>);</span><br><span class="line">String district=info.getString(<span class="string">"district"</span>);</span><br><span class="line">String address=info.getString(<span class="string">"address"</span>);</span><br><span class="line">System.out.println(province+city+district+address);</span><br></pre></td></tr></table></figure>
 
           
         
@@ -392,8 +402,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/10/mac-license/" itemprop="url">
-                  Mac License
+                <a class="post-title-link" href="/2016/01/12/php-r-sparkr/" itemprop="url">
+                  API configure with Php-r-sparkr
                 </a>
               
             
@@ -406,8 +416,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T00:54:13+08:00" content="2016-02-10">
-              2016-02-10
+            <time itemprop="dateCreated" datetime="2016-01-12T17:25:06+08:00" content="2016-01-12">
+              2016-01-12
             </time>
           </span>
 
@@ -420,8 +430,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/License/" itemprop="url" rel="index">
-                    <span itemprop="name">License</span>
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
                   </a>
                 </span>
 
@@ -436,8 +446,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/10/mac-license/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/mac-license/" itemprop="commentsCount"></span>
+                <a href="/2016/01/12/php-r-sparkr/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/php-r-sparkr/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -447,7 +457,7 @@
 
           
           
-             <span id="/2016/02/10/mac-license/" class="leancloud_visitors" data-flag-title="Mac License">
+             <span id="/2016/01/12/php-r-sparkr/" class="leancloud_visitors" data-flag-title="API configure with Php-r-sparkr">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -470,14 +480,236 @@
       
         
           
-            <p>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</p>
-<p>﻿- Open the terminal, then type in “ sudo xcodebuild -license”</p>
+            <blockquote>
+<hr>
+<p>PHP configure</p>
+<hr>
+</blockquote>
 <ul>
-<li><p>Type in “ enter”</p>
+<li><p>How to install the nignx on Ubuntu 10.04?<br>Append the appropriate stanza to /etc/apt/sources.list. The Pgp page expalins the signing of th nignx.org released packaging.</p>
+<ul>
+<li><p>shell script</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://nginx.org/packages/ubuntu/ lucid nginx</span><br><span class="line">deb-src http://nginx.org/packages/ubuntu/ lucid nginx</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Type in “space” for more to read, or “q” for quit</p>
+<li><p>then do</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="_">-s</span></span><br><span class="line">nginx=stable <span class="comment"># use nginx=development for latest development version</span></span><br><span class="line">add-apt-repository ppa:nginx/<span class="variable">$nginx</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Finally, type in “agree” and enter.</p>
+<li><p>Then finished. Ref. at website<br>(<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank" rel="external">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a>)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>PHP Server Nginx</p>
+<ul>
+<li>$ cd nginx/html</li>
+<li>port : 80 –&gt; public port: 8181</li>
+<li>example-data.cloudapp.net:8181/index.html</li>
+</ul>
+</li>
+<li><p>Docker</p>
+<ul>
+<li>$ curl -sSL https//get.docker.com/ | sh</li>
+<li>$ sudo docker run hello-world</li>
+<li>Add a user with ‘sudo’<ul>
+<li>sudo user -aG docker admin</li>
+</ul>
+</li>
+<li>Restart the server<ul>
+<li>$ docker run hello-world</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<hr>
+<p>R installation</p>
+<hr>
+</blockquote>
+<ul>
+<li>R Tutorial</li>
+<li><p>Update R on Ubuntu</p>
+<ul>
+<li>$ sudo gedit /etc/apt/sources.list –&gt; open the .list file<ul>
+<li>sudo vi /etc/apt/sources.list</li>
+<li>#sudo apt-get install gedit</li>
+<li><a href="http://cran.r-project.org/becin/linux/ubuntu/" target="_blank" rel="external">http://cran.r-project.org/becin/linux/ubuntu/</a></li>
+</ul>
+</li>
+<li>add the following line into source.list<ul>
+<li>deb <a href="http://cran.cnr.berkeley.edu/bin/linux/ubuntu/" target="_blank" rel="external">http://cran.cnr.berkeley.edu/bin/linux/ubuntu/</a> trusty/</li>
+<li><h1 id="trusty_for_Ubuntu_14-04"><a href="#trusty_for_Ubuntu_14-04" class="headerlink" title="trusty for Ubuntu 14.04"></a>trusty for Ubuntu 14.04</h1></li>
+</ul>
+</li>
+<li><p>Secure apt, when u see the gpg secure problem, just do the following lines</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9</span><br><span class="line"><span class="variable">$gpg</span> --keyserver keyserver.ubuntu.com --recv-key E084DAB9</span><br><span class="line"><span class="variable">$gpg</span> <span class="_">-a</span> --export E084DAB9 | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Then, perform this command</p>
+<ul>
+<li>sudo apt-get update</li>
+<li>sudo apt-get install r-base r-base-dev</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Import library dplyr &amp; FeatureHashing</p>
+<ul>
+<li>Request R version &gt;3.1.2<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ R</span><br><span class="line">&gt; install.packages(<span class="string">"dplyr"</span>)</span><br><span class="line">&gt; library(dplyr)</span><br><span class="line">&gt; install.packages(<span class="string">"FeatureHashing"</span>)</span><br><span class="line">&gt; library(FeatureHashing)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<hr>
+<p>R library</p>
+<hr>
+</blockquote>
+<ul>
+<li><p>library</p>
+<ul>
+<li>Matrix</li>
+<li>glmnt</li>
+<li>FeatureHashing<ul>
+<li>Important, the FeatureHashing’s latest version is 0.9, which default parameter transpose is TRUE (but in 0.8 version is FALSE)</li>
+</ul>
+</li>
+<li>glmnet</li>
+<li>dplyr</li>
+<li>ROC <a href="http://web.expasy.org/pROC/" target="_blank" rel="external">http://web.expasy.org/pROC/</a>  <ul>
+<li>install.packages(“pROC”)</li>
+<li>library(pROC)</li>
+</ul>
+</li>
+<li>“josnlite” package, parser json file<ul>
+<li>A smart json encoder in R <a href="https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/" target="_blank" rel="external">https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/</a></li>
+<li>install.packages(“jsonlite”, repos=”<a href="http://cran.r-project.org" target="_blank" rel="external">http://cran.r-project.org</a>“)</li>
+<li>install.packages(“curl”)</li>
+</ul>
+</li>
+<li>“lubridate”, parser date</li>
+<li>“json_decode”, function to parser json into array</li>
+<li><p>R compare script (* important)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = data.frame(A=c(5,6,7,8), B=c(1,7,5,9))</span><br><span class="line">with(df,df[A&gt;B,])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Censored regression in r</p>
+<ul>
+<li>Each steps <a href="http://stats.stackexchange.com/questions/149091/censored-regression-in-r" target="_blank" rel="external">http://stats.stackexchange.com/questions/149091/censored-regression-in-r</a></li>
+<li>Package <a href="https://cran.r-project.org/web/packages/AER/" target="_blank" rel="external">https://cran.r-project.org/web/packages/AER/</a></li>
+<li>How to install packages<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; install.packages(<span class="string">"AER"</span>, lib = <span class="string">"/my/own/R-packages/"</span>)</span><br><span class="line">&gt; library(<span class="string">"AER"</span>, lib.loc=<span class="string">"/my/own/R-packages/"</span>)</span><br><span class="line">Ref http://www.math.usask.ca/~longhai/software/installrpkg.html</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<hr>
+<p>PHP call R API</p>
+<hr>
+</blockquote>
+<ul>
+<li><p>API part</p>
+<ul>
+<li><p>PHP API</p>
+<ul>
+<li>API url <a href="http://example-rtb.cloudapp.net:8181/example/api/predict.php" target="_blank" rel="external">http://example-rtb.cloudapp.net:8181/example/api/predict.php</a></li>
+<li>PHP calling function methods</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">call_user_func()</span><br><span class="line">call_user_func(<span class="string">'a'</span>, <span class="string">"111"</span>, <span class="string">"222"</span>)</span><br><span class="line">call_user_func_array()</span><br><span class="line">call_user_func_array(<span class="string">'a'</span>, array(<span class="string">"111"</span>, <span class="string">"222"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RESTful API based OpenCPU</p>
+<ul>
+<li>example prediction API<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ time curl http://localhost:7509/ocpu/library/exampleApi/R/predict_api/json -H <span class="string">"Content-Type:application/json"</span> <span class="_">-d</span> <span class="string">'&#123;"request":["http://*.cloudapp.net:8181/json/req.txt"]&#125;'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Install opencpu on Ubuntu cloud server</p>
+<ul>
+<li>Recommended on Ubuntu 14.04</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#requires ubuntu 14.04 (trusty)</span></span><br><span class="line">sudo add-apt-reporitory -y ppa:opencpu/opencpu-1.5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line"><span class="comment">#install opencpu server</span></span><br><span class="line">sudo apt-get install -y opencpu</span><br><span class="line"><span class="comment"># optional</span></span><br><span class="line">sudo apt-get isntall -y rstudio-server</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>R command</p>
+<ul>
+<li><p>Local</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/sparkR --packages com.databricks:spark-csv_2.11:1.2.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Standalone</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/sparkR --master spark://example-data01:7077 --packages com.databricks:spark-csv_2.11:1.2.0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>SparkR MLlib</p>
+<ul>
+<li>An exampel for sparkR MLlib<ul>
+<li>Ref <a href="https://github.com/AlbanPhelip/SparkR-example" target="_blank" rel="external">https://github.com/AlbanPhelip/SparkR-example</a></li>
+</ul>
+</li>
+<li>Only the glm() can be used in sparkR<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/sparkR --master spark://example-data01:7077 --packages com.databricks:spark-csv_2.11:1.2.0 /home/admin/Rscript_model_<span class="built_in">test</span>/train_sparkr.R hdfs://masters/Rscript_model/data.txt hdfs://masters/Rscript_model/model.Rds</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<hr>
+<p>R on SparkR  tutorials for Big Data analysis and Machine Learning as IPython/Jupyter notebooks</p>
+<h2 id="https_3A//github-com/jadianes/spark-r-notebooks"><a href="#https_3A//github-com/jadianes/spark-r-notebooks" class="headerlink" title="https://github.com/jadianes/spark-r-notebooks"></a><a href="https://github.com/jadianes/spark-r-notebooks" target="_blank" rel="external">https://github.com/jadianes/spark-r-notebooks</a></h2><hr>
+<p>A good example for R app</p>
+<hr>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">http://blog.fens.me/r-app-china-weather/</span><br><span class="line">RandomForest <span class="keyword">in</span> R with parallel trainning.</span><br><span class="line"><span class="comment"># the parallel computing by RandomForest</span></span><br><span class="line">library(randomForest)</span><br><span class="line"> cl &lt;- makeCluster(4)</span><br><span class="line"> registerDoParallel(cl)</span><br><span class="line"> rf &lt;- foreach(ntree=rep(25000, 4),</span><br><span class="line">                  .combine=combine,</span><br><span class="line">                  .packages=<span class="string">'randomForest'</span>) %dopar%</span><br><span class="line">          randomForest(Species~., data=iris, ntree=ntree)</span><br><span class="line">stopCluster(cl)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<hr>
+<p>SparkR configure</p>
+<hr>
+</blockquote>
+<p>SparkR is an R package that provides a light-weight frontend to use Apache Spark from R</p>
+<ul>
+<li>Ref <a href="https://github.com/amplab-extras/SparkR-pkg" target="_blank" rel="external">https://github.com/amplab-extras/SparkR-pkg</a> | <a href="http://amplab-extras.github.io/SparkR-pkg/" target="_blank" rel="external">http://amplab-extras.github.io/SparkR-pkg/</a></li>
+<li><p>Configure the sparkR environment</p>
+<ul>
+<li>Required<ul>
+<li>openjdk 7, R</li>
+</ul>
+</li>
+<li>Steps for set up<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo R</span><br><span class="line">install.packages(<span class="string">"rJava"</span>)</span><br><span class="line">install.packages(<span class="string">"devtools"</span>, dependencies = TRUE)</span><br><span class="line"><span class="comment"># after install rJava &amp; devtools</span></span><br><span class="line">library(devtools)</span><br><span class="line">install_github(<span class="string">"amplab-extras/SparkR-pkg"</span>, subdir=<span class="string">"pkg"</span>)</span><br><span class="line"><span class="comment"># Resolve</span></span><br><span class="line"><span class="comment"># sudo apt-get install r-cran-rjava</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Required</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxml2-dev</span><br><span class="line">sudo apt-get install libcurl4-openssl-dev</span><br><span class="line">sudo apt-get install libcurl4-gnutls-dev</span><br><span class="line">sudo apt-get install curl</span><br><span class="line">/etc/apt/source.list</span><br><span class="line">  <span class="comment">#deb http://cran.rstudio.com/bin/linux/ubuntu trusty/</span></span><br><span class="line">sudo apt-get install libssl-dev</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>Sort the SparkR</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">./bin/sparkR --packages com.databricks:spark-csv_2.11:1.2.0</span><br><span class="line"> sc &lt;- sparkR.init(sparkPackages=<span class="string">"com.databricks:spark-csv_2.11:1.2.0"</span>)</span><br><span class="line">sc &lt;- sparkR.init(master=<span class="string">"spark://example-data01:7077"</span>, sparkEnvir=list(spark.executor.memory=<span class="string">"10g"</span>, spark.cores.max=<span class="string">"4"</span>), sparkPackages=<span class="string">"com.databricks:spark-csv_2.11:1.2.0"</span> )</span><br><span class="line">sqlContext &lt;- sparkRSQL.init(sc)</span><br><span class="line">dataT &lt;- read.df(sqlContext, <span class="string">"hdfs://masters/Rscript_model/data.txt"</span>,<span class="string">"com.databricks.spark.csv"</span>,header=<span class="string">"true"</span>,delimiter=<span class="string">"\t"</span>)</span><br><span class="line">on example-data01: dataT &lt;- read.df(sqlContext, <span class="string">"/home/admin/data/data.txt"</span>,<span class="string">"com.databricks.spark.csv"</span>,header=<span class="string">"true"</span>,delimiter=<span class="string">"\t"</span>, transpose = <span class="string">"true"</span>, is.dgCMatrix = <span class="string">"false"</span>)</span><br><span class="line">Ref script</span><br><span class="line">dataT &lt;- read.df(sqlContext, <span class="string">"/home/admin/data/data.txt"</span>,<span class="string">"com.databricks.spark.csv"</span>,header=<span class="string">"true"</span>,delimiter=<span class="string">"\t"</span>)</span><br><span class="line">head(select(dataT,dataT<span class="variable">$is_win</span>))</span><br><span class="line"><span class="built_in">test</span> &lt;- structure(dataT, package=<span class="string">"SparkR"</span>)</span><br><span class="line">dataT &lt;- read.table(sqlContext, <span class="string">"hdfs://masters/Rscript_model/data.txt"</span>,<span class="string">"com.databricks.spark.csv"</span>,header=<span class="string">"true"</span>,delimiter=<span class="string">"\t"</span>)</span><br><span class="line"><span class="built_in">test</span> &lt;- cbind(select(dataT, <span class="string">"is_win"</span>), select(dataT, <span class="string">"days"</span>), select(dataT, <span class="string">"hours"</span>), select(dataT, <span class="string">"exchange_id"</span>), select(dataT, <span class="string">"app_id"</span>), select(dataT, <span class="string">"publiser_id"</span>), select(dataT, <span class="string">"bidfloor"</span>), select(dataT, <span class="string">"w"</span>), select(dataT, <span class="string">"h"</span>), select(dataT, <span class="string">"os"</span>), select(dataT, <span class="string">"Osv"</span>), select(dataT, <span class="string">"model"</span>), select(dataT, <span class="string">"connectiontype"</span>), select(dataT,<span class="string">"country"</span>), select(dataT, <span class="string">"ua"</span>), select(dataT,<span class="string">"carrier"</span>), select(dataT, <span class="string">"js"</span>), select(dataT, <span class="string">"user"</span>), select(dataT, <span class="string">"carriername"</span>), select(dataT, <span class="string">"app_cat"</span>), select(dataT,<span class="string">"btype"</span>), select(dataT,<span class="string">"mimes"</span>), select(dataT,<span class="string">"badv"</span>), select(dataT,<span class="string">"bcat"</span>))</span><br><span class="line">as.data.frame(<span class="built_in">test</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<hr>
+<p>Output Format using R</p>
+<hr>
+</blockquote>
+<ul>
+<li><p>pdf  format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pdf(file=<span class="string">"myplot.pdf"</span>)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jpeg format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setwd(<span class="string">"path"</span>)</span><br><span class="line">jpeg(file=<span class="string">"myplot.jpeg"</span>)</span><br><span class="line">plot(1:10)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>png format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">png(file=<span class="string">"myplot.png"</span>, <span class="built_in">bg</span>=<span class="string">"transparent"</span>)</span><br><span class="line">dev.off()</span><br><span class="line"><span class="comment">#View the png on Ubuntu, by using "gthumb"</span></span><br><span class="line"><span class="comment">#  sudo apt-get install gthumb</span></span><br><span class="line"><span class="comment">#  $gthumb myplot.png</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>bmp format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bmp(<span class="string">"myplot.bmp"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>PostScript format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postscript(<span class="string">"myplot.ps"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows image file format</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">win.metafile(<span class="string">"myplot.ps"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -525,8 +757,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/16/machine-learning-notes-1/" itemprop="url">
-                  Machine Learning notes (01)
+                <a class="post-title-link" href="/2016/01/12/hdfs-spark-2/" itemprop="url">
+                  HDFS configure with Zookeeper (02)
                 </a>
               
             
@@ -539,8 +771,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
-              2016-01-16
+            <time itemprop="dateCreated" datetime="2016-01-12T15:15:04+08:00" content="2016-01-12">
+              2016-01-12
             </time>
           </span>
 
@@ -569,8 +801,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                <a href="/2016/01/12/hdfs-spark-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/hdfs-spark-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -580,7 +812,7 @@
 
           
           
-             <span id="/2016/01/16/machine-learning-notes-1/" class="leancloud_visitors" data-flag-title="Machine Learning notes (01)">
+             <span id="/2016/01/12/hdfs-spark-2/" class="leancloud_visitors" data-flag-title="HDFS configure with Zookeeper (02)">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -603,32 +835,487 @@
       
         
           
-            <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
-<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
-<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
+            <p>Construct the platform for Big Data project</p>
+<h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Configure Zookeeper"></a>Configure Zookeeper</h2><ul>
+<li>on each server, configure the java environment<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf zookeeper-3.4.6.tar.gz</span><br><span class="line">$ mv zookeeper-3.4.6 zookeeper</span><br><span class="line">$ <span class="built_in">cd</span> zookeeper/conf</span><br><span class="line">$ cp zoo_sample.cfg zoo.cfg</span><br><span class="line">$ vi zoo.cfg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Server role</th>
+<th>example-data01（namenode1）</th>
+<th>example-data02（namenode2）</th>
+<th>example-data03（datanode1）</th>
+<th style="text-align:right">example-data04（datanode2）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NameNode</td>
+<td>YES</td>
+<td>YES</td>
+<td>NO</td>
+<td style="text-align:right">NO</td>
+</tr>
+<tr>
+<td>DataNode</td>
+<td>NO</td>
+<td>NO</td>
+<td>YES</td>
+<td style="text-align:right">YES</td>
+</tr>
+<tr>
+<td>JournalNode</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+<td style="text-align:right">NO</td>
+</tr>
+<tr>
+<td>ZooKeeper</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+<td style="text-align:right">NO</td>
+</tr>
+<tr>
+<td>ZKFC</td>
+<td>YES</td>
+<td>YES</td>
+<td>NO</td>
+<td style="text-align:right">NO</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><p>Scilit-learn requires:</p>
+<li>8080 =&gt; example-data01:50070</li>
+<li>8000 =&gt; example-data02:50070</li>
+</ul>
+<h3 id="Hadoop_configure"><a href="#Hadoop_configure" class="headerlink" title="Hadoop configure"></a>Hadoop configure</h3><ul>
+<li><p>hosts</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*.*.*.*  example-data01</span><br><span class="line">*.*.*.*  example-data02</span><br><span class="line">*.*.*.*  example-data03</span><br><span class="line">*.*.*.*  example-data04</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$ vi ~/.bashrc</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim ~/.bashrc</span></span><br><span class="line"><span class="built_in">export</span> ZOO_HOME=/home/admin/zookeeper</span><br><span class="line"><span class="built_in">export</span> ZOO_LOG_DIR=/home/admin/zookeeper/logs</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$ZOO_HOME</span>/bin</span><br><span class="line"><span class="comment"># source ~/.bashrc</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$ mkdir -p /data/hadoop/zookeeper/{data,logs}</p>
+</li>
+<li>$ cp ~/zookeeper/conf/zoo_sample.cfg ~/zookeeper/conf/zoo.cfg</li>
+<li><p>$ vim zoo.cfg</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /home/admin/zookeeper/conf/zoo.cfg</span></span><br><span class="line">tickTime=2000</span><br><span class="line">initLimit=10</span><br><span class="line">syncLimit=5</span><br><span class="line">dataDir=/home/admin/zookeeper/data</span><br><span class="line">clientPort=2181</span><br><span class="line">server.1=example-data01:2888:3888</span><br><span class="line">server.2=example-data02:2888:3888</span><br><span class="line">server.3=example-data03:2888:3888</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$ create myid in zkData file   -&gt; echo 1 &gt; myid</p>
+</li>
+<li>$ scp -r zookeeper/* admin@example-data02:~  -&gt; echo 2 &gt; myid</li>
+<li>$ scp -r zookeeper/* admin@example-data03:~   -&gt; echo 3 &gt; myid</li>
+<li>$ cp ~/zookeeper to each server ( example-data02, example-data03)</li>
+<li>on example-data01<ul>
+<li>check status by using  </li>
+<li>$  ./bin/zkCli.sh -server example-data01:2181</li>
+<li>$  or ./bin/zkCli.sh -server example-data02:2181</li>
+<li>exit by using “quit”</li>
+</ul>
+</li>
+<li>on each node to perform<ul>
+<li>./bin/zkServer.sh start</li>
+<li>./bin/zkServer.sh status</li>
+</ul>
+</li>
+</ul>
+<h4 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h4><pre><code>- example-data01(Namenode) example-data02(Sec-namenode) example-data03(datanode)  example-data04 (datanode)
+</code></pre><h4 id="On_example-data01"><a href="#On_example-data01" class="headerlink" title="On example-data01"></a>On example-data01</h4><ul>
+<li><p>Step 1:</p>
 <ul>
-<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
+<li>vim ~/.bashrc ( then copy the ~/.bashrc to example-data02( namenode) &amp; example-data03 (datanode)</li>
+</ul>
 </li>
-<li><p>Numpy (&gt;=1.6.1)</p>
-</li>
-<li><p>Scipy (&gt;=0.9)</p>
-</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># java configure</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm/java-8-oracle</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$CLASSPATH</span>:<span class="variable">$JAVA_HOME</span>/lib:<span class="variable">$JAVA_HOME</span>/jre/lib</span><br><span class="line"></span><br><span class="line"><span class="comment"># hadoop configure</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$HADOOP_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HADOOP_CONF_DIR=<span class="variable">$HADOOP_HOME</span>/etc/hadoop</span><br><span class="line"></span><br><span class="line"><span class="comment">#zookeeper configure</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> ZOO_HOME=/home/admin/zookeeper</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$ZOO_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> ZOO_LOG_DIR=/home/admin/zookeeper/logs</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_COMMON_LIB_NATIVE_DIR=<span class="variable">$HADOOP_HOME</span>/lib/native</span><br><span class="line"><span class="built_in">export</span> HADOOP_OPTS=<span class="string">"-Djava.library.path=<span class="variable">$HADOOP_HOME</span>/lib/native"</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_PID_DIR=/home/admin/hadoop/pids</span><br><span class="line"><span class="built_in">export</span> HADOOP_COMMON_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"><span class="built_in">export</span> HADOOP_HDFS_HOME=<span class="variable">$HADOOP_HOME</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$HADOOP_HOME</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step 2:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p /home/admin/hadoop/&#123;pids,storage&#125;</span><br><span class="line">$ mkdir -p /home/admin/hadoop/storage/&#123;hdfs,tmp,journal&#125;</span><br><span class="line">$ mkdir -p /home/admin/hadoop/storage/hdfs/&#123;name,data&#125;</span><br><span class="line"><span class="keyword">in</span> example-data03 &amp; example-data04</span><br><span class="line">$ mkdir -p /datadriver/hdfs/data</span><br><span class="line">$ sudo chown admin /datadriver/hdfs/data/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step 3:</li>
 </ul>
 <blockquote>
-<p>For OSX installation</p>
+<p>configure the core-site.xml, hadoop-env.sh, hdfs-site.xml</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
 <ul>
-<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<li>configure core-site.xml</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;hdfs://masters&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;file:/home/admin/hadoop/storage/tmp&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;ha.zookeeper.quorum&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;example-data01:2181,example-data02:2181,example-data03:2181&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;hadoop.native.lib&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br><span class="line">configure  hdfs-site.xml</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.nameservices&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;masters&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.ha.namenodes.masters&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;nn1,nn2&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;file:///home/admin/hadoop/storage/hdfs/name&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">//                &lt;value&gt;file:/home/admin/hadoop/storage/hdfs/data&lt;/value&gt;</span><br><span class="line">                &lt;value&gt;file:///datadriver/hdfs/data&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.rpc-address.masters.nn1&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;example-data01:9000&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.http-address.masters.nn1&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;example-data01:50070&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.rpc-address.masters.nn2&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;example-data02:9000&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.http-address.masters.nn2&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;example-data02:50070&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.namenode.shared.edits.dir&lt;/name&gt;</span><br><span class="line">         &lt;value&gt;qjournal://example-data01:8485;example-data02:8485;example-data03:8485/masters&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.journalnode.edits.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;/home/admin/hadoop/storage/journal&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.ha.fencing.methods&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;sshfence(hdfs)</span><br><span class="line">                shell(/bin/<span class="literal">true</span>)&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.ha.fencing.ssh.private-key-files&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;/home/admin/.ssh/id_rsa&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.ha.fencing.ssh.connect-timeout&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;30000&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.ha.automatic-failover.enabled&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.client.failover.proxy.provider.masters&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>configure hadoop-env.sh</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm/java-8-oracle</span><br></pre></td></tr></table></figure>
+<ul>
+<li>configure slaves</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">example-data03</span><br><span class="line">example-data04</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step 4:</li>
+</ul>
+<blockquote>
+<p>scp hadoop to each node ( example-data02, example-data03, example-data04)</p>
+</blockquote>
+<ul>
+<li>Step 5:</li>
+</ul>
+<blockquote>
+<p>Setup the  HDFS Cluster with ZooKeeper Using Demo (example)</p>
+</blockquote>
+<ul>
+<li><p>on the namenode1 (example-data01)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hdfs zkfc -formatZK</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on each zookeeper node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hadoop-daemon.sh start journalnode</span><br><span class="line">// $ ./sbin/hadoop-daemons.sh --hostnames <span class="string">'example-data01 example-data02 example-data03'</span> start journalnode  // this <span class="built_in">command</span> is used to start the journalnode of zookeeper</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on the namenode1 (example-data01)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hdfs namenode -format</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on the namenode1 (example-data01)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./sbin/hadoop-daemon.sh start namenode</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on namenode2 (example-data02)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hdfs namenode -bootstrapStandby</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on namenode2 (example-data02)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./sbin/hadoop-daemon.sh start namenode</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on the two namenode (namenode1, namenode2)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./sbin/hadoop-daemon.sh start zkfc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>on the all datanode (datanode1, datanode2)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./sbin/hadoop-daemon.sh start datanode</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>still now, we can see the following name on namenode1 (example-data01)</p>
+<blockquote>
+<p>QuorumPeerMain, NameNode, DFSZKFailoverController(basically), JournalNode</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>Step 6: Testing the HDFS’s  function<br>-</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  login on web</span></span><br><span class="line">example-data01: namenode (active)  =&gt; example-data01:9000</span><br><span class="line">website: example-hadoop.cloudapp.net:8080</span><br><span class="line">example-data02: namenode (standby)  =&gt; example-data02:9000</span><br><span class="line">website: example-hadoop.cloudapp.net:8000</span><br><span class="line"><span class="comment"># $ hadoop-daemon.sh start namenode</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Step 7: Import , excute on namenode1 (example-data01)</p>
+<ul>
+<li><p>Before Starting HDFS , Formating the zookeeper</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hdfs zkfc -formatZK</span><br><span class="line">Start the HDFS  --&gt; $ <span class="built_in">cd</span> /home/admin/hadoop &amp;&amp; sbin/start-dfs.sh</span><br><span class="line">Stop the HDFS  --&gt; $ <span class="built_in">cd</span> /home/admin/hadoop &amp;&amp; sbin/stop-dfs.sh</span><br><span class="line">$ start-dfs.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>check the status on two namenode</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hdfs haadmin -getServiceState nn1 --&gt; active</span><br><span class="line">$ hdfs haadmin -getServiceState nn2 --&gt; standby</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>when the stop-dfs.sh turn to <a href="http://taoo.iteye.com/blog/1730406" target="_blank" rel="external">error</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bashrc</span><br><span class="line"><span class="built_in">export</span> HADOOP_PID_DIR=/home/hadoop/pids</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
+<li><p>hdfs dfsadmin -report</p>
+</li>
+</ul>
+<h3 id="Spark_on_Yarn_Reference"><a href="#Spark_on_Yarn_Reference" class="headerlink" title="Spark on Yarn Reference"></a><a href="http://wuchong.me/blog/2015/04/04/spark-on-yarn-cluster-deploy/" target="_blank" rel="external">Spark on Yarn Reference</a></h3><p>configure additional two file<br>yarn-site.xml &amp; maperd-site.xml</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/12/hdfs-spark-1/" itemprop="url">
+                  HDFS configure with Zookeeper (01)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-12T15:14:59+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/12/hdfs-spark-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/hdfs-spark-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/12/hdfs-spark-1/" class="leancloud_visitors" data-flag-title="HDFS configure with Zookeeper (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Construct the platform for Big Data project</p>
+<h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>
+<ul>
+<li>Unbuntu 14.0 LTS</li>
+</ul>
+<h3 id="lvm2"><a href="#lvm2" class="headerlink" title="lvm2"></a>lvm2</h3><ul>
+<li>command <a href="http://linux.about.com/library/cmd/blcmdl8_lvcreate.htm" target="_blank" rel="external">–lvcreate</a></li>
+<li>Configure the raid 0<ul>
+<li>Login in the url: <a href="http://manage.windowsazure.com" target="_blank" rel="external">http://manage.windowsazure.com</a></li>
+<li>Attached/Added 4 empty disks</li>
+</ul>
+</li>
+<li>Create logical volume ( striped disks)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install lvm2</span><br><span class="line">// find the disk, using dmesg | grep SCSI</span><br><span class="line"><span class="comment">#  grep SCSI /var/log/dmesg</span></span><br><span class="line">$ sudo fdisk /dev/sdc  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sdd  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sde  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sdf  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo pvcreate /dev/sdc1</span><br><span class="line">$ sudo pvcreate /dev/sdd1</span><br><span class="line">$ sudo pvcreate /dev/sde1</span><br><span class="line">$ sudo pvcreate /dev/sdf1</span><br><span class="line">//  sudo pvscan</span><br><span class="line">// merge all the drives together</span><br><span class="line">$ sudo vgcreate datadrive /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1</span><br><span class="line">// sudo vgdisplay</span><br><span class="line">$ sudo lvcreate <span class="_">-l</span> 100%FREE datadrive -n example-log -I 64 -i 4</span><br><span class="line">// sudo lvdisplay</span><br><span class="line">//  sudo lvcreate -i &lt;number of physical volumes to stripe&gt; -I (大写i)&lt;size of stripe <span class="keyword">in</span> killobytes&gt; -L &lt;size <span class="keyword">in</span> megabytes&gt;M &lt;name of virtual group&gt;</span><br><span class="line">$ sudo mkfs -t ext4 /dev/datadrive/example-log</span><br><span class="line">$ sudo mkdir /datasource</span><br><span class="line">$ sudo mount /dev/datadrive/example-log /datasource</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Automatic Mount configure (<a href="https://wiki.archlinux.org/index.php/Fstab" target="_blank" rel="external">fstab</a>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo blkid</span><br><span class="line">sudo vim /etc/fstab</span><br><span class="line">/dev/mapper/datadrive-example--datalog: UUID=<span class="string">"b2e83db3-41b9-4f78-8b1f-f196bb9b9b6f"</span> TYPE=<span class="string">"ext4"</span></span><br><span class="line"></span><br><span class="line">UUID=b2e83db3-41b9-4f78-8b1f<span class="_">-f</span>196bb9b9b6f /datadrive ext4 defaults 0 0</span><br><span class="line">// An example from mine (bolded GUID is from my blkid, be sure to change it!): UUID=63ab0827-4698-427a-818a-279b18886757 /mnt/datadrive ext3 defaults 0 0</span><br><span class="line">// $ sudo chroot /target</span><br><span class="line">// Test disk write speed</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ time sh -c &quot;sudo dd if=/dev/zero of=/datasource/temp bs=4k count=2000000 &amp;&amp; sync&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><ul>
+<li>Login in <a href="http://manage.windowsazure.com" target="_blank" rel="external">http://manage.windowsazure.com</a>, build the server on Azure<ul>
+<li>Set the host: example-hadoop.cloudapp.net</li>
+<li>Create VM (Ubuntu 14 LTS), with 8 cores and 14GB RAM<ul>
+<li>example-data01, example-data02, example-data03, example-data04</li>
+</ul>
+</li>
+<li><a href="http://wiki.apache.org/hadoop/FAQ" target="_blank" rel="external">Hadoop FAQ</a></li>
+</ul>
+</li>
+<li>ssh-keygen</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">admin@example-data01 $ <span class="built_in">cd</span> .ssh</span><br><span class="line">$ ssh-keygen -t rsa  -&gt; enter, enter, enter</span><br><span class="line">$ cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line">// <span class="built_in">test</span> the key: $ ssh localhost  -&gt; successfully</span><br><span class="line">$ scp authorized_keys admin@example-data02:~/.ssh/</span><br><span class="line">$ scp authorized_keys admin@example-data03:~/.ssh/</span><br><span class="line">// <span class="built_in">test</span> $ ssh example-data02</span><br></pre></td></tr></table></figure>
+<p>Download the Hadoop Binary on each node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ Install java on ubuntu</span><br><span class="line">$ wget http://mirrors.cnnic.cn/apache/hadoop/common/stable/hadoop-2.7.1.tar.gz</span><br><span class="line">$ tar xvf hadoop-2.7.1.tar.gz</span><br><span class="line">$ mv hadoop-2.7.1 hadoop</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/12/tools-summary/" itemprop="url">
+                  Tools Summary
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-12T02:48:57+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/12/tools-summary/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/tools-summary/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/12/tools-summary/" class="leancloud_visitors" data-flag-title="Tools Summary">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Summary the tools used in project, essential in big data direction</p>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
+<li>Database: MySQL, NOSQL(redis), Hive, HBase</li>
+<li>Platform: Windows8, Ubuntu, Debian</li>
+<li>VM: VMware, Cywin, VirtualBox</li>
+<li>Language: JAVA, R, Python, go, Ruby, Matlab</li>
+<li>Shell: bash, perl</li>
+<li>Bigdata Sys: SPARK, Hadoop, XAMPP</li>
+<li>Algorithm: ML &amp; NL &amp; DM (DL)</li>
+<li>Transfer: winSCP</li>
+<li>Notes : WizNote , evernote</li>
+<li>Office : OpenOffice, WPS</li>
+<li>PHP, html5, <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>Build evn: Maven, sbt</li>
+<li>MLlib: liblinear-java, libsvm</li>
+<li>SSH manager : putty manager, putty</li>
+<li>Blog tools: WordPress, hexo</li>
+<li>Redis <a href="https://redislabs.com/redis-java" target="_blank" rel="external">java</a></li>
 </ul>
 
           
@@ -658,7 +1345,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -699,7 +1386,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -819,16 +1506,15 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times，
 </span>
 
-<span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
+<span id="busuanzi_container_site_uv"> Visitors <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -880,13 +1566,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
-
-
 
   
 

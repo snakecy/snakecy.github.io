@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning, Data Mining, Deep Learning" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -104,6 +104,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=55430358";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -245,8 +254,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/15/UCI-machine-learning-repository/" itemprop="url">
-                  UCI Machine Learning Repository
+                <a class="post-title-link" href="/2016/01/11/python-spyder/" itemprop="url">
+                  Install Python GUI spyder on Mac
                 </a>
               
             
@@ -259,8 +268,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-15T16:46:41+08:00" content="2016-01-15">
-              2016-01-15
+            <time itemprop="dateCreated" datetime="2016-01-11T00:22:08+08:00" content="2016-01-11">
+              2016-01-11
             </time>
           </span>
 
@@ -273,8 +282,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
                   </a>
                 </span>
 
@@ -289,8 +298,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/15/UCI-machine-learning-repository/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/15/UCI-machine-learning-repository/" itemprop="commentsCount"></span>
+                <a href="/2016/01/11/python-spyder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/11/python-spyder/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,7 +309,7 @@
 
           
           
-             <span id="/2016/01/15/UCI-machine-learning-repository/" class="leancloud_visitors" data-flag-title="UCI Machine Learning Repository">
+             <span id="/2016/01/11/python-spyder/" class="leancloud_visitors" data-flag-title="Install Python GUI spyder on Mac">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -323,72 +332,24 @@
       
         
           
-            <h2 id="Datasets_Examples_for_machine_learning"><a href="#Datasets_Examples_for_machine_learning" class="headerlink" title="Datasets Examples for machine learning"></a>Datasets Examples for machine learning</h2><p>Here are the data sets from <a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="external">UCI Machine Learning Repository</a> once I sorted and practiced. Some of the abstracts I summarized updated to my github <a href="https://github.com/snakecy/CUIMachineLearningRepositry" target="_blank" rel="external">CUIMachineLearningRepository</a>.</p>
-<p>Example:</p>
-<h3 id="Image_Segmentation"><a href="#Image_Segmentation" class="headerlink" title="Image Segmentation"></a>Image Segmentation</h3><ol>
-<li>Data set website<br><a href="http://archive.ics.uci.edu/ml/datasets/Image+Segmentation" target="_blank" rel="external">http://archive.ics.uci.edu/ml/datasets/Image+Segmentation</a></li>
-<li>Datasets describe<br>【1】The data used in our experiments were collected by Vision Group, University of Massachusetts.【2】We used to classify the image.【3】The instances were drawn randomly from a database of 7 outdoor images. The images were hand segmented to create a classification for every pixel. Each instance is a 3x3 region. Number of Attributes has 19 continuous attributes, each attribute can describes as region-centroid-col、region-centroid-row、region-pixel-count、short-line-density-5、short-line-density-2、 vedge-mean、vegde-sd、hedge-mean、hedge-sd、intensity-mean、rawred-mean、rawblue-mean、rawgreen-mean、exred-mean、exblue-mean、exgreen-mean、value-mean、saturatoin-mean、hue-mean.【4】The database has 2310 samples, respectively belong to training with 210 samples and testing with 2100 samples. The categories of network system include seven categories, as shown in Table 1.</li>
-</ol>
-<h5 id="Table_1_Category_Distribution_of_Network_System"><a href="#Table_1_Category_Distribution_of_Network_System" class="headerlink" title="Table 1 Category Distribution of Network System"></a>Table 1 Category Distribution of Network System</h5><table>
-<thead>
-<tr>
-<th style="text-align:left">Invasion</th>
-<th style="text-align:left">Training</th>
-<th style="text-align:left">Testing</th>
-<th style="text-align:left">Total Number of Samples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Brickface</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">sky</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Foliage</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Cement</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">window</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Path</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">grass</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Total number of samples in total</td>
-<td style="text-align:left">210</td>
-<td style="text-align:left">2100</td>
-<td style="text-align:left">2310</td>
-</tr>
-</tbody>
-</table>
+            <p>The spyder tool of Python GUI works on Max OS</p>
+<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>
+<h3 id="Install_Python_3-4-1_on_Mac"><a href="#Install_Python_3-4-1_on_Mac" class="headerlink" title="Install Python 3.4.1 on Mac"></a>Install Python 3.4.1 on Mac</h3><p>Mac has installed the python 2.7, if you want to use the latest version,  go to the <a href="http://www.python.org/download/" target="_blank" rel="external">Python</a> website and download.</p>
+<h2 id="Install_the_Python_GUI_on_Mac"><a href="#Install_the_Python_GUI_on_Mac" class="headerlink" title="Install the Python GUI on Mac"></a>Install the Python GUI on Mac</h2><h3 id="Step_1_2C_Intall_the_Python"><a href="#Step_1_2C_Intall_the_Python" class="headerlink" title="Step 1, Intall the Python"></a>Step 1, Intall the Python</h3><h3 id="Step_2_2C_Install_the_Anaconda"><a href="#Step_2_2C_Install_the_Anaconda" class="headerlink" title="Step 2, Install the Anaconda"></a>Step 2, Install the <a href="http://www.continuum.io/downloads" target="_blank" rel="external">Anaconda</a></h3><ul>
+<li>Command-Line Install</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda2-2.4.1-MacOSX-x86_64.sh</span><br></pre></td></tr></table></figure>
+<h3 id="Step_3_2C_Install_MacPorts"><a href="#Step_3_2C_Install_MacPorts" class="headerlink" title="Step 3, Install MacPorts"></a>Step 3, Install <a href="http://guide.macports.org/" target="_blank" rel="external">MacPorts</a></h3><p>Make sure that you have installed the XCode on mac, which is the encession to install “spyder”<br>Also for the MacPorts install <a href="http://www.ccvita.com/434.html" target="_blank" rel="external">reference</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.3.tar.bz2</span><br><span class="line">tar xf MacPorts-2.3.3.tar.bz2</span><br></pre></td></tr></table></figure>
+<p>Then, edit the /etc/profile file, add the following comand</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/opt/<span class="built_in">local</span>/bin:/opt/<span class="built_in">local</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>For the first time to run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
+<p>And if you update failed, you can re-run it with debug output, likes:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port <span class="_">-d</span> selfupdate</span><br></pre></td></tr></table></figure>
+<h3 id="Step_4_2C_install_spyder"><a href="#Step_4_2C_install_spyder" class="headerlink" title="Step 4, install spyder"></a>Step 4, install spyder</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo port install python27 // <span class="keyword">if</span> python27 dose not installed, <span class="keyword">then</span> install it before activate</span><br><span class="line">$ sudo port select --set python python27  // <span class="built_in">set</span> the default python</span><br><span class="line">$ sudo port select --list python // available versions</span><br><span class="line">$ sudo port <span class="_">-f</span> activate python27</span><br><span class="line">$ sudo port install py-spyder</span><br></pre></td></tr></table></figure>
+<p>﻿After long time waiting. Then, begin our python journey, run the spyder in the terminal</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ spyder</span><br></pre></td></tr></table></figure>
 
           
         
@@ -434,8 +395,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/13/nosql-database/" itemprop="url">
-                  Install NoSQL Database
+                <a class="post-title-link" href="/2016/01/09/github-hexo/" itemprop="url">
+                  Build Blog with Github & Hexo
                 </a>
               
             
@@ -448,8 +409,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-13T02:25:57+08:00" content="2016-01-13">
-              2016-01-13
+            <time itemprop="dateCreated" datetime="2016-01-09T00:00:00+08:00" content="2016-01-09">
+              2016-01-09
             </time>
           </span>
 
@@ -462,8 +423,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
+                  <a href="/categories/web-building/" itemprop="url" rel="index">
+                    <span itemprop="name">web-building</span>
                   </a>
                 </span>
 
@@ -478,8 +439,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/13/nosql-database/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/nosql-database/" itemprop="commentsCount"></span>
+                <a href="/2016/01/09/github-hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/09/github-hexo/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -489,7 +450,7 @@
 
           
           
-             <span id="/2016/01/13/nosql-database/" class="leancloud_visitors" data-flag-title="Install NoSQL Database">
+             <span id="/2016/01/09/github-hexo/" class="leancloud_visitors" data-flag-title="Build Blog with Github & Hexo">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -512,178 +473,35 @@
       
         
           
-            <p>NoSQL database for a key-value DB Redis</p>
+            <p>Beginning the blog journey of Hexo &amp; Gituhub</p>
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="Create_a_domain_of_yourself_bolg_website"><a href="#Create_a_domain_of_yourself_bolg_website" class="headerlink" title="Create a domain of yourself bolg website"></a>Create a domain of yourself bolg website</h2><h3 id="Step_1"><a href="#Step_1" class="headerlink" title="Step 1"></a>Step 1</h3><p>Register on <a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external">Godaddy</a>,  If possible, also should to use CDN on <a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a></p>
+<h3 id="Step_2"><a href="#Step_2" class="headerlink" title="Step 2"></a>Step 2</h3><p>Create Personal Rep. on github, and name the Rep. is <snakecy.github.io>, add the README.md file to describe the Rep.</snakecy.github.io></p>
+<h3 id="Step_3"><a href="#Step_3" class="headerlink" title="Step 3"></a>Step 3</h3><p>Using ping to get github pages ip  &lt; 103.245.222.133&gt;</p>
+<h3 id="Step_4"><a href="#Step_4" class="headerlink" title="Step 4"></a>Step 4</h3><p>On Mac OS, the necessary thing is to download Xcode CommandLine Tools in AppStore, and then<br><!-- download Xcode and install, then xcode-select --install --><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer</span><br></pre></td></tr></table></figure></p>
+<h3 id="Step_5"><a href="#Step_5" class="headerlink" title="Step 5"></a>Step 5</h3><p>Install jekyll (optional)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gem update --system</span><br><span class="line">$ sudo gem install jekyll</span><br></pre></td></tr></table></figure></p>
+<p>Install Hexo (use)</p>
 <ul>
-<li><p>Quick Start <a href="http://redis.io/topics/quickstart" target="_blank" rel="external">Redis</a></p>
-</li>
-<li><p>use the key value DB (redis)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Or download the redis from website</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Or download</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/redis-stable.tar.gz</span><br><span class="line">tar xvzf redis-stable.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-stable</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Update the redis-server</p>
+<li>Install Xcode and <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>Install Hexo on mac</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br><span class="line">$ mkdir blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo init &amp; npm install</span><br></pre></td></tr></table></figure>
+<p>Configure the homepage by</p>
 <ul>
-<li><p>first way</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:chris-lea/redis-server</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>another way to do this update</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y python-software-properties</span><br><span class="line">sudo add-apt-repository -y ppa:rwky/redis</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y redis-server</span><br></pre></td></tr></table></figure>
-</li>
+<li><a href="http://www.jianshu.com/p/73779eacb494" target="_blank" rel="external">jianshu</a></li>
+<li><a href="http://theme-next.iissnan.com" target="_blank" rel="external">iissnan</a></li>
 </ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/13/json-eclipse/" itemprop="url">
-                  Json parsered by Java
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-13T01:26:05+08:00" content="2016-01-13">
-              2016-01-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/13/json-eclipse/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/json-eclipse/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/01/13/json-eclipse/" class="leancloud_visitors" data-flag-title="Json parsered by Java">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">Views </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Describe how to parser Json flows in (eclipse)  Java, also in Scala</p>
-<h2 id="Json_in_Java"><a href="#Json_in_Java" class="headerlink" title="Json in Java"></a>Json in Java</h2><p>Json-lib must contain the jars blowing ( versions not limited)</p>
-<ul>
-<li><p><a href="http://www.studytrails.com/java/json/java-org-json.jsp" target="_blank" rel="external">Java-org-json</a></p>
-</li>
-<li><p>Json-lib</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">commons-beanutils-1.7.0.jar  or commons-beanutils-1.9.2.jar</span><br><span class="line">commons-collections-3.1.jar  or commons-collections-3.2.1.jar</span><br><span class="line">commons-lang-2.5.jar  or commons-lang-2.6.jar</span><br><span class="line">commons-logging-1.1.1.jar  or commons-logging-1.2.jar</span><br><span class="line">ezmorph-1.0.3.jar  or ezmorph-1.0.6.jar</span><br><span class="line">json-lib-2.2.2-jdk15.jar  or json-lib-2.4-jdk15.jar</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="http://www.cnblogs.com/zhenjing/p/json-smart.html" target="_blank" rel="external">Json-smart</a></p>
-<ul>
-<li>Compare with each json jar package <a href="https://code.google.com/p/json-smart/wiki/FeaturesTests" target="_blank" rel="external">compare</a></li>
-</ul>
-</li>
-<li><p>simple-json</p>
-</li>
-<li><p>org.json</p>
-</li>
-<li><p>example</p>
-<ul>
-<li><a href="http://crunchify.com/how-to-write-json-object-to-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-write-json-object-to-file-in-java/</a></li>
-<li><a href="http://crunchify.com/how-to-read-json-object-from-file-in-java/" target="_blank" rel="external">http://crunchify.com/how-to-read-json-object-from-file-in-java/</a></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reference:</span></span><br><span class="line">&gt; json格式如下：&#123;<span class="string">"response"</span>:&#123;<span class="string">"data"</span>:[&#123;<span class="string">"address"</span>:<span class="string">"南京市游乐园"</span>,<span class="string">"province"</span>:<span class="string">"江苏"</span>,<span class="string">"district"</span>:<span class="string">"玄武区"</span>,<span class="string">"city"</span>:<span class="string">"南京"</span>&#125;]&#125;,<span class="string">"status"</span>:<span class="string">"ok"</span>&#125;</span><br><span class="line">Result： 江苏 南京 玄武区 南京市游乐园</span><br><span class="line">﻿</span><br><span class="line">JSONObject dataJson=new JSONObject(<span class="string">"Json data"</span>);</span><br><span class="line">JSONObject response=dataJson.getJSONObject(<span class="string">"response"</span>);</span><br><span class="line">JSONArray data=response.getJSONArray(<span class="string">"data"</span>);</span><br><span class="line">JSONObject info=data.getJSONObject(0);</span><br><span class="line">String province=info.getString(<span class="string">"province"</span>);</span><br><span class="line">String city=info.getString(<span class="string">"city"</span>);</span><br><span class="line">String district=info.getString(<span class="string">"district"</span>);</span><br><span class="line">String address=info.getString(<span class="string">"address"</span>);</span><br><span class="line">System.out.println(province+city+district+address);</span><br></pre></td></tr></table></figure>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><h3 id="Update_hexo"><a href="#Update_hexo" class="headerlink" title="Update hexo"></a>Update hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="Update_themes"><a href="#Update_themes" class="headerlink" title="Update themes"></a>Update themes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<h3 id="Update_plugins"><a href="#Update_plugins" class="headerlink" title="Update plugins"></a>Update plugins</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm update</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="comment">### Add plugins</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2.7 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.3.0 --save</span><br><span class="line">npm install hexo-generator-feed@1.0.3 --save</span><br><span class="line">npm install hexo-generator-sitemap@1.0.1 --save</span><br></pre></td></tr></table></figure>
 
           
         
@@ -712,7 +530,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
   </nav>
 
 
@@ -753,7 +571,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -873,16 +691,15 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times，
 </span>
 
-<span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
+<span id="busuanzi_container_site_uv"> Visitors <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -934,13 +751,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
-
-
 
   
 

@@ -4,8 +4,90 @@
 
     
   <url>
+    <loc>https://snakecy.github.io/2016/03/13/java-thread/</loc>
+    <lastmod>2016-04-05T15:05:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Multi-thread</title>
+        <pubTime>2016-03-13T14:37:52.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
+    <lastmod>2016-04-05T14:50:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Machine Learning with Scala</title>
+        <pubTime>2016-03-09T16:26:44.000Z</pubTime>
+        
+        <tag>Spark</tag>
+         
+        <tag>Scala</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
+    <lastmod>2016-04-05T14:49:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ipinyou DataSet Description</title>
+        <pubTime>2016-03-10T12:35:08.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</loc>
+    <lastmod>2016-04-05T14:45:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>L-BFGS Algorithm (01)</title>
+        <pubTime>2016-03-14T17:56:22.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://snakecy.github.io/2016/03/18/mac-apache-server/</loc>
-    <lastmod>2016-04-04T16:36:13.000Z</lastmod>
+    <lastmod>2016-04-05T14:44:14.000Z</lastmod>
     <data>
         <display>
         <title>Apache Server Configure on Mac</title>
@@ -26,19 +108,21 @@
 
     
   <url>
-    <loc>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</loc>
-    <lastmod>2016-04-04T12:38:50.000Z</lastmod>
+    <loc>https://snakecy.github.io/2016/03/06/java-call-matlab/</loc>
+    <lastmod>2016-04-05T14:43:41.000Z</lastmod>
     <data>
         <display>
-        <title>L-BFGS Algorithm (01)</title>
-        <pubTime>2016-03-14T17:56:22.000Z</pubTime>
+        <title>Java call Matlab Method</title>
+        <pubTime>2016-03-05T17:49:37.000Z</pubTime>
         
         <tag>Java</tag>
+         
+        <tag>Matlab</tag>
          
          
            
              
-              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
           
         </display>
     </data>
@@ -181,28 +265,6 @@
 
     
   <url>
-    <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
-    <lastmod>2016-04-03T19:33:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Machine Learning with Scala</title>
-        <pubTime>2016-03-09T16:26:44.000Z</pubTime>
-        
-        <tag>Spark</tag>
-         
-        <tag>Scala</tag>
-         
-         
-           
-             
-              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://snakecy.github.io/2016/01/16/machine-learning-notes-1/</loc>
     <lastmod>2016-04-03T19:32:52.000Z</lastmod>
     <data>
@@ -262,48 +324,6 @@
            
              
               <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://snakecy.github.io/2016/03/06/java-call-matlab/</loc>
-    <lastmod>2016-04-03T19:31:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java call Matlab Method</title>
-        <pubTime>2016-03-05T17:49:37.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
-    <lastmod>2016-04-03T19:31:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ipinyou DataSet Description</title>
-        <pubTime>2016-03-10T12:35:08.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
           
         </display>
     </data>

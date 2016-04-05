@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning, Data Mining, Deep Learning" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -104,6 +104,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=55430358";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -322,8 +331,7 @@
 
       
         
-          
-            <h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
+          <h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
 <li>Start up Apache on Mac<ul>
 <li>sudo apachectl (-k) start</li>
 <li>//sudo apachectl (-k) restart</li>
@@ -338,29 +346,11 @@
 <li>(Mac) Apache: You don’t have permission to access / on this server  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites/"</span>&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Options Indexes MultiViews FollowSymLinks</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Configure_PHP_Server"><a href="#Configure_PHP_Server" class="headerlink" title="Configure PHP Server"></a>Configure PHP Server</h3><ol>
-<li><p>Search httpd.conf</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apache2</span><br><span class="line">//sudo cp httpd.conf httpd.conf.bak</span><br><span class="line">sudo vim httpd.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Configure httpd.conf</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Change the DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></span><br><span class="line">DocumentRoot <span class="string">"/Users/andy/Sites"</span></span><br><span class="line">// Change the &lt;Directory <span class="string">"/Library/WebServer/Documents"</span>&gt;</span><br><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites"</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Find php</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#LoadModule php5_module libexec/apache2/libphp5.so</span></span><br><span class="line">drop <span class="string">"#"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cd /etc/</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp php.ini.default php.ini</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Create index.php in /Users/andy/Sites”, and type in</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php phpinfo(); ?&gt;    // &lt;?php  without blank space</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>sudo apachectl restart</p>
-</li>
-<li>Scan localhost in website <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://loaclhost/index.php</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/18/mac-apache-server/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -481,16 +471,153 @@
 
       
         
-          
-            <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
-<blockquote>
-<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
+          <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><blockquote>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。<a href="http://mlworks.cn/posts/introduction-to-l-bfgs/">links</a></p>
 </blockquote>
 <h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
 <p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
 </blockquote>
-<h4 id="Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><a href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29" class="headerlink" title="Newton Algorithm (牛顿算法)"></a>Newton Algorithm (牛顿算法)</h4><h4 id="BFGS_Algorithm"><a href="#BFGS_Algorithm" class="headerlink" title="BFGS Algorithm"></a>BFGS Algorithm</h4>
+<p>The Details description can refer to the <a href="http://www.cnblogs.com/kemaswill/p/3352898.html">notes</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/algorithm-L-BFGS/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/13/java-thread/" itemprop="url">
+                  Java Multi-thread
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-13T22:37:52+08:00" content="2016-03-13">
+              2016-03-13
+            </time>
+          </span>
+
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/13/java-thread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/13/java-thread/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/13/java-thread/" class="leancloud_visitors" data-flag-title="Java Multi-thread">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Java multi-threading implementation ways mainly contain three:</p>
+<ul>
+<li>Inherit the “Thread class”</li>
+<li>Realized the “Runnable interface”</li>
+<li>ExecutorService, Callable, Future<ul>
+<li>The former two ways have no return value after the thread execution, only the last one is with a return value.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/13/java-thread/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -611,20 +738,17 @@
 
       
         
-          
-            <h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
+          <h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
 <hr>
 <p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
 <hr>
 </blockquote>
 <ul>
-<li><p>RankSorce = CTR * BidPrice</p>
-<ul>
-<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html" target="_blank" rel="external">Advertising Calculating</a></li>
+<li>RankSorce = CTR * BidPrice<ul>
+<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html">Advertising Calculating</a></li>
 </ul>
 </li>
-<li><p>Aim</p>
-<ul>
+<li>Aim<ul>
 <li>Low-latency and scalale predictions as a service</li>
 <li>Integrated approach leads to fresher, better predictions</li>
 <li>Easy translation to production predictions</li>
@@ -632,69 +756,153 @@
 </ul>
 </li>
 </ul>
-<h4 id="Experiment_using_R"><a href="#Experiment_using_R" class="headerlink" title="Experiment using R"></a>Experiment using R</h4><ul>
-<li><p>First //</p>
-<ul>
-<li><a href="https://github.com/wnzhang/make-ipinyou-data" target="_blank" rel="external">make-ipinyou-data</a></li>
-<li>Paper: Real-Time Bidding Benchmarking with iPinYou Dataset</li>
-</ul>
-</li>
-<li><p>Second</p>
-<ul>
-<li><a href="https://github.com/wnzhang/rtbcontrol" target="_blank" rel="external">rtbcontrol</a></li>
-<li>Paper: Experiment Code for RTB Feedback Control Techniques</li>
-</ul>
-</li>
-<li><p>Third</p>
-<ul>
-<li><a href="https://github.com/wnzhang/rtbarbitrage" target="_blank" rel="external">rtbarbitrage</a></li>
-<li>Paper: Statistical Arbitrage Mining for Display Advertising</li>
-</ul>
-</li>
-<li><p>Fourth //</p>
-<ul>
-<li><a href="https://github.com/wnzhang/optimal-rtb" target="_blank" rel="external">optimal-rtb</a></li>
-<li>Paper: Optimal Real-Time Bidding for Display Advertising</li>
-</ul>
-</li>
-<li><p>Fifth</p>
-<ul>
-<li><a href="https://github.com/wush978/KDD2015wpp" target="_blank" rel="external">KDD2015wpp</a></li>
-<li>Predicting Winning Price in Real Time Bidding with Censored Data</li>
-</ul>
-</li>
-</ul>
-<h3 id="Winning_price_steps"><a href="#Winning_price_steps" class="headerlink" title="Winning price steps"></a>Winning price steps</h3><ul>
-<li>What features should be taken in</li>
-<li>Considering of the Winning Rate</li>
-<li>Combine Win Rate &amp; Winning Price<ul>
-<li><a href="http://blog.csdn.net/star_liux/article/details/39666737" target="_blank" rel="external">logistic factor solution</a></li>
-<li>Paper reference<ul>
-<li><a href="http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data" target="_blank" rel="external">http://www.slideshare.net/WushWu/predicting-winning-price-in-real-time-bidding-with-censored-data</a></li>
-<li>Programmatic buying bidding strategies with Win Rate and Winning Price Estimation in real time mobile advertising</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Join bid_req, bid_resp and win_notice for Winning Rate/Winning Price Prediction</li>
-</ul>
-<ul>
-<li>Testing Winning Rate running by python (examples with ipinyou)<ul>
-<li>Example of CTR Using Python<ul>
-<li><a href="http://www.dataguru.cn/thread-460417-1-1.html" target="_blank" rel="external">http://www.dataguru.cn/thread-460417-1-1.html</a>  </li>
-</ul>
-</li>
-<li>Example of CTR using R<ul>
-<li><a href="http://f.dataguru.cn/thread-329637-1-1.html" target="_blank" rel="external">http://f.dataguru.cn/thread-329637-1-1.html</a>  </li>
-<li><a href="http://blog.csdn.net/yucan1001/article/details/23228053" target="_blank" rel="external">http://blog.csdn.net/yucan1001/article/details/23228053</a>  </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CRT_DATA.txt</span></span><br><span class="line">0 20 0.294181968932 0.508158622733 0.182334278695 0.629420618229</span><br><span class="line">0 68 0.1867187241 0.606174671096 0.0748709302071 0.806387550943</span><br><span class="line">0 18 0.62087371082 0.497772456954 0.0321750684638 0.629224616618</span><br><span class="line">1 90 0.521405561387 0.476048142961 0.134707792901 0.400062294097</span><br><span class="line">0 75 0.0126899618353 0.507688693623 0.377923880332 0.998697036848</span><br><span class="line">0 8 0.308646073229 0.930652495254 0.755735916926 0.0519441699996</span><br><span class="line">0 64 0.444668888126 0.768001428418 0.501163712702 0.418327345087</span><br><span class="line">0 79 0.842532595853 0.817052919537 0.0709486928253 0.552712019723</span><br><span class="line">1 32 0.410650495262 0.164977576847 0.491438436479 0.886456782492</span><br><span class="line">// first col is whether click, second is the number of impressions</span><br><span class="line"></span><br><span class="line">ctr_data &lt;- read.csv(<span class="string">'CTR_DATA.txt'</span>,header = F, sep = <span class="string">" "</span>)</span><br><span class="line">head(ctr_data)</span><br><span class="line">attach(ctr_data)</span><br><span class="line">ctr_logr &lt;- glm(cbind(V1,V2)~V3+V4+V5+V6,family=binomial(link=<span class="string">"logit"</span>))</span><br><span class="line">record &lt;- data.frame(V3=0.294181968932,V4=0.508158622733,V5=0.182334278695,V6=0.629420618229)</span><br><span class="line">d &lt;- predict(ctr_logr,newdata = record,<span class="built_in">type</span>=<span class="string">"response"</span>)</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/10/ipinyou-database/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/10/machine-learning-scala/" itemprop="url">
+                  Machine Learning with Scala
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T00:26:44+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/10/machine-learning-scala/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/machine-learning-scala/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/10/machine-learning-scala/" class="leancloud_visitors" data-flag-title="Machine Learning with Scala">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<hr>
+<p>Good Example: REST API &amp; Velox <a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final">PPT</a>, <a href="http://arxiv.org/pdf/1409.3809v2.pdf">Papre</a>, <a href="https://github.com/amplab/velox-modelserver">Github</a></p>
+<hr>
+</blockquote>
+<h3 id="Construct_project_2C_with_SBT__26amp_3B_dependencies"><a href="#Construct_project_2C_with_SBT__26amp_3B_dependencies" class="headerlink" title="Construct project, with SBT &amp; dependencies"></a>Construct project, with SBT &amp; dependencies</h3><blockquote>
+<p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
+</blockquote>
+<ul>
+<li>think-bayes<ul>
+<li>github <a href="https://github.com/ruippeixotog/think-bayes-scala">https://github.com/ruippeixotog/think-bayes-scala</a></li>
+<li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
+<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
+<li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
+</ul>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/10/machine-learning-scala/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -721,7 +929,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -762,7 +970,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -882,16 +1090,15 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times，
 </span>
 
-<span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
+<span id="busuanzi_container_site_uv"> Visitors <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -943,13 +1150,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
-
-
 
   
 

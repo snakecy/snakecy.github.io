@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Spark,Scala," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -59,40 +59,31 @@
 
 
 
-<meta name="description" content="Good Example: REST API &amp;amp; Velox PPT, Papre, Github
+<meta name="description" content="Java multi-threading implementation ways mainly contain three:
 
-
-Construct project, with SBT &amp;amp; dependencies
-The reference example project can be found on my github
-
-
-think-bayes
-github https://github.com">
+Inherit the “Thread class”
+Realized the “Runnable interface”
+ExecutorService, Callable, Future
+The former two ways have no return value">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning with Scala">
-<meta property="og:url" content="https://snakecy.github.io/2016/03/10/machine-learning-scala/index.html">
+<meta property="og:title" content="Java Multi-thread">
+<meta property="og:url" content="https://snakecy.github.io/2016/03/13/java-thread/index.html">
 <meta property="og:site_name" content="Snakecy's NOTE">
-<meta property="og:description" content="Good Example: REST API &amp;amp; Velox PPT, Papre, Github
+<meta property="og:description" content="Java multi-threading implementation ways mainly contain three:
 
-
-Construct project, with SBT &amp;amp; dependencies
-The reference example project can be found on my github
-
-
-think-bayes
-github https://github.com">
-<meta property="og:updated_time" content="2016-04-05T14:50:12.000Z">
+Inherit the “Thread class”
+Realized the “Runnable interface”
+ExecutorService, Callable, Future
+The former two ways have no return value">
+<meta property="og:updated_time" content="2016-04-05T15:05:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning with Scala">
-<meta name="twitter:description" content="Good Example: REST API &amp;amp; Velox PPT, Papre, Github
+<meta name="twitter:title" content="Java Multi-thread">
+<meta name="twitter:description" content="Java multi-threading implementation ways mainly contain three:
 
-
-Construct project, with SBT &amp;amp; dependencies
-The reference example project can be found on my github
-
-
-think-bayes
-github https://github.com">
+Inherit the “Thread class”
+Realized the “Runnable interface”
+ExecutorService, Callable, Future
+The former two ways have no return value">
 
 
 
@@ -110,7 +101,7 @@ github https://github.com">
   };
 </script>
 
-  <title> Machine Learning with Scala | Snakecy's NOTE </title>
+  <title> Java Multi-thread | Snakecy's NOTE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -276,7 +267,7 @@ github https://github.com">
             
             
               
-                Machine Learning with Scala
+                Java Multi-thread
               
             
           </h1>
@@ -288,8 +279,8 @@ github https://github.com">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T00:26:44+08:00" content="2016-03-10">
-              2016-03-10
+            <time itemprop="dateCreated" datetime="2016-03-13T22:37:52+08:00" content="2016-03-13">
+              2016-03-13
             </time>
           </span>
 
@@ -318,8 +309,8 @@ github https://github.com">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/10/machine-learning-scala/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/10/machine-learning-scala/" itemprop="commentsCount"></span>
+                <a href="/2016/03/13/java-thread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/13/java-thread/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -329,7 +320,7 @@ github https://github.com">
 
           
           
-             <span id="/2016/03/10/machine-learning-scala/" class="leancloud_visitors" data-flag-title="Machine Learning with Scala">
+             <span id="/2016/03/13/java-thread/" class="leancloud_visitors" data-flag-title="Java Multi-thread">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -350,101 +341,27 @@ github https://github.com">
       
 
       
-        <blockquote>
-<hr>
-<p>Good Example: REST API &amp; Velox <a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final" target="_blank" rel="external">PPT</a>, <a href="http://arxiv.org/pdf/1409.3809v2.pdf" target="_blank" rel="external">Papre</a>, <a href="https://github.com/amplab/velox-modelserver" target="_blank" rel="external">Github</a></p>
-<hr>
-</blockquote>
-<h3 id="Construct_project_2C_with_SBT__26amp_3B_dependencies"><a href="#Construct_project_2C_with_SBT__26amp_3B_dependencies" class="headerlink" title="Construct project, with SBT &amp; dependencies"></a>Construct project, with SBT &amp; dependencies</h3><blockquote>
-<p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
-</blockquote>
+        <p>Java multi-threading implementation ways mainly contain three:</p>
 <ul>
-<li>think-bayes<ul>
-<li>github <a href="https://github.com/ruippeixotog/think-bayes-scala" target="_blank" rel="external">https://github.com/ruippeixotog/think-bayes-scala</a></li>
-<li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1" target="_blank" rel="external">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
-<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
-<li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
+<li>Inherit the “Thread class”</li>
+<li>Realized the “Runnable interface”</li>
+<li>ExecutorService, Callable, Future<ul>
+<li>The former two ways have no return value after the thread execution, only the last one is with a return value.</li>
 </ul>
 </li>
 </ul>
+<h3 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyThread myThread = new MyThread();</span><br></pre></td></tr></table></figure>
+<h3 id="Runnable"><a href="#Runnable" class="headerlink" title="Runnable"></a>Runnable</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends OtherClass implements Runnable&#123;</span><br><span class="line">// public class MyThread implements Runnable&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyThread myThread = new MyThread();</span><br><span class="line">Thread thread = new Thread(myThread);</span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
+<h3 id="ExecutorService_2C_Callable_2C_Future"><a href="#ExecutorService_2C_Callable_2C_Future" class="headerlink" title="ExecutorService, Callable, Future"></a>ExecutorService, Callable, Future</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int taskSize = 4;</span><br><span class="line">// init to create a thread pool</span><br><span class="line">ExecutorService pool = Executors.newFixedThreadPool(taskSize);</span><br><span class="line">// create multi-tasks with a <span class="built_in">return</span> value</span><br><span class="line">List&lt;Future&gt; list = new ArrayList&lt;Future&gt;();</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">Callable ca = new MyCallable(taskSize);</span><br><span class="line">// implement the Obj of Future</span><br><span class="line">Future f = pool.submit(c);</span><br><span class="line">list.add(f);</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">pool.shutdown();</span><br><span class="line">// obtain the results</span><br><span class="line"><span class="keyword">for</span> (Future f: list)&#123;</span><br><span class="line">    f.get().toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// MyCallable class</span><br><span class="line">class MyCallable implements Callable&lt;Object&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Other libraryDependencies<br>spark-core_2.10, spark-mllib_2.10, jblas</li>
-<li>Using IntelliJ IDEA to package scala with spark<ul>
-<li>The reason of the Scala for Eclipse is not comfortable in using</li>
-<li>Support code checking, cvs/ant/maven/git</li>
-<li>JDK, Scala</li>
+<li>Statements</li>
 </ul>
-</li>
-<li>Censored regression model, contains 5 scala class<ul>
-<li>Main class -&gt; TestTrainer.scala</li>
-<li>optimization.scala</li>
-<li>gradient.scala</li>
-<li>linalg.scala</li>
-<li>utils.scala</li>
-<li>build.sbt</li>
-</ul>
-</li>
-</ul>
-<h4 id="Complie"><a href="#Complie" class="headerlink" title="Complie"></a>Complie</h4><ul>
-<li>Ref to: spark-shell –packages com.databricks:spark-csv_2.11:1.2.0</li>
-<li>spark-shell –packages net.ruippeixotog:think-bayes_2.11:0.1</li>
-<li>Using the think-bayes to check the Pdf() and Cdf() functions<ul>
-<li>SBT package for think-bayes with scala 2.10.4</li>
-<li>./bin/spark-shell –driver-class-path /home/azureuser/think-bayes-scala/target/scala-2.10/think-bayes_2.10-1.0-SNAPSHOT.jar</li>
-<li>then, import thinkbayes._</li>
-</ul>
-</li>
-</ul>
-<h4 id="sbt_assembly_methods"><a href="#sbt_assembly_methods" class="headerlink" title="sbt assembly methods"></a>sbt assembly methods</h4><ul>
-<li><p>Scala library<br><a href="http://www.scala-lang.org/api/current/index.html#scala.math.package" target="_blank" rel="external">http://www.scala-lang.org/api/current/index.html#scala.math.package</a></p>
-</li>
-<li><p>Creat a project/assembly.sbt</p>
+<p>// public static ExecutorService newFixedThreadPool(int nThreads)<br>// create fixed number of threads<br>// public static ExecutorService newCachedThreadPool()<br>// * create scheduled pool, which can instead of the Timer class<br>// public static ScheduledExecutorService newScheduledThreadPool(int corePoolSize)</p>
 <ul>
-<li>Add<br>-addSbtPlugin(“com.eed3si9n” % “sbt-assembly” % “0.14.1”)</li>
-<li>When using sbt 0.13.5<ul>
-<li>addSbtPlugin(“com.eed3si9n” % “sbt-assembly” % “0.11.2”)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Add in build.sbt</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mergeStrategy <span class="keyword">in</span> assembly := &#123;</span><br><span class="line">  <span class="keyword">case</span> m <span class="keyword">if</span> m.toLowerCase.endsWith(<span class="string">"manifest.mf"</span>)          =&gt; MergeStrategy.discard</span><br><span class="line">  <span class="keyword">case</span> m <span class="keyword">if</span> m.toLowerCase.matches(<span class="string">"meta-inf.*\\.sf$"</span>)      =&gt; MergeStrategy.discard</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"log4j.properties"</span>                                  =&gt; MergeStrategy.discard</span><br><span class="line">  <span class="keyword">case</span> m <span class="keyword">if</span> m.toLowerCase.startsWith(<span class="string">"meta-inf/services/"</span>) =&gt; MergeStrategy.filterDistinctLines</span><br><span class="line">  <span class="keyword">case</span> <span class="string">"reference.conf"</span>                                    =&gt; MergeStrategy.concat</span><br><span class="line">  <span class="keyword">case</span> _                                                   =&gt; MergeStrategy.first</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Dependencies</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies ++= Seq(</span><br><span class="line">  <span class="string">"com.github.wookietreiber"</span> %% <span class="string">"scala-chart"</span>   % <span class="string">"0.5.0"</span>,</span><br><span class="line">  <span class="string">"nz.ac.waikato.cms.weka"</span>    % <span class="string">"weka-stable"</span>   % <span class="string">"3.6.13"</span>,  </span><br><span class="line"> <span class="string">"org.apache.commons"</span>        % <span class="string">"commons-math3"</span> % <span class="string">"3.5"</span>,  </span><br><span class="line"> <span class="string">"org.specs2"</span>               %% <span class="string">"specs2-core"</span>   %  <span class="string">"3.6.5"</span> % <span class="string">"test"</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://github.com/sbt/sbt-assembly" target="_blank" rel="external">https://github.com/sbt/sbt-assembly</a></li>
-<li><a href="https://github.com/ruippeixotog/think-bayes-scala/blob/master/build.sbt" target="_blank" rel="external">https://github.com/ruippeixotog/think-bayes-scala/blob/master/build.sbt</a></li>
-<li><p><a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1" target="_blank" rel="external">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></p>
-</li>
-<li><p>Ref to build spark using scala 2.11</p>
-<ul>
-<li><a href="https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-building-from-sources.html" target="_blank" rel="external">https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-building-from-sources.html</a>  </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>Push source to Github with SourceTree</p>
-<ul>
-<li>new clone</li>
-<li>repositry</li>
-<li>commit</li>
-<li>push</li>
-</ul>
-</li>
-<li><p>Keen on study on the function of pdf and cdf in censored regression model</p>
-<ul>
-<li>Self-defined the function using normal distribution function<ul>
-<li>f(x) -&gt; 1/(sqrt(2pi)<em>sigma) </em> exp(-(x-u)^2/2*sigma^2)</li>
-<li>then f(x) accumulate to cdf</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="http://blog.csdn.net/aboy123/article/details/38307539" target="_blank" rel="external">Reference</a></li>
 </ul>
 
       
@@ -460,9 +377,7 @@ github https://github.com">
       
         <div class="post-tags">
           
-            <a href="/tags/Spark/" rel="tag">#Spark</a>
-          
-            <a href="/tags/Scala/" rel="tag">#Scala</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -471,16 +386,16 @@ github https://github.com">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/06/java-call-matlab/" rel="next" title="Java call Matlab Method">
-                <i class="fa fa-chevron-left"></i> Java call Matlab Method
+              <a href="/2016/03/10/ipinyou-database/" rel="next" title="Ipinyou DataSet Description">
+                <i class="fa fa-chevron-left"></i> Ipinyou DataSet Description
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/10/ipinyou-database/" rel="prev" title="Ipinyou DataSet Description">
-                Ipinyou DataSet Description <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/15/algorithm-L-BFGS/" rel="prev" title="L-BFGS Algorithm (01)">
+                L-BFGS Algorithm (01) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -679,7 +594,7 @@ github https://github.com">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Construct_project_2C_with_SBT__26amp_3B_dependencies"><span class="nav-number">1.</span> <span class="nav-text">Construct project, with SBT & dependencies</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Complie"><span class="nav-number">1.1.</span> <span class="nav-text">Complie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sbt_assembly_methods"><span class="nav-number">1.2.</span> <span class="nav-text">sbt assembly methods</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Thread"><span class="nav-number">1.</span> <span class="nav-text">Thread</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Runnable"><span class="nav-number">2.</span> <span class="nav-text">Runnable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ExecutorService_2C_Callable_2C_Future"><span class="nav-number">3.</span> <span class="nav-text">ExecutorService, Callable, Future</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -955,9 +870,9 @@ github https://github.com">
 
     <script type="text/javascript">
       var disqus_shortname = 'snakecy';
-      var disqus_identifier = '2016/03/10/machine-learning-scala/';
-      var disqus_title = 'Machine Learning with Scala';
-      var disqus_url = 'https://snakecy.github.io/2016/03/10/machine-learning-scala/';
+      var disqus_identifier = '2016/03/13/java-thread/';
+      var disqus_title = 'Java Multi-thread';
+      var disqus_url = 'https://snakecy.github.io/2016/03/13/java-thread/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

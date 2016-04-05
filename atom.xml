@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://snakecy.github.io/"/>
-  <updated>2016-04-04T16:36:13.000Z</updated>
+  <updated>2016-04-05T14:44:14.000Z</updated>
   <id>https://snakecy.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://snakecy.github.io/2016/03/18/mac-apache-server/"/>
     <id>https://snakecy.github.io/2016/03/18/mac-apache-server/</id>
     <published>2016-03-18T10:15:59.000Z</published>
-    <updated>2016-04-04T16:36:13.000Z</updated>
+    <updated>2016-04-05T14:44:14.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
 <li>Start up Apache on Mac<ul>
 <li>sudo apachectl (-k) start</li>
@@ -35,6 +35,7 @@
 <li>(Mac) Apache: You don’t have permission to access / on this server  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites/"</span>&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Options Indexes MultiViews FollowSymLinks</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <h3 id="Configure_PHP_Server"><a href="#Configure_PHP_Server" class="headerlink" title="Configure PHP Server"></a>Configure PHP Server</h3><ol>
 <li><p>Search httpd.conf</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/apache2</span><br><span class="line">//sudo cp httpd.conf httpd.conf.bak</span><br><span class="line">sudo vim httpd.conf</span><br></pre></td></tr></table></figure>
@@ -59,7 +60,21 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="Apache_Server"><a href="#Apache_Server" class="headerlink" title="Apache Server"></a>Apache Server</h3><ul>
-<li>Start up Apache on M]]>
+<li>Start up Apache on Mac<ul>
+<li>sudo apachectl (-k) start</li>
+<li>//sudo apachectl (-k) restart</li>
+<li>sudo apachectl (-k) stop</li>
+</ul>
+</li>
+<li>Check the apache version<ul>
+<li>sudo apachectl -v</li>
+<li>or apachectl -v</li>
+</ul>
+</li>
+<li>(Mac) Apache: You don’t have permission to access / on this server  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory <span class="string">"/Users/andy/Sites/"</span>&gt;</span><br><span class="line">AllowOverride All</span><br><span class="line">Options Indexes MultiViews FollowSymLinks</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>]]>
+    
     </summary>
     
       <category term="PHP" scheme="https://snakecy.github.io/tags/PHP/"/>
@@ -75,17 +90,24 @@
     <link href="https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/"/>
     <id>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</id>
     <published>2016-03-14T17:56:22.000Z</published>
-    <updated>2016-04-04T12:38:50.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
-<blockquote>
-<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
+    <updated>2016-04-05T14:45:47.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><blockquote>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。<a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">links</a></p>
 </blockquote>
 <h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
 <p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
 </blockquote>
-<h4 id="Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><a href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29" class="headerlink" title="Newton Algorithm (牛顿算法)"></a>Newton Algorithm (牛顿算法)</h4><h4 id="BFGS_Algorithm"><a href="#BFGS_Algorithm" class="headerlink" title="BFGS Algorithm"></a>BFGS Algorithm</h4>]]></content>
+<p>The Details description can refer to the <a href="http://www.cnblogs.com/kemaswill/p/3352898.html" target="_blank" rel="external">notes</a><br><a id="more"></a></p>
+]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introdu]]>
+    <![CDATA[<h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><blockquote>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。<a href="http://mlworks.cn/posts/introduction-to-l-bfgs/">links</a></p>
+</blockquote>
+<h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
+<p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
+</blockquote>
+<p>The Details description can refer to the <a href="http://www.cnblogs.com/kemaswill/p/3352898.html">notes</a><br>]]>
+    
     </summary>
     
       <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
@@ -95,24 +117,71 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Java Multi-thread]]></title>
+    <link href="https://snakecy.github.io/2016/03/13/java-thread/"/>
+    <id>https://snakecy.github.io/2016/03/13/java-thread/</id>
+    <published>2016-03-13T14:37:52.000Z</published>
+    <updated>2016-04-05T15:05:56.000Z</updated>
+    <content type="html"><![CDATA[<p>Java multi-threading implementation ways mainly contain three:</p>
+<ul>
+<li>Inherit the “Thread class”</li>
+<li>Realized the “Runnable interface”</li>
+<li>ExecutorService, Callable, Future<ul>
+<li>The former two ways have no return value after the thread execution, only the last one is with a return value.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyThread myThread = new MyThread();</span><br></pre></td></tr></table></figure>
+<h3 id="Runnable"><a href="#Runnable" class="headerlink" title="Runnable"></a>Runnable</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends OtherClass implements Runnable&#123;</span><br><span class="line">// public class MyThread implements Runnable&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyThread myThread = new MyThread();</span><br><span class="line">Thread thread = new Thread(myThread);</span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
+<h3 id="ExecutorService_2C_Callable_2C_Future"><a href="#ExecutorService_2C_Callable_2C_Future" class="headerlink" title="ExecutorService, Callable, Future"></a>ExecutorService, Callable, Future</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int taskSize = 4;</span><br><span class="line">// init to create a thread pool</span><br><span class="line">ExecutorService pool = Executors.newFixedThreadPool(taskSize);</span><br><span class="line">// create multi-tasks with a <span class="built_in">return</span> value</span><br><span class="line">List&lt;Future&gt; list = new ArrayList&lt;Future&gt;();</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">Callable ca = new MyCallable(taskSize);</span><br><span class="line">// implement the Obj of Future</span><br><span class="line">Future f = pool.submit(c);</span><br><span class="line">list.add(f);</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">pool.shutdown();</span><br><span class="line">// obtain the results</span><br><span class="line"><span class="keyword">for</span> (Future f: list)&#123;</span><br><span class="line">    f.get().toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// MyCallable class</span><br><span class="line">class MyCallable implements Callable&lt;Object&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Statements</li>
+</ul>
+<p>// public static ExecutorService newFixedThreadPool(int nThreads)<br>// create fixed number of threads<br>// public static ExecutorService newCachedThreadPool()<br>// * create scheduled pool, which can instead of the Timer class<br>// public static ScheduledExecutorService newScheduledThreadPool(int corePoolSize)</p>
+<ul>
+<li><a href="http://blog.csdn.net/aboy123/article/details/38307539" target="_blank" rel="external">Reference</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Java multi-threading implementation ways mainly contain three:</p>
+<ul>
+<li>Inherit the “Thread class”</li>
+<li>Realized the “Runnable interface”</li>
+<li>ExecutorService, Callable, Future<ul>
+<li>The former two ways have no return value after the thread execution, only the last one is with a return value.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread&#123;</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">      <span class="comment"># do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]>
+    
+    </summary>
+    
+      <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
+    
+      <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Ipinyou DataSet Description]]></title>
     <link href="https://snakecy.github.io/2016/03/10/ipinyou-database/"/>
     <id>https://snakecy.github.io/2016/03/10/ipinyou-database/</id>
     <published>2016-03-10T12:35:08.000Z</published>
-    <updated>2016-04-03T19:31:48.000Z</updated>
+    <updated>2016-04-05T14:49:16.000Z</updated>
     <content type="html"><![CDATA[<h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
 <hr>
 <p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
 <hr>
 </blockquote>
 <ul>
-<li><p>RankSorce = CTR * BidPrice</p>
-<ul>
+<li>RankSorce = CTR * BidPrice<ul>
 <li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html" target="_blank" rel="external">Advertising Calculating</a></li>
 </ul>
 </li>
-<li><p>Aim</p>
-<ul>
+<li>Aim<ul>
 <li>Low-latency and scalale predictions as a service</li>
 <li>Integrated approach leads to fresher, better predictions</li>
 <li>Easy translation to production predictions</li>
@@ -120,39 +189,31 @@
 </ul>
 </li>
 </ul>
-<h4 id="Experiment_using_R"><a href="#Experiment_using_R" class="headerlink" title="Experiment using R"></a>Experiment using R</h4><ul>
-<li><p>First //</p>
-<ul>
+<a id="more"></a>
+<h3 id="Experiment_using_R"><a href="#Experiment_using_R" class="headerlink" title="Experiment using R"></a>Experiment using R</h3><ul>
+<li>First //<ul>
 <li><a href="https://github.com/wnzhang/make-ipinyou-data" target="_blank" rel="external">make-ipinyou-data</a></li>
 <li>Paper: Real-Time Bidding Benchmarking with iPinYou Dataset</li>
 </ul>
 </li>
-<li><p>Second</p>
-<ul>
+<li>Second<ul>
 <li><a href="https://github.com/wnzhang/rtbcontrol" target="_blank" rel="external">rtbcontrol</a></li>
 <li>Paper: Experiment Code for RTB Feedback Control Techniques</li>
 </ul>
 </li>
-<li><p>Third</p>
-<ul>
+<li>Third<ul>
 <li><a href="https://github.com/wnzhang/rtbarbitrage" target="_blank" rel="external">rtbarbitrage</a></li>
 <li>Paper: Statistical Arbitrage Mining for Display Advertising</li>
 </ul>
 </li>
-<li><p>Fourth //</p>
-<ul>
+<li>Fourth //<ul>
 <li><a href="https://github.com/wnzhang/optimal-rtb" target="_blank" rel="external">optimal-rtb</a></li>
 <li>Paper: Optimal Real-Time Bidding for Display Advertising</li>
 </ul>
 </li>
-<li><p>Fifth</p>
-<ul>
+<li>Fifth<ul>
 <li><a href="https://github.com/wush978/KDD2015wpp" target="_blank" rel="external">KDD2015wpp</a></li>
-<li>Predicting Winning Price in Real Time Bidding with Censored Data</li>
-</ul>
-</li>
-</ul>
-<h3 id="Winning_price_steps"><a href="#Winning_price_steps" class="headerlink" title="Winning price steps"></a>Winning price steps</h3><ul>
+<li>Predicting Winning Price in Real Time Bidding with Censored Data<h3 id="Winning_price_steps"><a href="#Winning_price_steps" class="headerlink" title="Winning price steps"></a>Winning price steps</h3></li>
 <li>What features should be taken in</li>
 <li>Considering of the Winning Rate</li>
 <li>Combine Win Rate &amp; Winning Price<ul>
@@ -165,6 +226,8 @@
 </ul>
 </li>
 <li>Join bid_req, bid_resp and win_notice for Winning Rate/Winning Price Prediction</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li>Testing Winning Rate running by python (examples with ipinyou)<ul>
@@ -184,7 +247,24 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="iPinyou_Reference"><a href="#iPinyou_Reference" class="headerlink" title="iPinyou Reference"></a>iPinyou Reference</h3><blockquote>
-]]>
+<hr>
+<p>  Ipinyou database<br>Features = {IP,Region,City,Ad exchange,ad slot id,ad slot width, ad slot height,ad visiblility,ad slot format,advertiser id,user tags}</p>
+<hr>
+</blockquote>
+<ul>
+<li>RankSorce = CTR * BidPrice<ul>
+<li><a href="http://sobuhu.com/ml/2013/01/25/r-ctr.html">Advertising Calculating</a></li>
+</ul>
+</li>
+<li>Aim<ul>
+<li>Low-latency and scalale predictions as a service</li>
+<li>Integrated approach leads to fresher, better predictions</li>
+<li>Easy translation to production predictions</li>
+<li>Eases Operational pain</li>
+</ul>
+</li>
+</ul>]]>
+    
     </summary>
     
       <category term="R" scheme="https://snakecy.github.io/tags/R/"/>
@@ -198,40 +278,34 @@
     <link href="https://snakecy.github.io/2016/03/10/machine-learning-scala/"/>
     <id>https://snakecy.github.io/2016/03/10/machine-learning-scala/</id>
     <published>2016-03-09T16:26:44.000Z</published>
-    <updated>2016-04-03T19:33:26.000Z</updated>
+    <updated>2016-04-05T14:50:12.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <hr>
-<p>Good Example: REST API &amp; Velox<br><a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final" target="_blank" rel="external">PPT</a><br><a href="http://arxiv.org/pdf/1409.3809v2.pdf" target="_blank" rel="external">Papre</a><br><a href="https://github.com/amplab/velox-modelserver" target="_blank" rel="external">Github</a></p>
+<p>Good Example: REST API &amp; Velox <a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final" target="_blank" rel="external">PPT</a>, <a href="http://arxiv.org/pdf/1409.3809v2.pdf" target="_blank" rel="external">Papre</a>, <a href="https://github.com/amplab/velox-modelserver" target="_blank" rel="external">Github</a></p>
 <hr>
 </blockquote>
 <h3 id="Construct_project_2C_with_SBT__26amp_3B_dependencies"><a href="#Construct_project_2C_with_SBT__26amp_3B_dependencies" class="headerlink" title="Construct project, with SBT &amp; dependencies"></a>Construct project, with SBT &amp; dependencies</h3><blockquote>
 <p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
 </blockquote>
 <ul>
-<li><p>think-bayes</p>
-<ul>
+<li>think-bayes<ul>
 <li>github <a href="https://github.com/ruippeixotog/think-bayes-scala" target="_blank" rel="external">https://github.com/ruippeixotog/think-bayes-scala</a></li>
 <li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1" target="_blank" rel="external">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
 <li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
 <li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
 </ul>
 </li>
-<li><p>Other libraryDependencies</p>
-<ul>
-<li>spark-core_2.10</li>
-<li>spark-mllib_2.10</li>
-<li>jblas</li>
 </ul>
-</li>
-<li><p>Using IntelliJ IDEA to package scala with spark</p>
+<a id="more"></a>
 <ul>
+<li>Other libraryDependencies<br>spark-core_2.10, spark-mllib_2.10, jblas</li>
+<li>Using IntelliJ IDEA to package scala with spark<ul>
 <li>The reason of the Scala for Eclipse is not comfortable in using</li>
 <li>Support code checking, cvs/ant/maven/git</li>
 <li>JDK, Scala</li>
 </ul>
 </li>
-<li><p>Censored regression model, contains 5 scala class</p>
-<ul>
+<li>Censored regression model, contains 5 scala class<ul>
 <li>Main class -&gt; TestTrainer.scala</li>
 <li>optimization.scala</li>
 <li>gradient.scala</li>
@@ -305,7 +379,22 @@
     <summary type="html">
     <![CDATA[<blockquote>
 <hr>
-<p>Good Example: REST API &amp; Velox<br><a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final" target="_blan]]>
+<p>Good Example: REST API &amp; Velox <a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final">PPT</a>, <a href="http://arxiv.org/pdf/1409.3809v2.pdf">Papre</a>, <a href="https://github.com/amplab/velox-modelserver">Github</a></p>
+<hr>
+</blockquote>
+<h3 id="Construct_project_2C_with_SBT__26amp_3B_dependencies"><a href="#Construct_project_2C_with_SBT__26amp_3B_dependencies" class="headerlink" title="Construct project, with SBT &amp; dependencies"></a>Construct project, with SBT &amp; dependencies</h3><blockquote>
+<p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
+</blockquote>
+<ul>
+<li>think-bayes<ul>
+<li>github <a href="https://github.com/ruippeixotog/think-bayes-scala">https://github.com/ruippeixotog/think-bayes-scala</a></li>
+<li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
+<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
+<li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
+</ul>
+</li>
+</ul>]]>
+    
     </summary>
     
       <category term="Spark" scheme="https://snakecy.github.io/tags/Spark/"/>
@@ -321,21 +410,16 @@
     <link href="https://snakecy.github.io/2016/03/06/java-call-matlab/"/>
     <id>https://snakecy.github.io/2016/03/06/java-call-matlab/</id>
     <published>2016-03-05T17:49:37.000Z</published>
-    <updated>2016-04-03T19:31:55.000Z</updated>
+    <updated>2016-04-05T14:43:41.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
 </code></pre><ol>
-<li><p>JAVA_HOME</p>
-<ul>
-<li><p>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)</p>
-<ul>
-<li><p>设置后，重启matlab才能有效.</p>
-</li>
-<li><p>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</p>
-</li>
+<li>JAVA_HOME<ul>
+<li>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)<ul>
+<li>设置后，重启matlab才能有效.</li>
+<li>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</li>
 </ul>
 </li>
-<li><p>ii. Classpath</p>
-<ul>
+<li>ii. Classpath<ul>
 <li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
 </ul>
 </li>
@@ -345,13 +429,12 @@
 </li>
 </ul>
 </li>
-<li><p>build matlab m-file into a jar</p>
-<ul>
+<li>build matlab m-file into a jar<ul>
 <li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
 <li>b) 在Deployment Tool中，点击new按钮，选择 Matlab Builder for Java 与 Java Package。新建一个工程名字，如flying.prj 。对该工程，要进入其设置对话框，设置其compiler为“matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar ”。</li>
 <li>c) In the Deployment Tool pane, ensure that the Generate Verbose Output option is selected</li>
 <li>d) 将欲被java调用的.m 文件，（如mydraw.m，其中包括两个参数(x,y)），从Matlab整个界面的左侧工作目录面板，拖拽到Deployment Tool中的新建的类下面的class文件夹下。</li>
-<li>e) 点击build 按钮，则会在matlab的当前目录下，生成以一个与工程同名的(如flying)文件夹。</li>
+<li>e) 点击build 按钮，则会在matlab的当前目录下，生成以一个与工程同名的(如flying)文件夹。<a id="more"></a></li>
 </ul>
 </li>
 <li><p>编写java函数，准备调用刚刚生成好的flying.jar中的方法。</p>
@@ -382,17 +465,41 @@
 </li>
 <li><p>Matlab程序(.m文件)的修改</p>
 <ul>
-<li>a) 找到TestDirectory\ flying.jar所在的位置（因为按照上述步骤的话，.m源文件就在该位置附近）。这个位置，从Eclipse的Package Explore可以用看到。</li>
+<li>a) 找到TestDirectory\ flying.jar所在的位置</li>
 <li>b) 直接修改欲改动的.m文件</li>
-<li>c) 打开Matlab, 在Command输入 Deploytool, 在新打开的部署面板中，“打开”该m文件所在的工程，如 flying.prj。</li>
+<li>c) 打开Matlab, 在Command输入 Deploytool, 在新打开的部署面板中，“打开”该m文件所在的工程，如flying.prj。</li>
 <li>d) 选中相应工程下Class文件夹下的.m文件，点击工具栏的Build按钮。</li>
-<li>e) 则相应源文件被重新编译。如果按照前面步骤添加的jar包，则编译后新生成的jar包自动替换掉原有的jar。又由于这个jar的位置，已经作为BuildPath告诉了java的相应工程，因此Java端不需要做任何调整，即可正确调用到新修改了内容的matlab方法。</li>
+<li>e) 则相应源文件被重新编译。如果按照前面步骤添加的jar包，则编译后新生成的jar包自动替换掉原有的jar。</li>
 </ul>
 </li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; ]]>
+    <![CDATA[<h3 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h3><pre><code>+ Eclipse &amp; Matlab
+</code></pre><ol>
+<li>JAVA_HOME<ul>
+<li>i. JAVA_HOME (JDK的安装位置 如C:\Program Files\Java\jdk1.5.0)<ul>
+<li>设置后，重启matlab才能有效.</li>
+<li>用getenv JAVA_HOME，在Matlab的命令窗口中试验，看看得到的返回值正确方可说明其对Matlab生效了。</li>
+</ul>
+</li>
+<li>ii. Classpath<ul>
+<li>添加 matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar</li>
+</ul>
+</li>
+<li>iii. Path<ul>
+<li>添加%JAVA_HOME%/bin/javac</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>build matlab m-file into a jar<ul>
+<li>a) 在matlab的command窗口，输入 deploytool。会在右侧弹出一个新窗口（Deployment Tool）。</li>
+<li>b) 在Deployment Tool中，点击new按钮，选择 Matlab Builder for Java 与 Java Package。新建一个工程名字，如flying.prj 。对该工程，要进入其设置对话框，设置其compiler为“matlabInstallRoot\toolbox\javabuilder\jar\javabuilder.jar ”。</li>
+<li>c) In the Deployment Tool pane, ensure that the Generate Verbose Output option is selected</li>
+<li>d) 将欲被java调用的.m 文件，（如mydraw.m，其中包括两个参数(x,y)），从Matlab整个界面的左侧工作目录面板，拖拽到Deployment Tool中的新建的类下面的class文件夹下。</li>
+<li>e) 点击build 按钮，则会在matlab的当前目录下，生成以一个与工程同名的(如flying)文件夹。]]>
+    
     </summary>
     
       <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
@@ -1371,46 +1478,6 @@
     </summary>
     
       <category term="Software" scheme="https://snakecy.github.io/tags/Software/"/>
-    
-      <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Install Python GUI spyder on Mac]]></title>
-    <link href="https://snakecy.github.io/2016/01/11/python-spyder/"/>
-    <id>https://snakecy.github.io/2016/01/11/python-spyder/</id>
-    <published>2016-01-10T16:22:08.000Z</published>
-    <updated>2016-04-03T19:34:17.000Z</updated>
-    <content type="html"><![CDATA[<p>The spyder tool of Python GUI works on Max OS</p>
-<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Python"></a>Install Python</h2><h3 id="Install_Python_3-4-1_on_Ubuntu"><a href="#Install_Python_3-4-1_on_Ubuntu" class="headerlink" title="Install Python 3.4.1 on Ubuntu"></a>Install Python 3.4.1 on Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span><br><span class="line">tar -xvf Python-3.4.1.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.4.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line">&gt; <span class="keyword">then</span> run ./python <span class="keyword">in</span> terminal</span><br></pre></td></tr></table></figure>
-<h3 id="Install_Python_3-4-1_on_Mac"><a href="#Install_Python_3-4-1_on_Mac" class="headerlink" title="Install Python 3.4.1 on Mac"></a>Install Python 3.4.1 on Mac</h3><p>Mac has installed the python 2.7, if you want to use the latest version,  go to the <a href="http://www.python.org/download/" target="_blank" rel="external">Python</a> website and download.</p>
-<h2 id="Install_the_Python_GUI_on_Mac"><a href="#Install_the_Python_GUI_on_Mac" class="headerlink" title="Install the Python GUI on Mac"></a>Install the Python GUI on Mac</h2><h3 id="Step_1_2C_Intall_the_Python"><a href="#Step_1_2C_Intall_the_Python" class="headerlink" title="Step 1, Intall the Python"></a>Step 1, Intall the Python</h3><h3 id="Step_2_2C_Install_the_Anaconda"><a href="#Step_2_2C_Install_the_Anaconda" class="headerlink" title="Step 2, Install the Anaconda"></a>Step 2, Install the <a href="http://www.continuum.io/downloads" target="_blank" rel="external">Anaconda</a></h3><ul>
-<li>Command-Line Install</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda2-2.4.1-MacOSX-x86_64.sh</span><br></pre></td></tr></table></figure>
-<h3 id="Step_3_2C_Install_MacPorts"><a href="#Step_3_2C_Install_MacPorts" class="headerlink" title="Step 3, Install MacPorts"></a>Step 3, Install <a href="http://guide.macports.org/" target="_blank" rel="external">MacPorts</a></h3><p>Make sure that you have installed the XCode on mac, which is the encession to install “spyder”<br>Also for the MacPorts install <a href="http://www.ccvita.com/434.html" target="_blank" rel="external">reference</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.3.tar.bz2</span><br><span class="line">tar xf MacPorts-2.3.3.tar.bz2</span><br></pre></td></tr></table></figure>
-<p>Then, edit the /etc/profile file, add the following comand</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/opt/<span class="built_in">local</span>/bin:/opt/<span class="built_in">local</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<p>For the first time to run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port -v selfupdate</span><br></pre></td></tr></table></figure>
-<p>And if you update failed, you can re-run it with debug output, likes:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port <span class="_">-d</span> selfupdate</span><br></pre></td></tr></table></figure>
-<h3 id="Step_4_2C_install_spyder"><a href="#Step_4_2C_install_spyder" class="headerlink" title="Step 4, install spyder"></a>Step 4, install spyder</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo port install python27 // <span class="keyword">if</span> python27 dose not installed, <span class="keyword">then</span> install it before activate</span><br><span class="line">$ sudo port select --set python python27  // <span class="built_in">set</span> the default python</span><br><span class="line">$ sudo port select --list python // available versions</span><br><span class="line">$ sudo port <span class="_">-f</span> activate python27</span><br><span class="line">$ sudo port install py-spyder</span><br></pre></td></tr></table></figure>
-<p>﻿After long time waiting. Then, begin our python journey, run the spyder in the terminal</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ spyder</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>The spyder tool of Python GUI works on Max OS</p>
-<h2 id="Install_Python"><a href="#Install_Python" class="headerlink" title="Install Pyt]]>
-    </summary>
-    
-      <category term="Python" scheme="https://snakecy.github.io/tags/Python/"/>
-    
-      <category term="Mac" scheme="https://snakecy.github.io/tags/Mac/"/>
-    
-      <category term="Spyder" scheme="https://snakecy.github.io/tags/Spyder/"/>
     
       <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
     

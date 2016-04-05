@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -59,38 +59,35 @@
 
 
 
-<meta name="description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
-
-L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+<meta name="description" content="1. Introduction of  L-BFGS
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。links
 
 2. Optimization algorithm - BFGS
-BGFS是一种准牛顿算法, 所谓的”准”是">
+BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦">
 <meta property="og:type" content="article">
 <meta property="og:title" content="L-BFGS Algorithm (01)">
 <meta property="og:url" content="https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/index.html">
 <meta property="og:site_name" content="Snakecy's NOTE">
-<meta property="og:description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
-
-L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+<meta property="og:description" content="1. Introduction of  L-BFGS
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。links
 
 2. Optimization algorithm - BFGS
-BGFS是一种准牛顿算法, 所谓的”准”是">
-<meta property="og:updated_time" content="2016-04-04T12:38:50.000Z">
+BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦">
+<meta property="og:updated_time" content="2016-04-05T14:45:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="L-BFGS Algorithm (01)">
-<meta name="twitter:description" content="1. Introduction of  L-BFGShttp://mlworks.cn/posts/introduction-to-l-bfgs/
-
-L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。
+<meta name="twitter:description" content="1. Introduction of  L-BFGS
+L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。links
 
 2. Optimization algorithm - BFGS
-BGFS是一种准牛顿算法, 所谓的”准”是">
+BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -120,6 +117,15 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=55430358";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -332,14 +338,14 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
       
 
       
-        <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><p><a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">http://mlworks.cn/posts/introduction-to-l-bfgs/</a></p>
-<blockquote>
-<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。</p>
+        <h3 id="1-_Introduction_of_L-BFGS"><a href="#1-_Introduction_of_L-BFGS" class="headerlink" title="1. Introduction of  L-BFGS"></a>1. Introduction of  L-BFGS</h3><blockquote>
+<p>L-BFGS(Limited-Memory BFGS)是BFGS算法在受限内存时的一种近似算法，BFGS是数学优化中一种无约束最优化算法。<a href="http://mlworks.cn/posts/introduction-to-l-bfgs/" target="_blank" rel="external">links</a></p>
 </blockquote>
 <h3 id="2-_Optimization_algorithm_-_BFGS"><a href="#2-_Optimization_algorithm_-_BFGS" class="headerlink" title="2. Optimization algorithm - BFGS"></a>2. Optimization algorithm - BFGS</h3><blockquote>
 <p>BGFS是一种准牛顿算法, 所谓的”准”是指牛顿算法会使用Hessian矩阵来进行优化, 但是直接计算Hessian矩阵比较麻烦, 所以很多算法会使用近似的Hessian, 这些算法就称作准牛顿算法(Quasi Newton Algorithm).</p>
 </blockquote>
-<h4 id="Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><a href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29" class="headerlink" title="Newton Algorithm (牛顿算法)"></a>Newton Algorithm (牛顿算法)</h4><h4 id="BFGS_Algorithm"><a href="#BFGS_Algorithm" class="headerlink" title="BFGS Algorithm"></a>BFGS Algorithm</h4>
+<p>The Details description can refer to the <a href="http://www.cnblogs.com/kemaswill/p/3352898.html" target="_blank" rel="external">notes</a><br><a id="more"></a></p>
+
       
     </div>
 
@@ -362,8 +368,8 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/10/ipinyou-database/" rel="next" title="Ipinyou DataSet Description">
-                <i class="fa fa-chevron-left"></i> Ipinyou DataSet Description
+              <a href="/2016/03/13/java-thread/" rel="next" title="Java Multi-thread">
+                <i class="fa fa-chevron-left"></i> Java Multi-thread
               </a>
             
           </div>
@@ -386,6 +392,29 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
       
     </div>
   </div>
@@ -447,7 +476,7 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -547,7 +576,7 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_Introduction_of_L-BFGS"><span class="nav-number">1.</span> <span class="nav-text">1. Introduction of  L-BFGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_Optimization_algorithm_-_BFGS"><span class="nav-number">2.</span> <span class="nav-text">2. Optimization algorithm - BFGS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Newton_Algorithm__28_u725B_u987F_u7B97_u6CD5_29"><span class="nav-number">2.1.</span> <span class="nav-text">Newton Algorithm (牛顿算法)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFGS_Algorithm"><span class="nav-number">2.2.</span> <span class="nav-text">BFGS Algorithm</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_Introduction_of_L-BFGS"><span class="nav-number">1.</span> <span class="nav-text">1. Introduction of  L-BFGS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_Optimization_algorithm_-_BFGS"><span class="nav-number">2.</span> <span class="nav-text">2. Optimization algorithm - BFGS</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -584,16 +613,15 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times，
 </span>
 
-<span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
+<span id="busuanzi_container_site_uv"> Visitors <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -645,13 +673,6 @@ BGFS是一种准牛顿算法, 所谓的”准”是">
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
-
-
 
   
   

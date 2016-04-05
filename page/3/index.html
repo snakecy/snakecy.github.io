@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning, Data Mining, Deep Learning" />
 
 
 
@@ -74,7 +74,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -104,6 +104,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=55430358";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -245,8 +254,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/05/algorithm-by-java-1/" itemprop="url">
-                  Binary Search Algorithm (01)
+                <a class="post-title-link" href="/2016/02/10/debug-nativecodeloader/" itemprop="url">
+                  Resolve the debug problem of WARN NativeCodeLoader
                 </a>
               
             
@@ -259,8 +268,438 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T01:37:03+08:00" content="2016-03-05">
-              2016-03-05
+            <time itemprop="dateCreated" datetime="2016-02-10T00:58:25+08:00" content="2016-02-10">
+              2016-02-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/10/debug-nativecodeloader/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/debug-nativecodeloader/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/10/debug-nativecodeloader/" class="leancloud_visitors" data-flag-title="Resolve the debug problem of WARN NativeCodeLoader">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN NativeCodeLoader will turn on.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/home/admin/hadoop</span><br><span class="line"><span class="comment">#export PATH=$HADOOP_HOME/bin:$PATH</span></span><br><span class="line"><span class="comment">#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span></span><br><span class="line"><span class="comment">#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"</span></span><br><span class="line"><span class="comment">#export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS</span><br><span class="line">WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS</span><br></pre></td></tr></table></figure>
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p>Three ways to solve the problem</p>
+<blockquote>
+<p>install libgfortran3<br>linstall libatlas3-base libopenblas-base<br>OpenBlase</p>
+</blockquote>
+<ul>
+<li><p>in sbt file: libraryDependencies += “com.github.fommil.netlib” % “all” % “1.1.2”</p>
+<ul>
+<li>-Dcom.github.fommil.netlib.BLAS=com.github.fommil.netlib.F2jBLAS</li>
+<li><a href="https://github.com/mridulm/netlib-java" target="_blank" rel="external">https://github.com/mridulm/netlib-java</a></li>
+</ul>
+</li>
+<li><p>or in commandline</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libgfortran3</span><br><span class="line">// check the libgfortran3</span><br><span class="line">$ dpkg <span class="_">-l</span> libgfortran3</span><br><span class="line">$ sudo apt-get install gfortran</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>resolve the problem (important)</p>
+<ul>
+<li>refers to <a href="https://github.com/fommil/netlib-java#machine-optimised-system-libraries" target="_blank" rel="external">https://github.com/fommil/netlib-java#machine-optimised-system-libraries</a></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas3-base libopenblas-base</span><br><span class="line">sudo update-alternatives --config libblas.so.3</span><br><span class="line">sudo update-alternatives --config liblapack.so.3</span><br><span class="line">$ /etc/ld.so.conf</span><br><span class="line">add /usr/lib/libblas.so.3 &amp;  /usr/lib/liblapack.so.3</span><br><span class="line">$ sudo ldconfig</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/10/mac-license/" itemprop="url">
+                  Mac License
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-02-10T00:54:13+08:00" content="2016-02-10">
+              2016-02-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/License/" itemprop="url" rel="index">
+                    <span itemprop="name">License</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/10/mac-license/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/mac-license/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/10/mac-license/" class="leancloud_visitors" data-flag-title="Mac License">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</p>
+<p>﻿- Open the terminal, then type in “ sudo xcodebuild -license”</p>
+<ul>
+<li><p>Type in “ enter”</p>
+</li>
+<li><p>Type in “space” for more to read, or “q” for quit</p>
+</li>
+<li><p>Finally, type in “agree” and enter.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/16/machine-learning-notes-1/" itemprop="url">
+                  Machine Learning notes (01)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-16T00:23:52+08:00" content="2016-01-16">
+              2016-01-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/16/machine-learning-notes-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/16/machine-learning-notes-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/16/machine-learning-notes-1/" class="leancloud_visitors" data-flag-title="Machine Learning notes (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Machine_learning_package_for_Python__281_29"><a href="#Machine_learning_package_for_Python__281_29" class="headerlink" title="Machine learning package for Python (1)"></a>Machine learning package for Python (1)</h3><h4 id="Basic_Requirement"><a href="#Basic_Requirement" class="headerlink" title="Basic Requirement"></a>Basic Requirement</h4><p><a href="http://blog.csdn.net/shuimuqingyi/article/details/24499057" target="_blank" rel="external">Introduce</a></p>
+<h5 id="Scikit-learn"><a href="#Scikit-learn" class="headerlink" title="Scikit-learn"></a>Scikit-learn</h5><ul>
+<li><p>A module for machine learning in Python, which is based on Numpy, Scipy and matplotlib.</p>
+<ul>
+<li><p>Scilit-learn requires:</p>
+<ul>
+<li><p>Python (&gt;=2.6 or &gt;=3.3)</p>
+</li>
+<li><p>Numpy (&gt;=1.6.1)</p>
+</li>
+<li><p>Scipy (&gt;=0.9)</p>
+</li>
+</ul>
+<blockquote>
+<p>For OSX installation</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install -U numpy scipy scikit-learn</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Before install the required tools above, we need to install homebrew to finish the installation.</p>
+<ul>
+<li>In mac terminal, run this<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby \</span><br><span class="line"><span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/15/UCI-machine-learning-repository/" itemprop="url">
+                  UCI Machine Learning Repository
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-15T16:46:41+08:00" content="2016-01-15">
+              2016-01-15
             </time>
           </span>
 
@@ -289,8 +728,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/05/algorithm-by-java-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/algorithm-by-java-1/" itemprop="commentsCount"></span>
+                <a href="/2016/01/15/UCI-machine-learning-repository/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/15/UCI-machine-learning-repository/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,7 +739,7 @@
 
           
           
-             <span id="/2016/03/05/algorithm-by-java-1/" class="leancloud_visitors" data-flag-title="Binary Search Algorithm (01)">
+             <span id="/2016/01/15/UCI-machine-learning-repository/" class="leancloud_visitors" data-flag-title="UCI Machine Learning Repository">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -323,13 +762,72 @@
       
         
           
-            <h2 id="Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09"><a href="#Binary_Search_uFF08_u4E8C_u5206_u67E5_u627E_uFF09" class="headerlink" title="Binary Search（二分查找）"></a>Binary Search（二分查找）</h2><h3 id="Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E"><a href="#Java_u5B9E_u73B0_u4E8C_u5206_u67E5_u627E" class="headerlink" title="Java实现二分查找"></a>Java实现二分查找</h3><p>在一个有序的集合中查找元素，可以使用二分查找算法，也叫二分搜索。二分查找算法先比较位于集合中间位置的元素与键的大小，有三种情况（假设集合是从小到大排列的）：</p>
-<ol>
-<li>键小于中间位置的元素，则匹配元素必在左边（如果有的话），于是对左边的区域应用二分搜索。</li>
-<li>键等于中间位置的元素，所以元素找到。</li>
-<li>键大于中间位置的元素，则匹配元素必在右边（如果有的话），于是对右边的区域应用二分搜索。另外，当集合为空，则代表找不到。</li>
+            <h2 id="Datasets_Examples_for_machine_learning"><a href="#Datasets_Examples_for_machine_learning" class="headerlink" title="Datasets Examples for machine learning"></a>Datasets Examples for machine learning</h2><p>Here are the data sets from <a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="external">UCI Machine Learning Repository</a> once I sorted and practiced. Some of the abstracts I summarized updated to my github <a href="https://github.com/snakecy/CUIMachineLearningRepositry" target="_blank" rel="external">CUIMachineLearningRepository</a>.</p>
+<p>Example:</p>
+<h3 id="Image_Segmentation"><a href="#Image_Segmentation" class="headerlink" title="Image Segmentation"></a>Image Segmentation</h3><ol>
+<li>Data set website<br><a href="http://archive.ics.uci.edu/ml/datasets/Image+Segmentation" target="_blank" rel="external">http://archive.ics.uci.edu/ml/datasets/Image+Segmentation</a></li>
+<li>Datasets describe<br>【1】The data used in our experiments were collected by Vision Group, University of Massachusetts.【2】We used to classify the image.【3】The instances were drawn randomly from a database of 7 outdoor images. The images were hand segmented to create a classification for every pixel. Each instance is a 3x3 region. Number of Attributes has 19 continuous attributes, each attribute can describes as region-centroid-col、region-centroid-row、region-pixel-count、short-line-density-5、short-line-density-2、 vedge-mean、vegde-sd、hedge-mean、hedge-sd、intensity-mean、rawred-mean、rawblue-mean、rawgreen-mean、exred-mean、exblue-mean、exgreen-mean、value-mean、saturatoin-mean、hue-mean.【4】The database has 2310 samples, respectively belong to training with 210 samples and testing with 2100 samples. The categories of network system include seven categories, as shown in Table 1.</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class BinarySearch &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; a = new ArrayList&lt;Integer&gt;();</span><br><span class="line">        addIntegerInSequence(a,1,10);</span><br><span class="line">        <span class="built_in">print</span>(a);</span><br><span class="line">        int pos = binarySearch(a,10);</span><br><span class="line">        <span class="keyword">if</span> ( pos != -1 )</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element found: "</span> + pos);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(<span class="string">"Element not found"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 二分查找法</span><br><span class="line">    * @param a</span><br><span class="line">    * @param value 待查找元素</span><br><span class="line">    * @<span class="built_in">return</span></span><br><span class="line">    */</span><br><span class="line">    public static int binarySearch(ArrayList&lt;Integer&gt; a, int value)</span><br><span class="line">    &#123;</span><br><span class="line">        int size = a.size();</span><br><span class="line">        int low = 0 , high = size - 1;</span><br><span class="line">        int mid;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low + high) / 2;</span><br><span class="line">            <span class="keyword">if</span> ( a.get(mid) &lt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                low = low + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ( a.get(mid) &gt; value )</span><br><span class="line">            &#123;</span><br><span class="line">                high = high - 1;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 填充顺序元素到数组</span><br><span class="line">    * @param a</span><br><span class="line">    * @param begin 开始元素</span><br><span class="line">    * @param size 大小</span><br><span class="line">    */</span><br><span class="line">    public static void addIntegerInSequence(ArrayList&lt;Integer&gt; a, int begin, int size)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = begin; i &lt; begin + size; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * 打印数组</span><br><span class="line">    * @param a</span><br><span class="line">    */</span><br><span class="line">    public static void <span class="built_in">print</span>(ArrayList&lt;Integer&gt; a)</span><br><span class="line">    &#123;</span><br><span class="line">        Iterator&lt;Integer&gt; i = a.iterator();</span><br><span class="line">        <span class="keyword">while</span> (i.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(i.next() + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//JAVA 库中的二分查找使用非递归方式实现，返回结果与前面写的有所不同：找不到时返回的是负数，但不一定是-1</span><br><span class="line">private static int binarySearch0(int[] a, int fromIndex, int toIndex,</span><br><span class="line">int key) &#123;</span><br><span class="line">    int low = fromIndex;</span><br><span class="line">    int high = toIndex - 1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        int mid = (low + high) &gt;&gt;&gt; 1;</span><br><span class="line">        int midVal = a[mid];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (midVal &lt; key)</span><br><span class="line">        low = mid + 1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (midVal &gt; key)</span><br><span class="line">        high = mid - 1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">return</span> mid; // key found</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> -(low + 1);  // key not found.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Table_1_Category_Distribution_of_Network_System"><a href="#Table_1_Category_Distribution_of_Network_System" class="headerlink" title="Table 1 Category Distribution of Network System"></a>Table 1 Category Distribution of Network System</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">Invasion</th>
+<th style="text-align:left">Training</th>
+<th style="text-align:left">Testing</th>
+<th style="text-align:left">Total Number of Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Brickface</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">sky</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Foliage</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Cement</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">window</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Path</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">grass</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">330</td>
+</tr>
+<tr>
+<td style="text-align:left">Total number of samples in total</td>
+<td style="text-align:left">210</td>
+<td style="text-align:left">2100</td>
+<td style="text-align:left">2310</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -375,8 +873,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/11/perl-example/" itemprop="url">
-                  Perl Demo
+                <a class="post-title-link" href="/2016/01/13/nosql-database/" itemprop="url">
+                  Install NoSQL Database
                 </a>
               
             
@@ -389,8 +887,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-11T23:12:07+08:00" content="2016-02-11">
-              2016-02-11
+            <time itemprop="dateCreated" datetime="2016-01-13T02:25:57+08:00" content="2016-01-13">
+              2016-01-13
             </time>
           </span>
 
@@ -419,8 +917,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/11/perl-example/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/11/perl-example/" itemprop="commentsCount"></span>
+                <a href="/2016/01/13/nosql-database/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/13/nosql-database/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -430,7 +928,7 @@
 
           
           
-             <span id="/2016/02/11/perl-example/" class="leancloud_visitors" data-flag-title="Perl Demo">
+             <span id="/2016/01/13/nosql-database/" class="leancloud_visitors" data-flag-title="Install NoSQL Database">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -453,167 +951,29 @@
       
         
           
-            <h3 id="install_tutorial"><a href="#install_tutorial" class="headerlink" title="install tutorial"></a>install tutorial</h3><blockquote>
-<p>Perl install</p>
-<p>sudo apt-get update</p>
-<p>sudo apt-get upgrade</p>
-<p>sudo apt-get install -y perl</p>
-<p>perl -version</p>
-</blockquote>
+            <p>NoSQL database for a key-value DB Redis</p>
 <ul>
-<li>my $secstr = join(“\t\t”,@items2[1…$#items2]);</li>
-</ul>
-<ul>
-<li>perl example:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line">die <span class="string">"perl <span class="variable">$0</span> perl infile1 infile2 &gt; outfile.xls\n"</span> unless @ARGV == 2;</span><br><span class="line"><span class="variable">$infile1</span> = <span class="built_in">shift</span>;</span><br><span class="line"><span class="variable">$infile2</span> = <span class="built_in">shift</span>;</span><br><span class="line"><span class="built_in">print</span> <span class="string">"ID\tP1_counts\tP2_counts\n"</span>;</span><br><span class="line">my %data;</span><br><span class="line">open IN, <span class="variable">$infile1</span> or die $!;</span><br><span class="line"><span class="keyword">while</span>(&lt;IN&gt;)&#123;</span><br><span class="line">	chomp;</span><br><span class="line">	my @items = split /\s+\/;</span><br><span class="line">	my <span class="variable">$str</span> = <span class="variable">$items</span>[1];</span><br><span class="line">	<span class="variable">$data</span>&#123;<span class="variable">$items</span>[0]&#125; = <span class="variable">$str</span>;</span><br><span class="line">&#125;</span><br><span class="line">close IN;</span><br><span class="line">my <span class="variable">$str1</span> = 0;</span><br><span class="line"><span class="comment"># print "$str1\n";</span></span><br><span class="line">open IN, <span class="variable">$infile2</span> or die $!;</span><br><span class="line"><span class="keyword">while</span>(&lt;IN&gt;)&#123;</span><br><span class="line">	chomp;</span><br><span class="line">	my @items2 = split /\s+/;</span><br><span class="line">	my <span class="variable">$str2</span> = <span class="variable">$items2</span>[1];</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;)&#123;</span><br><span class="line">		<span class="built_in">print</span> <span class="string">"<span class="variable">$items2</span>[0]\t<span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;\t<span class="variable">$str2</span>\n"</span>;</span><br><span class="line">		delete <span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">print</span> <span class="string">"<span class="variable">$items2</span>[0]\t<span class="variable">$str1</span>\t<span class="variable">$str2</span>\n"</span>;</span><br><span class="line">		delete <span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">close IN;</span><br><span class="line">foreach my <span class="variable">$chr</span> (keys %data)&#123;</span><br><span class="line">	<span class="built_in">print</span> <span class="string">"<span class="variable">$chr</span>\t<span class="variable">$data</span>&#123;<span class="variable">$chr</span>&#125;\t<span class="variable">$str1</span>\n"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># output combine to files</span></span><br><span class="line"><span class="comment">#open COMBINE, "&gt; tmp.xls" or die "Unable to create combine file : $!";</span></span><br><span class="line"><span class="comment">#foreach (sort keys %data)&#123;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># COMBINE $data&#123;$itesm[0]&#125;&#123;$items[1]&#125;,"\n";</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br><span class="line"><span class="comment">#close COMBINE;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>How to split array in perl file</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">        my <span class="variable">$datetime</span> = <span class="variable">$items2</span>[5];</span><br><span class="line"><span class="comment">#       my @straing = split /[-\s:]+/, $datatime;</span></span><br><span class="line">        my @time = split(/[[:space:]]+/,<span class="variable">$datetime</span>);</span><br><span class="line">        my @day = split(/-/,<span class="variable">$time</span>[0]);</span><br><span class="line">        my @hr = split(/:/,<span class="variable">$time</span>[1]);</span><br></pre></td></tr></table></figure>
-<p>Question: If there is 10g file data 10g, but there are a lot of row is duplicated and need to merge the duplicate rows with a line, there are two ways to achieve. <a href="http://www.jb51.net/article/34992.htm" target="_blank" rel="external">Ref</a></p>
-<ul>
-<li><p>cat data |sort|uniq &gt; new_data # cost too much time</p>
+<li><p>Quick Start <a href="http://redis.io/topics/quickstart" target="_blank" rel="external">Redis</a></p>
 </li>
-<li><p>A small tool processed by perl.</p>
+<li><p>use the key value DB (redis)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redis-server</span><br><span class="line">to <span class="built_in">test</span> redis using: &gt;&gt; redis-cli   to enter</span><br><span class="line"><span class="keyword">then</span> : 127.0.0.1:6379&gt; <span class="built_in">set</span> <span class="built_in">test</span> 1</span><br><span class="line">&gt; get <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download the redis from website</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.2.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Or download</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/redis-stable.tar.gz</span><br><span class="line">tar xvzf redis-stable.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-stable</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update the redis-server</p>
+<ul>
+<li><p>first way</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:chris-lea/redis-server</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>another way to do this update</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y python-software-properties</span><br><span class="line">sudo add-apt-repository -y ppa:rwky/redis</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y redis-server</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line"><span class="comment"># creat a hash, each raw as a key value, then using the number of each line to fill the key value.</span></span><br><span class="line"></span><br><span class="line"> my %<span class="built_in">hash</span>;</span><br><span class="line">my <span class="variable">$script</span> = <span class="variable">$0</span>; <span class="comment"># Get the script name</span></span><br><span class="line"> sub usage</span><br><span class="line">&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Usage:\n"</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"perl <span class="variable">$script</span> &lt;source_file&gt; &lt;dest_file&gt;\n"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment"># If the number of parameters less than 2 ,exit the script</span></span><br><span class="line"><span class="keyword">if</span> ( <span class="variable">$#ARGV</span>+1 &lt; 2) &#123;</span><br><span class="line">         &amp;usage;</span><br><span class="line">        <span class="built_in">exit</span> 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">my <span class="variable">$source_file</span> = <span class="variable">$ARGV</span>[0]; <span class="comment">#File need to remove duplicate rows</span></span><br><span class="line">my <span class="variable">$dest_file</span> = <span class="variable">$ARGV</span>[1]; <span class="comment"># File after remove duplicates rows</span></span><br><span class="line"> open (FILE,<span class="string">"&lt;<span class="variable">$source_file</span>"</span>) or die <span class="string">"Cannot open file $!\n"</span>;</span><br><span class="line">open (SORTED,<span class="string">"&gt;<span class="variable">$dest_file</span>"</span>) or die <span class="string">"Cannot open file $!\n"</span>;</span><br><span class="line"> <span class="keyword">while</span>(defined (my <span class="variable">$line</span> = &lt;FILE&gt;))</span><br><span class="line">&#123;</span><br><span class="line">        chomp(<span class="variable">$line</span>);</span><br><span class="line">        <span class="variable">$hash</span>&#123;<span class="variable">$line</span>&#125; += 1;</span><br><span class="line">        <span class="comment"># print "$line,$hash&#123;$line&#125;\n";</span></span><br><span class="line">&#125;</span><br><span class="line"> foreach my <span class="variable">$k</span> (keys %<span class="built_in">hash</span>) &#123;</span><br><span class="line">        <span class="built_in">print</span> SORTED <span class="string">"<span class="variable">$k</span>,<span class="variable">$hash</span>&#123;<span class="variable">$k</span>&#125;\n"</span>; <span class="comment">#change the line and print out the col, as well as the number of col to objective file</span></span><br><span class="line">&#125;</span><br><span class="line">close (FILE);</span><br><span class="line">close (SORTED);</span><br></pre></td></tr></table></figure>
-<h3 id="Regular_Expression"><a href="#Regular_Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">"this is a string"</span></span><br><span class="line"><span class="comment"># estimate if the character "this" is contained in str, using the following statement</span></span><br><span class="line"></span><br><span class="line">[[ <span class="variable">$str</span> =~ <span class="string">"this"</span> ]] &amp;&amp; <span class="built_in">echo</span> <span class="string">"\$str contains this"</span></span><br><span class="line">[[ <span class="variable">$str</span> =~ <span class="string">"that"</span> ]] || <span class="built_in">echo</span> <span class="string">"\$str does NOT contain this"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>judge symbol “[[“<br>match symbol “=~”</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/10/about-libsvm/" itemprop="url">
-                  Libsvm Package
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-10T01:13:22+08:00" content="2016-02-10">
-              2016-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/open-source/" itemprop="url" rel="index">
-                    <span itemprop="name">open-source</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/10/about-libsvm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/about-libsvm/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/02/10/about-libsvm/" class="leancloud_visitors" data-flag-title="Libsvm Package">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">Views </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>About the applications using libsvm tools on different platform.</p>
-<p><a href="http://jacoxu.com/?p=118" target="_blank" rel="external">libsvm tutorial</a></p>
-<p>which can be used on the following platform, such as Java, matlab(64 bit), python, svm-toy.</p>
-<p><a href="https://github.com/bwaldvogel/liblinear-java" target="_blank" rel="external">liblinear-java-1.95.jar</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">training:  java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Train <span class="_">-s</span> 0 data_file</span><br><span class="line">prediction: java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Prediction -b 1 <span class="built_in">test</span>_file data_file.model output_file</span><br></pre></td></tr></table></figure>
-<p><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/distributed-liblinear/spark/running_spark_liblinear.html" target="_blank" rel="external">Spark liblinear</a></p>
-<ul>
-<li>Limited for the JDK version (before 8u)</li>
+</li>
 </ul>
 
           
@@ -643,7 +1003,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -684,7 +1044,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -804,16 +1164,15 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
 <span id="busuanzi_container_site_pv">
-  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times
+  &nbsp; | &nbsp; Views <span id="busuanzi_value_site_pv"></span> times，
 </span>
 
-<span id="busuanzi_container_site_uv">
-  &nbsp; | &nbsp; Visited <span id="busuanzi_value_site_uv"></span>
+<span id="busuanzi_container_site_uv"> Visitors <span id="busuanzi_value_site_uv"></span>
 </span>
 
 
@@ -865,13 +1224,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
-
-
 
   
 
