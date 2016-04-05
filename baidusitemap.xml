@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/18/mac-apache-server/</loc>
+    <lastmod>2016-04-04T16:36:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>Apache Server Configure on Mac</title>
+        <pubTime>2016-03-18T10:15:59.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/15/algorithm-L-BFGS/</loc>
+    <lastmod>2016-04-04T12:38:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>L-BFGS Algorithm (01)</title>
+        <pubTime>2016-03-14T17:56:22.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/15/UCI-machine-learning-repository/</loc>
+    <lastmod>2016-04-03T19:34:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>UCI Machine Learning Repository</title>
+        <pubTime>2016-01-15T08:46:41.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>Matlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/tools-summary/</loc>
+    <lastmod>2016-04-03T19:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Tools Summary</title>
+        <pubTime>2016-01-11T18:48:57.000Z</pubTime>
+        
+        <tag>Software</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/11/python-spyder/</loc>
+    <lastmod>2016-04-03T19:34:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>Install Python GUI spyder on Mac</title>
+        <pubTime>2016-01-10T16:22:08.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Mac</tag>
+         
+        <tag>Spyder</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/php-r-sparkr/</loc>
+    <lastmod>2016-04-03T19:34:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>API configure with Php-r-sparkr</title>
+        <pubTime>2016-01-12T09:25:06.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+        <tag>PHP</tag>
+         
+        <tag>SparkR</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/02/11/perl-example/</loc>
+    <lastmod>2016-04-03T19:33:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Perl Demo</title>
+        <pubTime>2016-02-11T15:12:07.000Z</pubTime>
+        
+        <tag>Perl</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/13/nosql-database/</loc>
+    <lastmod>2016-04-03T19:33:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Install NoSQL Database</title>
+        <pubTime>2016-01-12T18:25:57.000Z</pubTime>
+        
+        <tag>NoSQL</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
+    <lastmod>2016-04-03T19:33:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Machine Learning with Scala</title>
+        <pubTime>2016-03-09T16:26:44.000Z</pubTime>
+        
+        <tag>Spark</tag>
+         
+        <tag>Scala</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/16/machine-learning-notes-1/</loc>
+    <lastmod>2016-04-03T19:32:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Machine Learning notes (01)</title>
+        <pubTime>2016-01-15T16:23:52.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/02/10/mac-license/</loc>
+    <lastmod>2016-04-03T19:32:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac License</title>
+        <pubTime>2016-02-09T16:54:13.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="License" url="https://snakecy.github.io/categories/License/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/13/json-eclipse/</loc>
+    <lastmod>2016-04-03T19:32:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Json parsered by Java</title>
+        <pubTime>2016-01-12T17:26:05.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Json</tag>
+         
+        <tag>Eclipse</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/06/java-call-matlab/</loc>
+    <lastmod>2016-04-03T19:31:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java call Matlab Method</title>
+        <pubTime>2016-03-05T17:49:37.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Matlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/10/ipinyou-database/</loc>
+    <lastmod>2016-04-03T19:31:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ipinyou DataSet Description</title>
+        <pubTime>2016-03-10T12:35:08.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-2/</loc>
+    <lastmod>2016-04-03T19:30:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>HDFS configure with Zookeeper (02)</title>
+        <pubTime>2016-01-12T07:15:04.000Z</pubTime>
+        
+        <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/12/hdfs-spark-1/</loc>
+    <lastmod>2016-04-03T19:30:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>HDFS configure with Zookeeper (01)</title>
+        <pubTime>2016-01-12T07:14:59.000Z</pubTime>
+        
+        <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/01/09/github-hexo/</loc>
+    <lastmod>2016-04-03T19:30:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>Build Blog with Github & Hexo</title>
+        <pubTime>2016-01-08T16:00:00.000Z</pubTime>
+        
+        <tag>Hexo + Github</tag>
+         
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="web-building" url="https://snakecy.github.io/categories/web-building/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/02/10/debug-nativecodeloader/</loc>
+    <lastmod>2016-04-03T19:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Resolve the debug problem of WARN NativeCodeLoader</title>
+        <pubTime>2016-02-09T16:58:25.000Z</pubTime>
+        
+        <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/05/algorithm-by-java-2/</loc>
+    <lastmod>2016-04-03T19:30:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Sorting Algorithm (02)</title>
+        <pubTime>2016-03-04T17:40:55.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/02/10/about-libsvm/</loc>
+    <lastmod>2016-04-03T19:29:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>Libsvm Package</title>
+        <pubTime>2016-02-09T17:13:22.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Libsvm</tag>
+         
+         
+           
+             
+              <breadCrumb title="open-source" url="https://snakecy.github.io/categories/open-source/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://snakecy.github.io/2016/03/05/algorithm-by-java-1/</loc>
+    <lastmod>2016-04-03T19:29:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Binary Search Algorithm (01)</title>
+        <pubTime>2016-03-04T17:37:03.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="https://snakecy.github.io/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
