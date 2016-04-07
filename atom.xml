@@ -278,7 +278,7 @@
     <link href="https://snakecy.github.io/2016/03/10/machine-learning-scala/"/>
     <id>https://snakecy.github.io/2016/03/10/machine-learning-scala/</id>
     <published>2016-03-09T16:26:44.000Z</published>
-    <updated>2016-04-05T14:50:12.000Z</updated>
+    <updated>2016-04-07T09:07:26.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <hr>
 <p>Good Example: REST API &amp; Velox <a href="http://www.slideshare.net/dscrankshaw/veloxampcamp5-final" target="_blank" rel="external">PPT</a>, <a href="http://arxiv.org/pdf/1409.3809v2.pdf" target="_blank" rel="external">Papre</a>, <a href="https://github.com/amplab/velox-modelserver" target="_blank" rel="external">Github</a></p>
@@ -288,11 +288,9 @@
 <p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
 </blockquote>
 <ul>
-<li>think-bayes<ul>
-<li>github <a href="https://github.com/ruippeixotog/think-bayes-scala" target="_blank" rel="external">https://github.com/ruippeixotog/think-bayes-scala</a></li>
-<li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1" target="_blank" rel="external">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
-<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
-<li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
+<li>think-bayes <a href="https://github.com/ruippeixotog/think-bayes-scala" target="_blank" rel="external">[github]</a>, <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1" target="_blank" rel="external">[Repository]</a><ul>
+<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- libraryDependencies += <span class="string">"net.ruippeixotog"</span> % <span class="string">"think-bayes_2.11"</span> % <span class="string">"0.1"</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>
@@ -386,11 +384,9 @@
 <p>The reference example project can be found on <a href="https://snakecy.github.io">my github</a></p>
 </blockquote>
 <ul>
-<li>think-bayes<ul>
-<li>github <a href="https://github.com/ruippeixotog/think-bayes-scala">https://github.com/ruippeixotog/think-bayes-scala</a></li>
-<li>Repository  <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1">https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1</a></li>
-<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution</li>
-<li>libraryDependencies += “net.ruippeixotog” % “think-bayes_2.11” % “0.1”</li>
+<li>think-bayes <a href="https://github.com/ruippeixotog/think-bayes-scala">[github]</a>, <a href="https://maven-repository.com/artifact/net.ruippeixotog/think-bayes_2.11/0.1">[Repository]</a><ul>
+<li>probability density function of the standard normal distribution &amp; cumulative density function of the standard normal distribution<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- libraryDependencies += <span class="string">"net.ruippeixotog"</span> % <span class="string">"think-bayes_2.11"</span> % <span class="string">"0.1"</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>]]>
@@ -626,9 +622,9 @@
 <p><a href="http://jacoxu.com/?p=118" target="_blank" rel="external"]]>
     </summary>
     
-      <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
-    
       <category term="Libsvm" scheme="https://snakecy.github.io/tags/Libsvm/"/>
+    
+      <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
     
       <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
     

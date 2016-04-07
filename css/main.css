@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: "Microsoft YaHei", Verdana, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -1043,7 +1043,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1467,6 +1467,13 @@ pre .javascript .function {
   height: auto;
   border: 2px solid #333;
   padding: 2px;
+/* start */
+  border-radius: 90%;
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
+/* end */
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1544,7 +1551,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4246c8;
+  background: #ff12b5;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2312,7 +2319,7 @@ hr {
 }
 .post-more-link a {
   padding: 0;
-  font-size: 15px;
+  font-size: 14px;
   color: #666;
   background: none;
   border: none;
