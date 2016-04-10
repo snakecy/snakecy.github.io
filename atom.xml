@@ -166,6 +166,32 @@
   </entry>
   
   <entry>
+    <title><![CDATA[MySQL Notes Installation (01)]]></title>
+    <link href="https://snakecy.github.io/2016/03/11/mysql-notes-01/"/>
+    <id>https://snakecy.github.io/2016/03/11/mysql-notes-01/</id>
+    <published>2016-03-10T16:25:23.000Z</published>
+    <updated>2016-04-10T16:35:14.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="MySQL_Installation_on_Mac"><a href="#MySQL_Installation_on_Mac" class="headerlink" title="MySQL Installation on Mac"></a>MySQL Installation on Mac</h3><blockquote>
+<p>In the newest version of MySQL or later one, it has not need to install the startup item “MySQL_StartupItem.pkg”, also use the default password as “root any more. After installed, Pop-up prompts a temporary password, as the message says:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2016-03-08T15:35:58.686693Z 1 [Note] A temporary password is generated <span class="keyword">for</span> root@localhost: E%*oVnN?d7sx</span><br><span class="line">If you lose this password, please consult the section How to Reset the Root Password <span class="keyword">in</span> the MySQL reference manual.</span><br></pre></td></tr></table></figure>
+<h3 id="Configure_Env"><a href="#Configure_Env" class="headerlink" title="Configure Env."></a>Configure Env.</h3><p>In terminal, type in “sudo vi /etc/bashrc”，then configure mysql and mysqladmin path in bash.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mysql</span></span><br><span class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></span><br><span class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></span><br></pre></td></tr></table></figure>
+<p>or in user’s path, touch ~/.bash_profile<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME=<span class="string">'usr/local/mysql/bin'</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$MYSQL_HOME</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Revise_the_default_password"><a href="#Revise_the_default_password" class="headerlink" title="Revise the default password"></a>Revise the default password</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root -p password</span><br></pre></td></tr></table></figure>
+<h3 id="Login_in_terminal"><a href="#Login_in_terminal" class="headerlink" title="Login in terminal"></a>Login in terminal</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="MySQL_Installation_on_Mac"><a href="#MySQL_Installation_on_Mac" class="headerlink" title="MySQL Installation on Mac"></a>MySQL Insta]]>
+    </summary>
+    
+      <category term="MySQL" scheme="https://snakecy.github.io/tags/MySQL/"/>
+    
+      <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Ipinyou DataSet Description]]></title>
     <link href="https://snakecy.github.io/2016/03/10/ipinyou-database/"/>
     <id>https://snakecy.github.io/2016/03/10/ipinyou-database/</id>
@@ -622,9 +648,9 @@
 <p><a href="http://jacoxu.com/?p=118" target="_blank" rel="external"]]>
     </summary>
     
-      <category term="Libsvm" scheme="https://snakecy.github.io/tags/Libsvm/"/>
-    
       <category term="Java" scheme="https://snakecy.github.io/tags/Java/"/>
+    
+      <category term="Libsvm" scheme="https://snakecy.github.io/tags/Libsvm/"/>
     
       <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
     
@@ -665,9 +691,9 @@
     <![CDATA[<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Resolve the debug problem of when to start up spark, WARN ]]>
     </summary>
     
-      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
-    
       <category term="Spark" scheme="https://snakecy.github.io/tags/Spark/"/>
+    
+      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
     
       <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
     
@@ -1380,9 +1406,9 @@
 <h2 id="Configure_Zookeeper"><a href="#Configure_Zookeeper" class="headerlink" title="Con]]>
     </summary>
     
-      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
-    
       <category term="Spark" scheme="https://snakecy.github.io/tags/Spark/"/>
+    
+      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
     
       <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
     
@@ -1434,48 +1460,11 @@
 <h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="B]]>
     </summary>
     
-      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
-    
       <category term="Spark" scheme="https://snakecy.github.io/tags/Spark/"/>
     
+      <category term="Hadoop" scheme="https://snakecy.github.io/tags/Hadoop/"/>
+    
       <category term="cloud-tech" scheme="https://snakecy.github.io/categories/cloud-tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Tools Summary]]></title>
-    <link href="https://snakecy.github.io/2016/01/12/tools-summary/"/>
-    <id>https://snakecy.github.io/2016/01/12/tools-summary/</id>
-    <published>2016-01-11T18:48:57.000Z</published>
-    <updated>2016-04-03T19:34:28.000Z</updated>
-    <content type="html"><![CDATA[<p>Summary the tools used in project, essential in big data direction</p>
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
-<li>Database: MySQL, NOSQL(redis), Hive, HBase</li>
-<li>Platform: Windows8, Ubuntu, Debian</li>
-<li>VM: VMware, Cywin, VirtualBox</li>
-<li>Language: JAVA, R, Python, go, Ruby, Matlab</li>
-<li>Shell: bash, perl</li>
-<li>Bigdata Sys: SPARK, Hadoop, XAMPP</li>
-<li>Algorithm: ML &amp; NL &amp; DM (DL)</li>
-<li>Transfer: winSCP</li>
-<li>Notes : WizNote , evernote</li>
-<li>Office : OpenOffice, WPS</li>
-<li>PHP, html5, <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>Build evn: Maven, sbt</li>
-<li>MLlib: liblinear-java, libsvm</li>
-<li>SSH manager : putty manager, putty</li>
-<li>Blog tools: WordPress, hexo</li>
-<li>Redis <a href="https://redislabs.com/redis-java" target="_blank" rel="external">java</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Summary the tools used in project, essential in big data direction</p>
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"><]]>
-    </summary>
-    
-      <category term="Software" scheme="https://snakecy.github.io/tags/Software/"/>
-    
-      <category term="open-source" scheme="https://snakecy.github.io/categories/open-source/"/>
     
   </entry>
   

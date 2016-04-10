@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://snakecy.github.io/2016/03/11/mysql-notes-01/</loc>
+    <lastmod>2016-04-10T16:35:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL Notes Installation (01)</title>
+        <pubTime>2016-03-10T16:25:23.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://snakecy.github.io/2016/03/10/machine-learning-scala/</loc>
     <lastmod>2016-04-07T09:07:26.000Z</lastmod>
     <data>
@@ -360,9 +380,9 @@
         <title>HDFS configure with Zookeeper (02)</title>
         <pubTime>2016-01-12T07:15:04.000Z</pubTime>
         
-        <tag>Hadoop</tag>
-         
         <tag>Spark</tag>
+         
+        <tag>Hadoop</tag>
          
          
            
@@ -382,9 +402,9 @@
         <title>HDFS configure with Zookeeper (01)</title>
         <pubTime>2016-01-12T07:14:59.000Z</pubTime>
         
-        <tag>Hadoop</tag>
-         
         <tag>Spark</tag>
+         
+        <tag>Hadoop</tag>
          
          
            
@@ -404,9 +424,9 @@
         <title>Resolve the debug problem of WARN NativeCodeLoader</title>
         <pubTime>2016-02-09T16:58:25.000Z</pubTime>
         
-        <tag>Hadoop</tag>
-         
         <tag>Spark</tag>
+         
+        <tag>Hadoop</tag>
          
          
            
@@ -446,9 +466,9 @@
         <title>Libsvm Package</title>
         <pubTime>2016-02-09T17:13:22.000Z</pubTime>
         
-        <tag>Libsvm</tag>
-         
         <tag>Java</tag>
+         
+        <tag>Libsvm</tag>
          
          
            
