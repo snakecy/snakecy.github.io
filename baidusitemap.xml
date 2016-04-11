@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>https://snakecy.github.io/2016/04/10/crawler-java-mysql/</loc>
+    <lastmod>2016-04-11T18:25:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Blog Crawler By Java and MySQL</title>
+        <pubTime>2016-04-09T16:39:20.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>MySQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="cloud-tech" url="https://snakecy.github.io/categories/cloud-tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://snakecy.github.io/2016/03/11/mysql-notes-01/</loc>
-    <lastmod>2016-04-10T16:35:14.000Z</lastmod>
+    <lastmod>2016-04-11T12:43:49.000Z</lastmod>
     <data>
         <display>
         <title>MySQL Notes Installation (01)</title>
@@ -380,9 +402,9 @@
         <title>HDFS configure with Zookeeper (02)</title>
         <pubTime>2016-01-12T07:15:04.000Z</pubTime>
         
-        <tag>Spark</tag>
-         
         <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
          
          
            
@@ -402,9 +424,9 @@
         <title>HDFS configure with Zookeeper (01)</title>
         <pubTime>2016-01-12T07:14:59.000Z</pubTime>
         
-        <tag>Spark</tag>
-         
         <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
          
          
            
@@ -424,9 +446,9 @@
         <title>Resolve the debug problem of WARN NativeCodeLoader</title>
         <pubTime>2016-02-09T16:58:25.000Z</pubTime>
         
-        <tag>Spark</tag>
-         
         <tag>Hadoop</tag>
+         
+        <tag>Spark</tag>
          
          
            

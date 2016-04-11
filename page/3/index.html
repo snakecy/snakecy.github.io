@@ -254,6 +254,159 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/11/perl-example/" itemprop="url">
+                  Perl Demo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-02-11T23:12:07+08:00" content="2016-02-11">
+              2016-02-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/open-source/" itemprop="url" rel="index">
+                    <span itemprop="name">open-source</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/11/perl-example/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/11/perl-example/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/11/perl-example/" class="leancloud_visitors" data-flag-title="Perl Demo">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="install_tutorial"><a href="#install_tutorial" class="headerlink" title="install tutorial"></a>install tutorial</h3><blockquote>
+<p>Perl install</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get upgrade</p>
+<p>sudo apt-get install -y perl</p>
+<p>perl -version</p>
+</blockquote>
+<ul>
+<li>my $secstr = join(“\t\t”,@items2[1…$#items2]);</li>
+</ul>
+<ul>
+<li>perl example:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line">die <span class="string">"perl <span class="variable">$0</span> perl infile1 infile2 &gt; outfile.xls\n"</span> unless @ARGV == 2;</span><br><span class="line"><span class="variable">$infile1</span> = <span class="built_in">shift</span>;</span><br><span class="line"><span class="variable">$infile2</span> = <span class="built_in">shift</span>;</span><br><span class="line"><span class="built_in">print</span> <span class="string">"ID\tP1_counts\tP2_counts\n"</span>;</span><br><span class="line">my %data;</span><br><span class="line">open IN, <span class="variable">$infile1</span> or die $!;</span><br><span class="line"><span class="keyword">while</span>(&lt;IN&gt;)&#123;</span><br><span class="line">	chomp;</span><br><span class="line">	my @items = split /\s+\/;</span><br><span class="line">	my <span class="variable">$str</span> = <span class="variable">$items</span>[1];</span><br><span class="line">	<span class="variable">$data</span>&#123;<span class="variable">$items</span>[0]&#125; = <span class="variable">$str</span>;</span><br><span class="line">&#125;</span><br><span class="line">close IN;</span><br><span class="line">my <span class="variable">$str1</span> = 0;</span><br><span class="line"><span class="comment"># print "$str1\n";</span></span><br><span class="line">open IN, <span class="variable">$infile2</span> or die $!;</span><br><span class="line"><span class="keyword">while</span>(&lt;IN&gt;)&#123;</span><br><span class="line">	chomp;</span><br><span class="line">	my @items2 = split /\s+/;</span><br><span class="line">	my <span class="variable">$str2</span> = <span class="variable">$items2</span>[1];</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;)&#123;</span><br><span class="line">		<span class="built_in">print</span> <span class="string">"<span class="variable">$items2</span>[0]\t<span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;\t<span class="variable">$str2</span>\n"</span>;</span><br><span class="line">		delete <span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">print</span> <span class="string">"<span class="variable">$items2</span>[0]\t<span class="variable">$str1</span>\t<span class="variable">$str2</span>\n"</span>;</span><br><span class="line">		delete <span class="variable">$data</span>&#123;<span class="variable">$items2</span>[0]&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">close IN;</span><br><span class="line">foreach my <span class="variable">$chr</span> (keys %data)&#123;</span><br><span class="line">	<span class="built_in">print</span> <span class="string">"<span class="variable">$chr</span>\t<span class="variable">$data</span>&#123;<span class="variable">$chr</span>&#125;\t<span class="variable">$str1</span>\n"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># output combine to files</span></span><br><span class="line"><span class="comment">#open COMBINE, "&gt; tmp.xls" or die "Unable to create combine file : $!";</span></span><br><span class="line"><span class="comment">#foreach (sort keys %data)&#123;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># COMBINE $data&#123;$itesm[0]&#125;&#123;$items[1]&#125;,"\n";</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br><span class="line"><span class="comment">#close COMBINE;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>How to split array in perl file</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">        my <span class="variable">$datetime</span> = <span class="variable">$items2</span>[5];</span><br><span class="line"><span class="comment">#       my @straing = split /[-\s:]+/, $datatime;</span></span><br><span class="line">        my @time = split(/[[:space:]]+/,<span class="variable">$datetime</span>);</span><br><span class="line">        my @day = split(/-/,<span class="variable">$time</span>[0]);</span><br><span class="line">        my @hr = split(/:/,<span class="variable">$time</span>[1]);</span><br></pre></td></tr></table></figure>
+<p>Question: If there is 10g file data 10g, but there are a lot of row is duplicated and need to merge the duplicate rows with a line, there are two ways to achieve. <a href="http://www.jb51.net/article/34992.htm" target="_blank" rel="external">Ref</a></p>
+<ul>
+<li><p>cat data |sort|uniq &gt; new_data # cost too much time</p>
+</li>
+<li><p>A small tool processed by perl.</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line"><span class="comment"># creat a hash, each raw as a key value, then using the number of each line to fill the key value.</span></span><br><span class="line"></span><br><span class="line"> my %<span class="built_in">hash</span>;</span><br><span class="line">my <span class="variable">$script</span> = <span class="variable">$0</span>; <span class="comment"># Get the script name</span></span><br><span class="line"> sub usage</span><br><span class="line">&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Usage:\n"</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"perl <span class="variable">$script</span> &lt;source_file&gt; &lt;dest_file&gt;\n"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment"># If the number of parameters less than 2 ,exit the script</span></span><br><span class="line"><span class="keyword">if</span> ( <span class="variable">$#ARGV</span>+1 &lt; 2) &#123;</span><br><span class="line">         &amp;usage;</span><br><span class="line">        <span class="built_in">exit</span> 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">my <span class="variable">$source_file</span> = <span class="variable">$ARGV</span>[0]; <span class="comment">#File need to remove duplicate rows</span></span><br><span class="line">my <span class="variable">$dest_file</span> = <span class="variable">$ARGV</span>[1]; <span class="comment"># File after remove duplicates rows</span></span><br><span class="line"> open (FILE,<span class="string">"&lt;<span class="variable">$source_file</span>"</span>) or die <span class="string">"Cannot open file $!\n"</span>;</span><br><span class="line">open (SORTED,<span class="string">"&gt;<span class="variable">$dest_file</span>"</span>) or die <span class="string">"Cannot open file $!\n"</span>;</span><br><span class="line"> <span class="keyword">while</span>(defined (my <span class="variable">$line</span> = &lt;FILE&gt;))</span><br><span class="line">&#123;</span><br><span class="line">        chomp(<span class="variable">$line</span>);</span><br><span class="line">        <span class="variable">$hash</span>&#123;<span class="variable">$line</span>&#125; += 1;</span><br><span class="line">        <span class="comment"># print "$line,$hash&#123;$line&#125;\n";</span></span><br><span class="line">&#125;</span><br><span class="line"> foreach my <span class="variable">$k</span> (keys %<span class="built_in">hash</span>) &#123;</span><br><span class="line">        <span class="built_in">print</span> SORTED <span class="string">"<span class="variable">$k</span>,<span class="variable">$hash</span>&#123;<span class="variable">$k</span>&#125;\n"</span>; <span class="comment">#change the line and print out the col, as well as the number of col to objective file</span></span><br><span class="line">&#125;</span><br><span class="line">close (FILE);</span><br><span class="line">close (SORTED);</span><br></pre></td></tr></table></figure>
+<h3 id="Regular_Expression"><a href="#Regular_Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">"this is a string"</span></span><br><span class="line"><span class="comment"># estimate if the character "this" is contained in str, using the following statement</span></span><br><span class="line"></span><br><span class="line">[[ <span class="variable">$str</span> =~ <span class="string">"this"</span> ]] &amp;&amp; <span class="built_in">echo</span> <span class="string">"\$str contains this"</span></span><br><span class="line">[[ <span class="variable">$str</span> =~ <span class="string">"that"</span> ]] || <span class="built_in">echo</span> <span class="string">"\$str does NOT contain this"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>judge symbol “[[“<br>match symbol “=~”</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/10/about-libsvm/" itemprop="url">
                   Libsvm Package
                 </a>
@@ -795,195 +948,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/15/UCI-machine-learning-repository/" itemprop="url">
-                  UCI Machine Learning Repository
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-15T16:46:41+08:00" content="2016-01-15">
-              2016-01-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/15/UCI-machine-learning-repository/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/15/UCI-machine-learning-repository/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/01/15/UCI-machine-learning-repository/" class="leancloud_visitors" data-flag-title="UCI Machine Learning Repository">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">Views </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Datasets_Examples_for_machine_learning"><a href="#Datasets_Examples_for_machine_learning" class="headerlink" title="Datasets Examples for machine learning"></a>Datasets Examples for machine learning</h2><p>Here are the data sets from <a href="http://archive.ics.uci.edu/ml/" target="_blank" rel="external">UCI Machine Learning Repository</a> once I sorted and practiced. Some of the abstracts I summarized updated to my github <a href="https://github.com/snakecy/CUIMachineLearningRepositry" target="_blank" rel="external">CUIMachineLearningRepository</a>.</p>
-<p>Example:</p>
-<h3 id="Image_Segmentation"><a href="#Image_Segmentation" class="headerlink" title="Image Segmentation"></a>Image Segmentation</h3><ol>
-<li>Data set website<br><a href="http://archive.ics.uci.edu/ml/datasets/Image+Segmentation" target="_blank" rel="external">http://archive.ics.uci.edu/ml/datasets/Image+Segmentation</a></li>
-<li>Datasets describe<br>【1】The data used in our experiments were collected by Vision Group, University of Massachusetts.【2】We used to classify the image.【3】The instances were drawn randomly from a database of 7 outdoor images. The images were hand segmented to create a classification for every pixel. Each instance is a 3x3 region. Number of Attributes has 19 continuous attributes, each attribute can describes as region-centroid-col、region-centroid-row、region-pixel-count、short-line-density-5、short-line-density-2、 vedge-mean、vegde-sd、hedge-mean、hedge-sd、intensity-mean、rawred-mean、rawblue-mean、rawgreen-mean、exred-mean、exblue-mean、exgreen-mean、value-mean、saturatoin-mean、hue-mean.【4】The database has 2310 samples, respectively belong to training with 210 samples and testing with 2100 samples. The categories of network system include seven categories, as shown in Table 1.</li>
-</ol>
-<h5 id="Table_1_Category_Distribution_of_Network_System"><a href="#Table_1_Category_Distribution_of_Network_System" class="headerlink" title="Table 1 Category Distribution of Network System"></a>Table 1 Category Distribution of Network System</h5><table>
-<thead>
-<tr>
-<th style="text-align:left">Invasion</th>
-<th style="text-align:left">Training</th>
-<th style="text-align:left">Testing</th>
-<th style="text-align:left">Total Number of Samples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Brickface</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">sky</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Foliage</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Cement</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">window</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Path</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">grass</td>
-<td style="text-align:left">30</td>
-<td style="text-align:left">300</td>
-<td style="text-align:left">330</td>
-</tr>
-<tr>
-<td style="text-align:left">Total number of samples in total</td>
-<td style="text-align:left">210</td>
-<td style="text-align:left">2100</td>
-<td style="text-align:left">2310</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1029,7 +993,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

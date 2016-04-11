@@ -67,7 +67,7 @@ In the newest version of MySQL or later one, it has not need to install the star
 <meta property="og:site_name" content="Snakecy's NOTE">
 <meta property="og:description" content="MySQL Installation on Mac
 In the newest version of MySQL or later one, it has not need to install the startup item “MySQL_StartupItem.pkg”, also use the default password as “root any more. After insta">
-<meta property="og:updated_time" content="2016-04-10T16:35:14.000Z">
+<meta property="og:updated_time" content="2016-04-11T12:43:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL Notes Installation (01)">
 <meta name="twitter:description" content="MySQL Installation on Mac
@@ -333,6 +333,7 @@ In the newest version of MySQL or later one, it has not need to install the star
 <p>In the newest version of MySQL or later one, it has not need to install the startup item “MySQL_StartupItem.pkg”, also use the default password as “root any more. After installed, Pop-up prompts a temporary password, as the message says:</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2016-03-08T15:35:58.686693Z 1 [Note] A temporary password is generated <span class="keyword">for</span> root@localhost: E%*oVnN?d7sx</span><br><span class="line">If you lose this password, please consult the section How to Reset the Root Password <span class="keyword">in</span> the MySQL reference manual.</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="Configure_Env"><a href="#Configure_Env" class="headerlink" title="Configure Env."></a>Configure Env.</h3><p>In terminal, type in “sudo vi /etc/bashrc”，then configure mysql and mysqladmin path in bash.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mysql</span></span><br><span class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></span><br><span class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></span><br></pre></td></tr></table></figure>
 <p>or in user’s path, touch ~/.bash_profile<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME=<span class="string">'usr/local/mysql/bin'</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$MYSQL_HOME</span></span><br></pre></td></tr></table></figure></p>
@@ -469,7 +470,7 @@ In the newest version of MySQL or later one, it has not need to install the star
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

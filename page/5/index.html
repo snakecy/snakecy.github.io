@@ -254,6 +254,163 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/12/hdfs-spark-1/" itemprop="url">
+                  HDFS configure with Zookeeper (01)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-12T15:14:59+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/cloud-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">cloud-tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/12/hdfs-spark-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/12/hdfs-spark-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/12/hdfs-spark-1/" class="leancloud_visitors" data-flag-title="HDFS configure with Zookeeper (01)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">Views </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Construct the platform for Big Data project</p>
+<h2 id="Build_HardDisk_RAID0"><a href="#Build_HardDisk_RAID0" class="headerlink" title="Build HardDisk RAID0"></a>Build HardDisk RAID0</h2><p>This paragraph describes the HDFS configure progress on Azure Cloud Server. You need have a azure account to login in and purchase the platform you will perform on. Here is my platform construction details to share with you.</p>
+<ul>
+<li>Unbuntu 14.0 LTS</li>
+</ul>
+<h3 id="lvm2"><a href="#lvm2" class="headerlink" title="lvm2"></a>lvm2</h3><ul>
+<li>command <a href="http://linux.about.com/library/cmd/blcmdl8_lvcreate.htm" target="_blank" rel="external">–lvcreate</a></li>
+<li>Configure the raid 0<ul>
+<li>Login in the url: <a href="http://manage.windowsazure.com" target="_blank" rel="external">http://manage.windowsazure.com</a></li>
+<li>Attached/Added 4 empty disks</li>
+</ul>
+</li>
+<li>Create logical volume ( striped disks)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install lvm2</span><br><span class="line">// find the disk, using dmesg | grep SCSI</span><br><span class="line"><span class="comment">#  grep SCSI /var/log/dmesg</span></span><br><span class="line">$ sudo fdisk /dev/sdc  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sdd  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sde  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo fdisk /dev/sdf  -&gt; n,p,1, enter, enter, p, w</span><br><span class="line">$ sudo pvcreate /dev/sdc1</span><br><span class="line">$ sudo pvcreate /dev/sdd1</span><br><span class="line">$ sudo pvcreate /dev/sde1</span><br><span class="line">$ sudo pvcreate /dev/sdf1</span><br><span class="line">//  sudo pvscan</span><br><span class="line">// merge all the drives together</span><br><span class="line">$ sudo vgcreate datadrive /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1</span><br><span class="line">// sudo vgdisplay</span><br><span class="line">$ sudo lvcreate <span class="_">-l</span> 100%FREE datadrive -n example-log -I 64 -i 4</span><br><span class="line">// sudo lvdisplay</span><br><span class="line">//  sudo lvcreate -i &lt;number of physical volumes to stripe&gt; -I (大写i)&lt;size of stripe <span class="keyword">in</span> killobytes&gt; -L &lt;size <span class="keyword">in</span> megabytes&gt;M &lt;name of virtual group&gt;</span><br><span class="line">$ sudo mkfs -t ext4 /dev/datadrive/example-log</span><br><span class="line">$ sudo mkdir /datasource</span><br><span class="line">$ sudo mount /dev/datadrive/example-log /datasource</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Automatic Mount configure (<a href="https://wiki.archlinux.org/index.php/Fstab" target="_blank" rel="external">fstab</a>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo blkid</span><br><span class="line">sudo vim /etc/fstab</span><br><span class="line">/dev/mapper/datadrive-example--datalog: UUID=<span class="string">"b2e83db3-41b9-4f78-8b1f-f196bb9b9b6f"</span> TYPE=<span class="string">"ext4"</span></span><br><span class="line"></span><br><span class="line">UUID=b2e83db3-41b9-4f78-8b1f<span class="_">-f</span>196bb9b9b6f /datadrive ext4 defaults 0 0</span><br><span class="line">// An example from mine (bolded GUID is from my blkid, be sure to change it!): UUID=63ab0827-4698-427a-818a-279b18886757 /mnt/datadrive ext3 defaults 0 0</span><br><span class="line">// $ sudo chroot /target</span><br><span class="line">// Test disk write speed</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ time sh -c &quot;sudo dd if=/dev/zero of=/datasource/temp bs=4k count=2000000 &amp;&amp; sync&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><ul>
+<li>Login in <a href="http://manage.windowsazure.com" target="_blank" rel="external">http://manage.windowsazure.com</a>, build the server on Azure<ul>
+<li>Set the host: example-hadoop.cloudapp.net</li>
+<li>Create VM (Ubuntu 14 LTS), with 8 cores and 14GB RAM<ul>
+<li>example-data01, example-data02, example-data03, example-data04</li>
+</ul>
+</li>
+<li><a href="http://wiki.apache.org/hadoop/FAQ" target="_blank" rel="external">Hadoop FAQ</a></li>
+</ul>
+</li>
+<li>ssh-keygen</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">admin@example-data01 $ <span class="built_in">cd</span> .ssh</span><br><span class="line">$ ssh-keygen -t rsa  -&gt; enter, enter, enter</span><br><span class="line">$ cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line">// <span class="built_in">test</span> the key: $ ssh localhost  -&gt; successfully</span><br><span class="line">$ scp authorized_keys admin@example-data02:~/.ssh/</span><br><span class="line">$ scp authorized_keys admin@example-data03:~/.ssh/</span><br><span class="line">// <span class="built_in">test</span> $ ssh example-data02</span><br></pre></td></tr></table></figure>
+<p>Download the Hadoop Binary on each node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ Install java on ubuntu</span><br><span class="line">$ wget http://mirrors.cnnic.cn/apache/hadoop/common/stable/hadoop-2.7.1.tar.gz</span><br><span class="line">$ tar xvf hadoop-2.7.1.tar.gz</span><br><span class="line">$ mv hadoop-2.7.1 hadoop</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/12/tools-summary/" itemprop="url">
                   Tools Summary
                 </a>
@@ -713,7 +870,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
