@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://snakecy.github.io/about/index.html</loc>
+    <lastmod>2016-05-07T11:01:30.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://snakecy.github.io/2016/04/10/crawler-java-mysql/</loc>
-    <lastmod>2016-04-11T18:25:18.000Z</lastmod>
+    <lastmod>2016-04-17T12:58:30.000Z</lastmod>
   </url>
   
   <url>
@@ -44,11 +49,6 @@
   <url>
     <loc>https://snakecy.github.io/2016/03/06/java-call-matlab/</loc>
     <lastmod>2016-04-05T14:43:41.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://snakecy.github.io/about/index.html</loc>
-    <lastmod>2016-04-04T08:47:53.000Z</lastmod>
   </url>
   
   <url>
